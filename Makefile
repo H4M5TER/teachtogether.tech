@@ -1,9 +1,9 @@
 .PHONY : all clean commands html settings
 
 # Files
-TEX=$(wildcard en/*.tex) $(wildcard es/*.tex)
-SRC=${TEX} $(wildcard en/*.bib) $(wildcard es/*.bib) $(wildcard *.cls) $(wildcard *.csl) $(wildcard */template.html)
-HTML=docs/index.html docs/en/index.html docs/es/index.html
+TEX=$(wildcard en/*.tex) $(wildcard es/*.tex) $(wildcard zh/*.tex)
+SRC=${TEX} $(wildcard en/*.bib) $(wildcard es/*.bib) $(wildcard zh/*.bib) $(wildcard *.cls) $(wildcard *.csl) $(wildcard */template.html)
+HTML=docs/index.html docs/en/index.html docs/es/index.html docs/zh/index.html
 STATIC_SRC=$(wildcard static/*)
 STATIC_DST=$(patsubst %,docs/%,${STATIC_SRC})
 
@@ -18,11 +18,13 @@ commands :
 pdf :
 	@make -C en pdf
 	@make -C es pdf
+	@make -C zh pdf
 
 ## html : generate HTML from LaTeX source.
 html :
 	@make -C en html
 	@make -C es html
+	@make -C zh html
 
 # Copy static.
 docs/static/% : static/%
