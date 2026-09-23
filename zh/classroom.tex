@@ -1,1008 +1,976 @@
-\chapter{In the Classroom}\label{s:classroom}
+\chapter{课堂之中}\label{s:classroom}
 
-The previous chapter described how to practice lesson delivery
-and described one method---live coding---that
-allows teachers to adapt to their learners' pace and interests.
-This chapter describes other practices that are also useful in programming classes.
+上一章讲了如何练习授课，
+并介绍了一种方法——现场编程——
+让老师能适应学习者的节奏和兴趣。
+本章介绍其他一些在编程课上同样有用的做法。
 
-Before describing them,
-it's worth pausing for a moment to set expectations.
-The best teaching method we know is individual tutoring:\index{individual tutoring (effectiveness of)}
-\cite{Bloo1984} found that students taught one-to-one
-did two standard deviations better than those who learned through conventional lecture,
-i.e.\ that individually tutored students outperformed
-98\% of students who were lectured to.
-However,
-while mentoring and apprenticeship were the most common ways to pass on knowledge
-throughout most of history,
-the industrialization of formal education has made it the exception today.
-Despite the hype around artificial intelligence,\index{artificial intelligence (hype)}
-it isn't going to square this circle any time soon,
-so every method described below is essentially
-an attempt to approach the effectiveness of individual tutoring at scale.
+在介绍它们之前，
+值得先停一下，设定好预期。
+我们知道的最好的教学方法是个别辅导：\index{个别辅导（的效果）}
+\cite{Bloo1984}发现，接受一对一教学的学生，
+比接受传统讲授的学生高出两个标准差，
+也就是接受个别辅导的学生胜过
+98\% 接受讲授的学生。
+然而，
+尽管在历史上大部分时期，师徒制和学徒制是最常见的知识传授方式，
+正规教育的工业化却使它在今天成了例外。
+尽管人工智能被吹得天花乱坠，\index{人工智能（炒作）}
+它短期内也不会把这个矛盾化解掉，
+所以下面描述的每一种方法，本质上
+都是想在规模化的情况下逼近个别辅导的效果。
 
-\seclbl{Enforce the Code of Conduct}{s:classroom-coc}
+\seclbl{执行行为准则}{s:classroom-coc}
 
-The most important thing I've learned about teaching in the last 30 years is
-how important it is for everyone to treat everyone else with respect,
-both in and out of class.
-If you use this material in any way,
-please adopt a Code of Conduct like the one in \appref{s:conduct}\index{Code of Conduct}
-and require everyone who takes part in your classes to abide by it.
-It can't stop people from being offensive,
-any more than laws against theft stop people from stealing,
-but it \emph{can} make expectations and consequences clear,
-and signal that you are trying to make your class welcoming to all.
+过去三十年里，我在教学上最重要的一条体会是，
+不管课内课外，每个人都尊重其他人，是多么重要。
+如果你以任何方式使用这些材料，
+请采用一份像\appref{s:conduct}里那样的行为准则，\index{行为准则}
+并要求所有参与你课程的人都遵守它。
+它拦不住人出言伤人，
+就像反盗窃的法律拦不住人偷东西一样，
+但它\emph{能}把预期和后果讲清楚，
+并表明你在努力让你的课堂对所有人都友善。
 
-But a Code of Conduct is only useful if it is enforced.
-If you believe that someone has violated yours,
-you may warn them,
-ask them to apologize,
-and/or expel them,
-depending on the severity of the violation and whether or not you believe it was intentional.
-Whatever you do:\index{Code of Conduct!enforcement}
+但行为准则只有被执行才有用。
+如果你认为有人违反了你的准则，
+你可以根据违规的严重程度、以及你是否认为它是有意的，
+警告他们、
+要求他们道歉、
+和/或将他们请出课堂。
+不管你做什么：\index{行为准则!执行}
 
 \begin{description}
 
-\item[Do it in front of witnesses.]
-  Most people will tone down their language and hostility in front of an audience,
-  and having someone else present ensures that
-  later discussion doesn't degenerate into conflicting claims about who said what.
+\item[在有证人在场的情况下做。]
+  大多数人在有听众时都会收敛言辞和敌意，
+  而且有别人在场，能确保
+  事后的讨论不会退化成「谁说了什么」的互相矛盾的口角。
 
-\item[If you expel someone, say so to the rest of the class and explain why.]
-  This helps prevent rumors from spreading
-  and shows that your Code of Conduct actually means something.
+\item[如果你把某人请出课堂，就向全班说明并解释原因。]
+  这有助于防止谣言传播，
+  并表明你的行为准则确实是有分量的。
 
-\item[Email the offender as soon as you can]
-  to summarize what happened and the steps you took,
-  and copy the message to your workshop's hosts or one of your fellow teachers
-  so that there's a contemporaneous record of the conversation.
-  If the offender replies,
-  don't engage in a long debate:
-  it's never productive.
+\item[尽快给违规者发邮件，]
+  概括发生了什么以及你采取了哪些步骤，
+  并把邮件抄送给你的工作坊主办方或某位同行老师，
+  这样就能留下当时的对话记录。
+  如果违规者回复了，
+  不要陷入冗长的争辩：
+  那从来不会有成果。
 
 \end{description}
 
-What happens outside of class matters at least as much as what happens within it~\cite{Part2011},
-so you need to provide a way for learners to report problems that you aren't there to see yourself.
-One step is to ask someone who isn't part of your group to be the first point of contact;
-that way,
-if someone wants to make a complaint about you or one of your fellow teachers,
-they have some assurance of confidentiality and independent action.
-\cite{Auro2019} has lots of other advice
-and is both short and practical.
+课外发生的事，至少和课内发生的事一样重要~\cite{Part2011}，
+所以你需要提供一种途径，让学习者能报告你自己看不到的问题。
+一个办法是请一位不属于你们小组的人做第一联系人；
+这样，
+如果有人想投诉你或你的某位同行，
+他们就对保密性和独立处理有了一定保障。
+\cite{Auro2019}还有很多别的建议，
+既简短又实用。
 
-\seclbl{Peer Instruction}{s:classroom-peer}
+\seclbl{同伴教学}{s:classroom-peer}
 
-No matter how good a teacher is,
-they can only say one thing at a time.
-How then can they clear up many different misconceptions in a reasonable time?
-The best solution developed so far is a technique called \gref{g:peer-instruction}{peer instruction}.
-Originally created by Eric Mazur at Harvard~\cite{Mazu1996},\index{Mazur, Eric}
-it has been studied extensively in a wide variety of contexts,
-including programming~\cite{Crou2001,Port2013},
-and~\cite{Port2016} found that learners value peer instruction even at first contact.
+不管一位老师有多好，
+他们一次也只能讲一件事。
+那么他们怎么才能在合理的时间内清除许多不同的误解呢？
+到目前为止发展出来的最好办法，是一种叫\gref{g:peer-instruction}{同伴教学}的技巧。
+它最初由哈佛的 Eric Mazur 提出~\cite{Mazu1996}，\index{Mazur, Eric}
+在各种情境下被广泛研究，
+包括编程~\cite{Crou2001,Port2013}，
+而~\cite{Port2016}发现，即便第一次接触，学习者也很看重同伴教学。
 
-Peer instruction attempts to provide one-to-one instruction in a scalable way
-by interleaving formative assessment with learner discussion:
+同伴教学试图以一种可扩展的方式提供一对一教学，
+办法是把形成性评价和学习者讨论交错起来：
 
 \begin{enumerate}
 
 \item
-  Give a brief introduction to the topic.
+  对这个主题做简要介绍。
 
 \item
-  Give learners a multiple choice question that probes for their misconceptions
-  (rather than testing simple factual knowledge).
+  给学习者一道多项选择题，用来探查他们的误解
+  （而不是测试简单的事实性知识）。
 
 \item
-  Have all the learners vote on their answers to the MCQ.
+  让所有学习者就 MCQ 的答案投票。
 
   \begin{itemize}
 
   \item
-    If the learners all have the right answer, move on.
+    如果学习者全都答对了，就往下走。
 
   \item
-    If they all have the same wrong answer,
-    address that specific misconception.
+    如果他们全选了同一个错误答案，
+    就针对那个具体误解加以讲解。
 
   \item
-    If they have a mix of right and wrong answers,
-    give them several minutes to argue with each other in groups of 2--4,
-    then vote again.
+    如果对错混杂，
+    就给他们几分钟，让他们 2—4 人一组互相争辩，
+    然后再投一次。
 
   \end{itemize}
 
 \end{enumerate}
 
-As
-\hreffoot{https://www.youtube.com/watch?v=2LbuoxAy56o}{this video} shows,
-group discussion significantly improves learners' understanding
-because it uncovers gaps in their reasoning and forces them to clarify their thinking.
-Re-polling the class then lets the teacher know if they can move on
-or if further explanation is necessary.
-A final round of additional explanation after the correct answer is presented
-gives learners one more chance to solidify their understanding.
+正如
+\hreffoot{https://www.youtube.com/watch?v=2LbuoxAy56o}{这段视频}所示，
+小组讨论会显著改善学习者的理解，
+因为它暴露出他们推理中的空缺，并迫使他们把自己的想法讲清楚。
+之后重新投票，就能让老师知道是否可以往下走，
+还是还需要进一步解释。
+在给出正确答案之后再补一轮额外讲解，
+又给了学习者一次巩固理解的机会。
 
-But could this be a false positive?
-Are results improving because of increased understanding during discussion
-or simply from a follow-the-leader effect (``vote like Jane, she's always right'')?
-\cite{Smit2009} tested this by following the first question with a second one
-that learners answered individually.
-They found that peer discussion actually does enhance understanding,
-even when none of the learners in a discussion group originally knew the correct answer.
-As long as there is a diversity of opinion within the group,
-their misconceptions cancel out.
+但这会不会是假象？
+成绩提升，是因为讨论中理解加深了，
+还是仅仅因为「跟着领头的走」（「跟着 Jane 投，她总是对的」）？
+\cite{Smit2009}通过在第一道题之后紧跟一道学习者独立作答的题来检验这一点。
+他们发现，同伴讨论确实能加深理解，
+即便讨论小组里原本没有一个人知道正确答案。
+只要组内存在意见分歧，
+他们的误解就会互相抵消。
 
 \newpage
-\begin{aside}{Taking a Stand}
-  It is important to have learners vote publicly
-  so that they can't change their minds afterward and rationalize it
-  by making excuses to themselves like ``I just misread the question.''
-  Much of the value of peer instruction comes from the hypercorrection
-  of getting the wrong answer
-  and having to think through the reasons why
-  (\secref{s:individual-strategies}).
+\begin{aside}{公开站定立场}
+  让学习者公开投票很重要，
+  这样他们就不能事后改主意、并靠自我开脱
+  （比如「我刚才只是看错题了」）来给自己找理由。
+  同伴教学很大一部分价值，来自答错之后的超校正、
+  以及不得不把原因想透的过程
+  （\secref{s:individual-strategies}）。
 \end{aside}
 
-\seclbl{Teach Together}{s:classroom-together}
+\seclbl{协同教学}{s:classroom-together}
 
-\grefdex{g:co-teaching}{Co-teaching}{co-teaching} describes any situation
-in which two teachers work together in the same classroom.
-\cite{Frie2016} describes several ways to do this:
+\grefdex{g:co-teaching}{协同教学}{协同教学}指两位老师在同一间教室里一起工作的任何情形。
+\cite{Frie2016}描述了几种做法：
 
 \begin{description}
 
-\item[Team teaching:]
-  Both teachers deliver a single stream of content in tandem,
-  taking turns like musicians taking solos.
+\item[双师教学：]
+  两位老师协同讲授同一份内容流，
+  像音乐家轮流独奏那样交替进行。
 
-\item[Teach and assist:]
-  Teacher A teaches while Teacher B moves around the classroom
-  to help struggling learners.
+\item[主讲加辅助：]
+  A 老师主讲，B 老师在教室里走动，
+  帮助遇到困难的学习者。
 
-\item[Alternative teaching:]
-  Teacher A provides a small set of learners with more intensive or specialized instruction
-  while Teacher B delivers a general lesson to the main group.
+\item[分层教学：]
+  A 老师给一小群学习者做更密集或更专门的讲授，
+  而 B 老师给大组上常规课。
 
-\item[Teach and observe:]
-  Teacher A teaches while Teacher B observes the learners,
-  collecting data on their understanding to help plan future lessons.
+\item[主讲加观察：]
+  A 老师主讲，B 老师观察学习者，
+  收集他们理解情况的资料，用来帮助规划后续课程。
 
-\item[Parallel teaching:]
-  The class is divided in two
-  and the teachers present the same material simultaneously to each.
+\item[并行教学：]
+  把全班分成两组，
+  两位老师同时向各自那组呈现同样的材料。
 
-\item[Station teaching:]
-  The learners are divided into small groups
-  that rotate from one station or activity to the next
-  while teachers supervise where needed.
+\item[站点教学：]
+  把学习者分成小组，
+  在各个站点或活动之间轮转，
+  老师在需要的地方进行督导。
 
 \end{description}
 
-All of these models create more opportunities for unintended knowledge transfer than teaching alone.
-\index{unintended knowledge transfer}
-Team teaching is particularly beneficial in day-long workshops:
-it gives each teacher's voice a chance to rest
-and reduces the risk that they will be so tired by the end of the day
-that they will start snapping at their learners
-or fumbling at their keyboard.
+所有这些模式，都比独自教学创造了更多非预期知识传递的机会。
+\index{非预期知识传递}
+双师教学在历时一整天的工作坊里尤其有好处：
+它让每位老师的嗓子有机会休息，
+也降低了他们一天下来累到开始冲学习者发火、
+或在键盘上手忙脚乱的风险。
 
-\begin{aside}{Helping}
-  Many people who aren't comfortable teaching
-  are willing and able to provide in-class technical support.
-  They can help learners with setup and installation,
-  answer technical questions during exercises,
-  monitor the room to spot people who may need help,
-  or keep an eye on the shared notes (\secref{s:classroom-notetaking}),
-  and either answer questions
-  or remind the teacher to do so during breaks.
+\begin{aside}{帮忙的人}
+  很多不太适合讲课的人，
+  却愿意、也能够提供课堂上的技术支持。
+  他们可以帮学习者做安装和配置、
+  在练习中回答技术问题、
+  巡视教室以发现可能需要帮助的人、
+  或盯着共享笔记（\secref{s:classroom-notetaking}），
+  并回答问题，
+  或提醒老师在休息时来回答。
 
-  Helpers are sometimes people training to become teachers
-  (i.e.\ they're Teacher B in the teach and assist model),
-  but they can also be members of the host institution's technical support staff,
-  alumni of the class,
-  or advanced learners who already know the material well.
-  Using the latter as helpers is doubly effective:
-  not only are they more likely to understand the problems their peers are having,
-  it also stops them from getting bored.
-  This helps the whole class stay engaged because boredom is infectious:
-  if a handful of people start checking out,
-  the people around them will follow suit.
+  助手有时是正在受训成为老师的人
+  （也就是「主讲加辅助」模式里的 B 老师），
+  但他们也可以是主办院校的技术支持人员、
+  课程的往届学员、
+  或者已经很熟悉材料的进阶学习者。
+  让后一种人当助手有双倍效果：
+  他们不仅更可能理解同伴遇到的困难，
+  也能让这些进阶学习者不至于无聊。
+  这有助于全班保持投入，因为无聊是会传染的：
+  如果有一小撮人开始走神，
+  他们周围的人也会跟着走神。
 \end{aside}
 
-If you and a partner are co-teaching:
+如果你和一位搭档协同教学：
 
 \begin{itemize}
 
 \item
-  Take 2--3 minutes before the start of each class
-  to confirm who's teaching what.
-  If you have time,
-  try drawing or reviewing a concept map together.
+  每次上课前花 2—3 分钟
+  确认谁讲什么。
+  如果有时间，
+  可以一起画或过一遍一张概念图。
 
 \item
-  Use that time to work out a couple of hand signals as well.
-  ``You're going too fast,''
-  ``speak up,''
-  ``that learner needs help,''
-  and, ``It's time for a bathroom break'' are all useful.
+  也利用这段时间商定几个手势。
+  「你讲太快了」、
+  「大声点」、
+  「那个学习者需要帮助」、
+  以及「该上厕所了」都很有用。
 
 \item
-  Each person should teach for at least 10--15 minutes at a stretch,
-  since learners will be distracted by more frequent switch-ups.
+  每人一次至少讲 10—15 分钟，
+  因为切换太频繁会分散学习者注意力。
 
 \item
-  The person who isn't teaching shouldn't interrupt,
-  offer corrections or elaborations,
-  or do anything else to distract from what the person teaching is doing or saying.
-  The one exception is to ask leading questions
-  if the learners seem lethargic or unsure of themselves.
+  没在讲的那个人不应该打断、
+  插话纠正或补充、
+  或做任何分散主讲者注意力的事。
+  唯一的例外是，如果学习者看起来无精打采或缺乏自信，可以问一些引导性的问题。
 
 \item
-  Each person should take a couple of minutes before they start teaching
-  to see what their partner is going to teach after they're done,
-  and then \emph{not} present any of that material.
+  每个人在开始讲课之前，应该花几分钟看看搭档讲完之后要讲什么，
+  然后\emph{不要}讲那部分材料。
 
 \item
-  The person who isn't teaching should stay engaged with the class,
-  not catch up on their email.
-  Monitoring the shared notes (\secref{s:classroom-notetaking}),
-  keeping an eye on the learners to see who's struggling,
-  jotting down some feedback to give your teaching partner at the next break---anything
-  that contributes to the lesson is better than anything that doesn't.
+  没在讲的那个人应该保持对课堂的投入，
+  而不是去补看邮件。
+  盯着共享笔记（\secref{s:classroom-notetaking}）、
+  留意哪些学习者在挣扎、
+  记下一些反馈留到下次休息时给你的搭档——任何
+  对课堂有贡献的事，都比没有贡献的事强。
 
 \end{itemize}
 
-Most importantly,
-take a few minutes when the class is over to congratulate or commiserate with each other:
-in teaching as in life,
-shared misery is lessened and shared joy increased.
+最重要的是，
+下课后花几分钟互相祝贺或互相安慰：
+教学一如人生，
+痛苦分担忧减，快乐分享增。
 
-\seclbl{Assess Prior Knowledge}{s:classroom-prior}
+\seclbl{评估先备知识}{s:classroom-prior}
 
-The more you know about your learners before you start teaching,
-the more you will be able to help them.
-Inside a formal school system,
-the prerequisites to your course will tell you something about
-what they're likely to already know.
-In a free-range setting,
-though,
-your learners may be much more diverse,
-so you may want to give them a short survey or questionnaire in advance of your class
-to find out what knowledge and skills they have.
+你在开课前对学习者了解得越多，
+就越能帮到他们。
+在正规学校体系里，
+你课程的前置要求会告诉你，
+他们可能已经知道什么。
+但在散养式环境里，
+你的学习者可能差异大得多，
+所以你可能想在开课前给他们一份简短的调查或问卷，
+弄清他们有哪些知识和技能。
 
-Asking people to rate themselves on a scale from 1 to 5 is pointless
-because the less people know about a subject,\index{self-assessment (perils of)}
-the less accurately they can estimate their knowledge
-(\figref{f:classroom-dunning-kruger},
-from \hreffoot{Neurologica}{https://theness.com/neurologicablog/index.php/misunderstanding-dunning-kruger/}),
-a phenomenon called the \gref{g:dunning-kruger-effect}{Dunning-Kruger effect}~\cite{Krug1999}.
-Conversely,
-people who are members of underrepresented groups will often underrate their skills.
+让人按 1 到 5 给自己打分是没有意义的，
+因为一个人对某个学科了解得越少，\index{自我评估（的危险）}
+就越无法准确估计自己的知识
+（\figref{f:classroom-dunning-kruger}，
+出自 \hreffoot{Neurologica}{https://theness.com/neurologicablog/index.php/misunderstanding-dunning-kruger/}），
+这一现象叫做\gref{g:dunning-kruger-effect}{邓宁—克鲁格效应}~\cite{Krug1999}。
+反过来，
+来自代表性不足群体的人，往往会低估自己的技能。
 
-\figimg{figures/dunning-kruger.png}{The Dunning-Kruger Effect}{f:classroom-dunning-kruger}{}
+\figimg{figures/dunning-kruger.png}{邓宁—克鲁格效应}{f:classroom-dunning-kruger}{}
 
-Rather than asking people to self-assess,
-you can ask them how easily they could complete some specific tasks.
-Doing this is risky,
-though,
-because school trains people
-to treat anything that looks like an exam as something they have to pass
-rather than as a chance to shape instruction.
-If someone answers ``I don't know'' to even a couple of questions on your pre-assessment,
-they might conclude that your class is too advanced for them.
-You could therefore scare off many of the people you most want to help.
+与其让人自我评估，
+不如问他们完成某些具体任务能有多容易。
+但这么做有风险，
+因为学校把人训练成了
+把任何看起来像考试的东西都当成必须通过的关卡，
+而不是塑造教学的机会。
+如果有人在你的前测里哪怕只有那么几道题回答「我不知道」，
+他们可能就断定你的课对他们来说太深了。
+这样你就可能把很多你最想帮的人吓跑。
 
-\secref{s:checklists-preassess} presents a short pre-assessment questionnaire
-that most potential learners are unlikely to find intimidating.
-If you use it or anything like it,
-try to follow up with people who \emph{don't} respond to find out why not
-and compare your evaluation of learners with their self-assessment
-to improve your questions.
+\secref{s:checklists-preassess}给出了一份简短的课前问卷，
+大多数潜在学习者不容易被它吓到。
+如果你用它或类似的东西，
+尽量去跟进那些\emph{没有}作答的人，弄清原因，
+并把你对学习者的评估和他们的自我评估作比较，
+从而改进你的问题。
 
-\seclbl{Plan for Mixed Abilities}{s:classroom-mixed}
-\index{mixed abilities (accommodating)}
+\seclbl{为能力参差做规划}{s:classroom-mixed}
+\index{能力参差（如何应对）}
 
-If your learners have widely varying levels of prior knowledge,
-you can easily wind up in a situation where a third of your class is lost
-and a third is bored.
-That's unsatisfying for everyone,
-but there are some strategies you can use to manage the situation:
+如果你的学习者先备知识水平相差很大，
+你很容易陷入一种局面：班上有三分之一的人跟不上，
+有三分之一的人觉得无聊。
+这让谁都不满意，
+但你可以用一些策略来应对这种情况：
 
 \begin{itemize}
 
 \item
-  Before running a workshop,
-  communicate its level clearly to everyone
-  by showing a few examples of exercises that they will be asked to complete.
-  This helps potential participants gauge the level of the class
-  far more effectively than a point-form list of topics.
+  办工作坊之前，
+  通过展示几道他们会做的练习，把难度水平清楚地告诉大家。
+  这比列成要点的主题清单更能有效帮潜在参与者判断课程的难度。
 
 \item
-  Provide extra self-paced exercises
-  so that more advanced learners don't finish early and get bored.
+  提供额外的自主进度练习，
+  让进阶学习者不会早早做完、然后觉得无聊。
 
 \item
-  Keep an eye out for learners who are falling behind
-  and intervene early so that they don't become frustrated and give up.
+  留意掉队的学习者，
+  尽早干预，免得他们受挫放弃。
 
 \item
-  Ask more advanced learners to help people next to them
-  (see \secref{s:classroom-pair} below).
+  请进阶学习者帮助旁边的人
+  （见下文\secref{s:classroom-pair}）。
 
 \end{itemize}
 
-One other way to accommodate mixed abilities is
-to have everyone work through material on their own at their own pace
-as they would in an online course,
-but to do it simultaneously and side by side
-with helpers roaming the room to get people unstuck.
-Some people will go three or four times further than others when workshops are run like this,
-but everyone will have had a rewarding and challenging day.
+应对能力参差的另一种办法，
+是让每个人像上在线课那样、按自己的节奏学材料，
+但大家是同时、并排地进行，
+助手在教室里走动，帮人解卡。
+以这种方式办工作坊时，有些人会比其他人多走三四倍的进度，
+但每个人都会度过有收获、有挑战的一天。
 
-\begin{aside}{False Beginners}
-  A \gref{g:false-beginner}{false beginner} is someone
-  who has studied a language before but is learning it again.
-  They may be indistinguishable from \grefdex{g:absolute-beginner}{absolute beginners}{absolute beginner}
-  on pre-assessment tests,
-  but they are able to move much more quickly once the class starts
-  because they are re-learning rather than learning for the first time.
+\begin{aside}{假性新手}
+  \gref{g:false-beginner}{假性新手}指
+  以前学过一门语言、现在又重新学的人。
+  在课前测试里，他们可能和\grefdex{g:absolute-beginner}{绝对新手}{绝对新手}
+  难以区分，
+  但一旦开课，他们就能快得多地推进，
+  因为他们是在重新学，而不是第一次学。
 
-  Being a false beginner is often a sign of \gref{g:preparatory-privilege}{preparatory privilege}~\cite{Marg2010},
-  and false beginners are common in free-range programming classes.
-  For example,
-  a child whose family is affluent enough to have sent them to a robotics summer camp
-  may do poorly on a pre-test of programming knowledge
-  because the material isn't fresh in their mind,
-  but still has an advantage over a child from a less fortunate background.
-  The strategies described above can help level the playing field in cases like this,
-  but again,
-  the real solution is to use your own privilege
-  to address larger out-of-class factors~\cite{Part2011}.
+  是假性新手，常常是\gref{g:preparatory-privilege}{预备性特权}的一个标志~\cite{Marg2010}，
+  假性新手在散养式编程班里很常见。
+  例如，
+  一个家境富裕到能送他去机器人夏令营的孩子，
+  在编程知识前测里可能成绩很差，
+  因为那些材料在他脑子里已经不新鲜了，
+  但他仍然比家境没那么好的孩子更有优势。
+  上面描述的策略能在这种情况下有助于拉平起点，
+  但再说一遍，
+  真正的解决办法是用你自己的特权
+  去处理课堂之外、更大的因素~\cite{Part2011}。
 \end{aside}
 
-The most important thing is to accept that
-you can't help everyone all of the time.
-If you slow down to accommodate two people who are struggling,
-you are failing the other eighteen.
-Equally,
-if you spend a few minutes talking about an advanced topic to a learner who is bored,
-the rest of the class will feel left out.
+最重要的一点是接受：
+你没法时时刻刻帮到每个人。
+如果你为了照顾两个跟不上的学生而慢下来，
+你就辜负了另外十八个。
+同样，
+如果你花几分钟和一个觉得无聊的学习者讲进阶主题，
+班里其他人就会觉得被冷落。
 
-\seclbl{Pair Programming}{s:classroom-pair}
+\seclbl{结对编程}{s:classroom-pair}
 
-\grefdex{g:pair-programming}{Pair programming}{pair programming} is a software development practice
-in which \hreffoot{https://www.youtube.com/watch?v=vgkahOzFH2Q}{two programmers work together on one computer}.
-One person (the driver) does the typing
-while the other (the navigator) offers comments and suggestions,
-and the two switch roles several times per hour.
+\grefdex{g:pair-programming}{结对编程}{结对编程}是一种软件开发实践，
+两个人\hreffoot{https://www.youtube.com/watch?v=vgkahOzFH2Q}{一起在一台电脑上工作}。
+一个人（驾驶员）负责打字，
+另一个人（领航员）提出意见和想法，
+两人每小时交换几次角色。
 
-Pair programming is an effective practice in professional work~\cite{Hann2009}
-and is also a good way to teach:
-benefits include increased success rate in introductory courses,
-better software,
-and higher learner confidence in their solutions.
-There is also evidence that learners from underrepresented groups
-benefit even more than others~\cite{McDo2006,Hank2011,Port2013,Cele2018}.
-Partners can help each other out during practical exercises,
-clarify each other's misconceptions when the solution is presented,
-and discuss common interests during breaks.
-I have found it particularly helpful with mixed-ability classes,
-since pairs are more homogeneous than individuals.
+结对编程是专业工作中一种有效的实践~\cite{Hann2009}，
+也是一种很好的教学方式：
+它的好处包括入门课程通过率更高、
+软件质量更好、
+学习者对自己解决方案更有信心。
+还有证据表明，来自代表性不足群体的学习者
+受益甚至更多~\cite{McDo2006,Hank2011,Port2013,Cele2018}。
+搭档可以在实操练习中互相帮助、
+在讲解答案时澄清彼此的误解、
+在休息时讨论共同的兴趣。
+我发现它在能力参差的班里特别有用，
+因为结对的人比单独的个体更同质。
 
-When you use pairing,
-put \emph{everyone} in pairs,
-not just learners who are struggling,
-so that no one feels singled out.
-It's also useful to have people sit in new places
-(and hence pair with different partners)
-on a regular basis,
-and to have people switch roles within each pair three or four times per hour
-so that the stronger personality in each pair doesn't dominate the session.
+使用结对时，
+把\emph{每个人}都编入结对，
+而不只是那些跟不上的学习者，
+这样没人会觉得被单独挑出来。
+定期让人换座位
+（从而和不同的搭档结对）也很有用，
+并让每对中的人每小时交换三四次角色，
+免得每对里个性更强的那个人主导整场练习。
 
-If your learners are new to pair programming,
-take a few minutes to demonstrate what it actually looks like
-so that they understand that
-the person who doesn't have their hands on the keyboard
-isn't supposed to just sit and watch.
-Finally,
-tell them that people who focus on trying to complete the task as quickly as possible
-are less fair in their sharing~\cite{Lewi2015}.
+如果你的学习者第一次接触结对编程，
+花几分钟演示一下它实际是什么样子，
+好让他们明白
+手不在键盘上的那个人
+不该只是坐着看。
+最后，
+告诉他们，那些一心想着尽快完成任务的人，
+在分享上会更不公平~\cite{Lewi2015}。
 
-\begin{aside}{Switching Partners}
-  Teachers have mixed opinions on whether people should be required to change partners at regular intervals.
-  On the one hand it gives everyone a chance to gain new insights and make new friends.
-  On the other,
-  moving computers and power adapters to new desks several times a day is disruptive,
-  and pairing can be uncomfortable for introverts.
-  That said,
-  \cite{Hann2010} found weak correlation between the ``Big Five'' personality traits
-  and performance in pair programming,
-  although an earlier study~\cite{Wall2009} found that
-  pairs whose members had differing levels of personality traits communicated more often.
+\begin{aside}{交换搭档}
+  对于是否应该要求人们定期更换搭档，老师们意见不一。
+  一方面，它给了每个人获得新洞见、结交新朋友的机会。
+  另一方面，
+  一天里好几次把电脑和电源适配器搬到新桌子上会造成干扰，
+  而且结对对内向的人可能不太自在。
+  话虽如此，
+  \cite{Hann2010}发现「大五」人格特质
+  和结对编程中的表现之间只有微弱相关，
+  尽管一项更早的研究~\cite{Wall2009}发现，
+  成员在人格特质上水平不同的结对，交流得更频繁。
 \end{aside}
 
-\seclbl{Take Notes{\ldots}Together?}{s:classroom-notetaking}
-\index{note-taking}
+\seclbl{一起\ldots 记笔记？}{s:classroom-notetaking}
+\index{记笔记}
 
-Note-taking is a form of real-time elaboration (\secref{s:individual-strategies}):
-it forces you to organize and reflect on material as it's coming in,
-which in turn increases the likelihood that you will transfer it to long-term memory.
-Many studies have shown that
-taking notes while learning improves retention~\cite{Aike1975,Boha2011}.
-While it has not yet been widely studied~\cite{Ornd2015,Yang2015},
-I have found that having learners take notes together in a shared online page is also effective:
+记笔记是一种实时的精细加工（\secref{s:individual-strategies}）：
+它迫使你在材料进来时就加以组织和反思，
+这反过来又增加了你把它转入长期记忆的可能性。
+许多研究表明，
+学习时记笔记能改善保持~\cite{Aike1975,Boha2011}。
+虽然还没有被广泛研究~\cite{Ornd2015,Yang2015}，
+但我发现，让学习者在一个共享的在线页面上一起记笔记也同样有效：
 
 \begin{itemize}
 
 \item
-  It allows people to compare what they think they're hearing
-  with what other people are hearing,
-  which helps them fill in gaps and correct misconceptions right away.
+  它让人能把自己以为听到的东西
+  和别人听到的东西作比较，
+  这有助于他们当场填补空缺、纠正误解。
 
 \item
-  It gives the more advanced learners in the class something useful to do.
-  Rather than getting bored and checking Instagram during class,
-  they can take the lead in recording what's being said,
-  which keeps them engaged
-  and allows less advanced learners to focus more of their attention on new material.
+  它给了班里进阶的学习者一些有用的事做。
+  与其在课上觉得无聊去刷 Instagram，
+  他们可以带头记录正在讲的内容，
+  这让他们保持投入，
+  也让不太进阶的学习者能把更多注意力放在新材料上。
 
 \item
-  The notes the learners take are usually more helpful \emph{to them}
-  than those the teacher would prepare in advance,
-  since the learners are more likely to write down what they actually found new
-  rather than what the teacher predicted would be new.
+  学习者记的笔记，通常比老师提前准备好的笔记\emph{对他们}更有帮助，
+  因为学习者更可能写下他们真正觉得新的东西，
+  而不是老师预测会显得新的东西。
 
 \item
-  Glancing at recent notes while learners are working on an exercise
-  helps the teacher discover that the class missed or misunderstood something.
+  在学习者做练习时瞄一眼最近的笔记，
+  能帮老师发现全班漏掉了或误解了什么。
 
 \end{itemize}
 
-\begin{aside}{Is the Pen Mightier than the Keyboard?}
-  \cite{Muel2014} reported that taking notes on a computer
-  is generally less effective than taking notes using pen and paper.
-  While their result was widely shared,
-  \cite{More2019} was unable to replicate it.
+\begin{aside}{笔真比键盘更强吗？}
+  \cite{Muel2014}报告说，用电脑记笔记
+  通常不如用纸笔记笔记有效。
+  尽管他们的结果被广泛传播，
+  \cite{More2019}却没能重复出来。
 \end{aside}
 
-If learners are taking notes together,
-you can also have them paste in short snippets of code
-and point-form or sentence-length answers to formative assessment questions.
-To prevent everyone from trying to edit the same couple of lines at the same time,
-make a list of everyone's name and paste it into the document
-whenever you want each person to answer a question.
+如果学习者在一起记笔记，
+你也可以让他们把代码小片段
+和对形成性评价问题的要点式或句子式回答粘贴进去。
+为了防止所有人同时去编辑那几行，
+把每个人的名字列成一份清单，
+在你想让每个人都回答一个问题时，把清单粘贴到文档里。
 
-Learners often find that taking notes together is distracting
-the first time they try it
-because they have to split their attention between
-what the teacher is saying
-and what their peers are writing (\secref{s:architecture-brain}).
-If you are only working with a particular group once,
-you should therefore heed the advice in \secref{s:classroom-innovate}
-and have them take notes individually.
+学习者第一次尝试一起记笔记时，常会觉得它让人分心，
+因为他们得把注意力分配到
+老师正在说的
+和同伴正在写的之间（\secref{s:architecture-brain}）。
+如果你只是和某个特定群体合作一次，
+那么就应该听从\secref{s:classroom-innovate}里的建议，
+让他们各自单独记笔记。
 
-\begin{aside}{Points for Improvement}
-  One way to demonstrate to learners that they are learning \emph{with} you,
-  not just \emph{from} you,
-  is to allow them to take notes by editing (a copy of) your lesson.
-  Instead of posting PDFs for them to download,
-  create editable copies of your slides, notes, and exercises
-  in a wiki,
-  a Google Doc,
-  or anything else that allows you to review and comment on changes.
-  Giving people credit for fixing mistakes,
-  clarifying explanations,
-  adding new examples,
-  and writing new exercises doesn't reduce your workload,
-  but increases engagement and the lesson's lifetime
-  (\secref{s:process-maintainability}).
+\begin{aside}{可改进之处}
+  向学习者表明他们是在和你\emph{一起}学、
+  而不只是\emph{从}你这里学，一个办法
+  是允许他们通过编辑你的课程（副本）来记笔记。
+  与其发布 PDF 让他们下载，
+  不如把你的幻灯片、笔记和练习的可编辑副本
+  放到 wiki、
+  Google Doc，
+  或任何允许你审阅并评论改动的地方。
+  给指出错误、
+  讲清解释、
+  添加新例子、
+  和编写新练习的人记上一笔功劳，并不会减少你的工作量，
+  却能提高参与度和课程的寿命
+  （\secref{s:process-maintainability}）。
 \end{aside}
 
-\seclbl{Sticky Notes}{s:classroom-sticky-notes}
+\seclbl{便利贴}{s:classroom-sticky-notes}
 
-Sticky notes are one of my favorite teaching tools,
-and I'm not alone in loving their versatility,
-portability, stickability, foldability,
-and subtle yet alluring aroma~\cite{Ward2015}.
+便利贴是我最喜欢的教学工具之一，
+而且不只我一个人喜欢它那多用途、便携、
+好贴、好折、
+还有那微妙而诱人的气味~\cite{Ward2015}。
 
-\subsection*{As Status Flags}
-\index{sticky notes!as status flags}
+\subsection*{作为状态旗}
+\index{便利贴!作为状态旗}
 
-Give each learner two sticky notes of different colors,
-such as orange and green.
-These can be held up for voting,
-but their real use is as status flags.
-If someone has completed an exercise and wants it checked,
-they put the green sticky note on their laptop;
-if they run into a problem and need help,
-they put up the orange one.
-This works much better than having people raise their hands:
-it's more discreet (which means they're more likely to actually do it),
-they can keep working while their flag is raised rather than trying to type one-handed,
-and the teacher can quickly see from the front of the room what state the class is in.
-Status flags are particularly helpful when people in mixed-ability classes
-are working through material at their own speed (\secref{s:classroom-mixed}).
+给每个学习者两张不同颜色的便利贴，
+比如橙色和绿色。
+它们可以用来举起来投票，
+但真正的用途是当状态旗。
+如果有人做完了练习、想让人检查，
+就把绿色便利贴贴在笔记本电脑上；
+如果遇到问题、需要帮助，
+就举起橙色的那张。
+这比让人举手好得多：
+它更不显眼（这意味着他们更可能真的这么做），
+他们的旗子举着时还能继续干活，而不是一只手打字，
+老师从教室前面就能一眼看出全班处于什么状态。
+当能力参差班里的人按自己的进度学材料时
+（\secref{s:classroom-mixed}），状态旗尤其有用。
 
-Once your learners are comfortable with two stickies,
-give them a third that they can put up when their brains are full
-or they need a bathroom break\footnote{A colleague once told me that
-the basic unit of teaching is the bladder.
-When I said I'd never thought of that,
-she said, ``You've obviously never been pregnant.''}.
-Again,
-adults are more likely to post a sticky than to raise their hand,
-and once one blue sticky note goes up,
-a flurry of others usually follows.
+等你的学习者习惯了两种贴纸，
+再给他们第三种，让他们在脑子满了
+或需要上厕所时举起来\footnote{一位同事曾告诉我，
+教学的基本单位是膀胱。
+我说我从没这么想过，
+她说：「你显然没怀过孕。」}。
+再说一遍，
+成年人贴一张便利贴比举手更乐意，
+而且一旦有一张蓝色便利贴举起来，
+通常就会跟着冒出一片。
 
-\subsection*{To Distribute Attention}
-\index{sticky notes!to distribute attention}
+\subsection*{用来分配注意力}
+\index{便利贴!用来分配注意力}
 
-Sticky notes can also be used to ensure the teacher's attention is fairly distributed.
-Have each learner write their name on a sticky note
-and put it on their laptop.
-Each time the teacher calls on them or answers one of their questions,
-they take their sticky note down.
-Once all the sticky notes are down,
-everyone puts theirs up again.
+便利贴也可以用来确保老师的注意力得到公平分配。
+让每个学习者把名字写在便利贴上，
+贴在自己的笔记本上。
+老师每叫到他们一次、或回答了他们的一个问题，
+他们就把自己的便利贴取下来。
+等所有便利贴都取下来之后，
+大家再把自己的重新贴上去。
 
-This technique makes it easy for the teacher to see who they haven't spoken with recently,
-which in turn helps them avoid unconscious bias
-and interacting preferentially with their most extroverted learners.
-Without a check like this,
-it's all too easy to create a feedback loop in which extroverts get more attention,
-which leads to them doing better,
-which in turn leads to them getting more attention,
-while quieter, less confident, or marginalized learners are left behind~\cite{Alvi1999,Juss2005}.
+这个技巧让老师很容易看出自己最近没和谁说过话，
+进而帮助他们避免无意识的偏见、
+避免优先和最外向的学习者互动。
+没有这样的检查，
+就太容易形成一种反馈循环：外向的人得到更多关注，
+于是表现更好，
+于是又得到更多关注，
+而更安静、更不自信或边缘化的学习者则被落在后面~\cite{Alvi1999,Juss2005}。
 
-It also shows learners that attention is being distributed fairly
-so that when they \emph{are} called on,
-they won't feel like they're being picked on.
-When I am working with a new group,
-I allow people to take down their own sticky notes
-during the first hour or two of class
-if they would rather not be called on.
-If they keep doing this as time goes on,
-I try to have a quiet conversation with them to find out why
-and to see if there's anything I can do to make them more comfortable.
+它也向学习者表明，注意力在被公平地分配，
+这样他们\emph{被}叫到时，
+就不会觉得自己是被针对。
+当我和一个新群体合作时，
+在课上的头一两个小时里，我会允许人们在自己不愿被叫到时
+取走自己的便利贴。
+如果他们随着时间推移一直这么做，
+我会试着和他们私下聊一聊，弄清原因，
+并看看我能不能做点什么让他们更自在。
 
-\subsection*{As Minute Cards}
-\index{sticky notes!as minute cards}
+\subsection*{作为一分钟卡片}
+\index{便利贴!作为一分钟卡片}
 
-You can also use sticky notes as \grefdex{g:minute-cards}{minute cards}{minute card}.
-Before each break,
-learners take a minute to write one thing on the green sticky note
-that they think will be useful
-and one thing on the orange note
-that they found too fast,
-too slow,
-confusing,
-or irrelevant.
-While they are enjoying their coffee or lunch,
-review their notes and look for patterns.
-It takes less than five minutes to see what learners in a 40-person class are enjoying,
-what they are confused by,
-what problems they're having,
-and what questions you have not yet answered.
+你也可以把便利贴当作\grefdex{g:minute-cards}{一分钟卡片}{一分钟卡片}。
+每次休息前，
+学习者花一分钟，在绿色便利贴上写下一件他们觉得有用的东西，
+在橙色便利贴上写下一件他们觉得太快、
+太慢、
+太乱、
+或无关的东西。
+他们去喝咖啡或吃午饭时，
+你翻看这些纸条，找找规律。
+在一个 40 人的班里，不到五分钟就能看出学习者在享受什么、
+被什么搞糊涂了、
+遇到什么问题、
+以及你还有哪些问题没回答。
 
-Learners should not sign their minute cards:
-they are meant as anonymous feedback.
-The one-up/one-down technique described in \secref{s:classroom-practices}
-is a chance for collective, attributable feedback.
+学习者不应该在一分钟卡片上签名：
+它们本意是匿名反馈。
+\secref{s:classroom-practices}里描述的「一条上、一条下」技巧，
+则是获得集体、可署名反馈的机会。
 
-\seclbl{Never a Blank Page}{s:classroom-blank}
+\seclbl{永远不要留空白页}{s:classroom-blank}
 
-Programming workshops and other kinds of classes
-can be built around a set of independent exercises,
-develop a single extended example in stages,
-or use a mixed strategy.
-The two main advantages of independent exercises are that
-people who fall behind can easily re-synchronize
-and that lesson developers can add, remove, and rearrange material at will
-(\secref{s:process-maintainability}).
-A single extended example,
-on the other hand,
-will show learners how the bits and pieces they're learning fit together:
-in educational parlance,
-it provides more opportunity for them to integrate their knowledge.
+编程工作坊和其他种类的课程，
+可以围绕一组相互独立的练习来构建，
+也可以分阶段展开一个单独的扩展例子，
+或者采用混合策略。
+独立练习的两大优点是：
+掉队的人能很容易重新跟上，
+课程开发者可以随意增删和重排材料
+（\secref{s:process-maintainability}）。
+而一个单独的扩展例子，
+则能向学习者展示他们正在学的零碎东西如何拼合在一起：
+用教育学的说法，
+它为他们整合知识提供了更多机会。
 
-Whichever approach you take,
-novices should never start doing exercises with a blank page or screen,
-since they often find this intimidating or bewildering.
-If they have been following along as you do live coding,
-ask them to add a few more lines
-or to modify the example you have built up.
-Alternatively, if they are taking notes together,
-paste a few lines of starter code into the document
-for them to extend or modify.
+不管你采用哪种做法，
+新手都不应该对着一张空白纸或空白屏幕开始做练习，
+因为他们常会觉得这令人发怵或不知所措。
+如果他们一路跟着你做了现场编程，
+就让他们再多加几行，
+或者改动你搭建起来的例子。
+或者，如果他们在一起记笔记，
+就往文档里粘贴几行起始代码，让他们去扩展或修改。
 
-Modifying existing code instead of writing new code from scratch
-doesn't just give learners structure:
-it is also closer to what they will do in real life.
-Keep in mind,
-though,
-that learners may be distracted by trying to understand all of the starter code
-rather than doing their own work.
-Java's \texttt{public static void main()}
-or a handful of \texttt{import} statements at the top of a Python program
-may make sense to you,
-but is extraneous load to them (\chapref{s:architecture}).
+修改现有代码，而不是从头写新代码，
+不仅给了学习者结构：
+它也更接近他们在真实生活中会做的事。
+不过要记住，
+学习者可能会因为试图弄懂所有起始代码而分心，
+反而没做自己的练习。
+Java 的 \texttt{public static void main()}
+或 Python 程序顶部那几行 \texttt{import} 语句，
+对你来说可能讲得通，
+但对他们来说是多余的负荷（\chapref{s:architecture}）。
 
-\seclbl{Setting Up Your Learners}{s:classroom-setup}
+\seclbl{为学习者搭好环境}{s:classroom-setup}
 
-Free-range learners often want bring their own computers
-and to leave the class with those machines set up to do real work.
-Free-range teachers should therefore prepare to teach on both Windows and MacOS\footnote{``And Linux!''
-someone shouts from the back of the room.},
-even though it would be simpler to require learners to use just one.
+散养式学习者常常想自带电脑，
+并且希望离开课堂时，这些电脑已经配置好、能干真活。
+所以散养式老师应该准备好同时在 Windows 和 MacOS 上教学\footnote{「还有 Linux！」
+有人从教室后面喊道。}，
+尽管只要求学习者用一种系统会简单得多。
 
-\begin{aside}{Common Denominators}
-  If your participants are using different operating systems,
-  try to avoid using features which are specific to just one
-  and point out any that you \emph{do} use.
-  For example,
-  the ``minimize window'' controls and behavior on Windows are different
-  from those on MacOS.
+\begin{aside}{共同点}
+  如果你的参与者用的是不同的操作系统，
+  就尽量避免使用只属于某一种系统的功能，
+  并把你\emph{确实}用到的这类功能指出来。
+  例如，
+  Windows 上「最小化窗口」的控件和行为
+  就和 MacOS 上不一样。
 \end{aside}
 
-No matter how many platforms you have to deal with,
-put detailed setup instructions on your course website
-and email learners a couple of days before the workshop starts
-to remind them to do the setup.
-A few people will still show up without the required software because
-they ran into problems,
-couldn't find time to complete all the steps,
-or are simply the sort of person who never follows instructions in advance.
-To detect this,
-have everyone run some simple command as soon as they arrive
-and show the teachers the result,
-then get helpers and other learners
-to assist people who have run into trouble.
+不管你要应付多少种平台，
+都要把详细的配置说明放到课程网站上，
+并在工作坊开始前几天给学习者发邮件，
+提醒他们提前配置好。
+仍然会有少数人没装好所需软件就来，
+因为他们遇到了问题、
+抽不出时间完成所有步骤、
+或者就是那种从不提前照说明做的人。
+为了发现这种情况，
+让大家一到就运行某条简单命令并把结果给老师看，
+然后让助手和其他学习者
+去帮助遇到麻烦的人。
 
-\begin{aside}{Virtual Machines}
-  Some people use tools like \hreffoot{http://docker.com}{Docker}
-  to put virtual machines on learners' computers\index{virtual machines}
-  so that everyone is working with exactly the same tools,
-  but this introduces a new set of problems.
-  Older or smaller machines simply aren't fast enough to run them,
-  learners struggle to switch back and forth
-  between two different sets of keyboard shortcuts for things like copying and pasting,
-  and even competent practitioners will become confused about what exactly is happening where.
+\begin{aside}{虚拟机}
+  有些人用 \hreffoot{http://docker.com}{Docker} 之类的工具
+  在学习者电脑上装虚拟机，\index{虚拟机}
+  好让每个人用的工具完全一样，
+  但这会引入一堆新问题。
+  又老又小的机器根本跑不动它们，
+  学习者还要在复制粘贴等操作的两套不同键盘快捷键之间来回切换，
+  很吃力，
+  甚至连胜任者都会搞不清到底哪个操作发生在哪里。
 \end{aside}
 
-Setting up is so complicated that
-many teachers prefer to have learners use browser-based tools instead.
-However,
-this makes the class dependent on institutional WiFi\index{institutional WiFi (perils of)}
-(which can be of highly variable quality)
-and doesn't satisfy learners' desire to leave with their own machines ready for real-world use.
-As cloud-based tools like \hreffoot{https://glitch.com/}{Glitch}
-and \hreffoot{http://rstudio.cloud}{RStudio Cloud} become more robust,
-though,
-the latter consideration is becoming less important.
+配置这么麻烦，
+很多老师更喜欢让学习者用基于浏览器的工具。
+然而，
+这会让课程依赖院校的 WiFi，\index{院校 WiFi（的隐患）}
+（其质量可能非常参差），
+也无法满足学习者「带着自己配置好、能用于真实场景的电脑离开」的愿望。
+不过，随着像 \hreffoot{https://glitch.com/}{Glitch}
+和 \hreffoot{http://rstudio.cloud}{RStudio Cloud} 这样的云端工具变得越来越健壮，
+后一种顾虑也就没那么重要了。
 
-One last way to tackle setup issues is to split the class over several days,
-and to have people install what's required for each day
-before leaving class on the day before.
-Dividing the work into chunks makes each one less intimidating,
-learners are more likely to actually do it,
-and it ensures that you can start on time for every lesson except the first.
+解决配置问题的最后一种办法，是把课程拆到好几天里，
+让人在每天结束离开之前，
+把第二天需要的东西装好。
+把工作分成小块，每一块就没那么吓人，
+学习者更可能真的去做，
+而且它能保证除了第一天之外，每节课你都能按时开始。
 
-\seclbl{Other Teaching Practices}{s:classroom-practices}
+\seclbl{其他教学实践}{s:classroom-practices}
 
-None of the smaller practices described below are essential,
-but all will improve lesson delivery.
-As with chess and marriage,
-success in teaching is often a matter of slow, steady progress.
+下面描述的这些小做法都不是必需的，
+但全都会改善授课。
+和国际象棋、婚姻一样，
+教学上的成功往往是缓慢而稳定的进步的结果。
 
-\subsection*{Start With Introductions}
+\subsection*{从自我介绍开始}
 
-Begin your class by introducing yourself.
-If you're an expert,
-tell them a bit about how you got to where you are;
-if you're only two steps ahead of them,
-emphasize what you and they have in common.
-Whatever you say,
-your goals are to make yourself more approachable
-and to encourage their belief that they can succeed.
+上课时先介绍你自己。
+如果你是专家，
+就给他们讲讲你是怎么走到今天这一步的；
+如果你只比他们领先两步，
+就强调你和他们的共同点。
+不管你说什么，
+你的目标都是让自己更平易近人，
+并让他们更相信自己能成功。
 
-Learners should also introduce themselves to each other.
-In a class of a dozen,
-they can do this verbally;
-in a larger class or if they are strangers to one another,
-I find it's better to have them each write a line or two about themselves
-in the shared notes (\secref{s:classroom-notetaking}).
+学习者也应该互相介绍。
+在一打人的班里，
+他们可以口头介绍；
+在大一些的班里，或者彼此都是陌生人时，
+我发现让他们每人往共享笔记里写一两行关于自己的话更好
+（\secref{s:classroom-notetaking}）。
 
-\subsection*{Set Up Your Own Environment}
+\subsection*{配置好你自己的环境}
 
-Setting up your environment is just as important as setting up your learners',
-but more involved.
-As well as having network access and all the software you're going to use,
-you should also have a glass of water
-or a cup of tea or coffee.
-This helps keep your throat lubricated,
-but its real purpose is to give you an excuse to pause and think for a couple of seconds
-when someone asks a hard question
-or when you lose track of what you were going to say next.
-You will probably also want some whiteboard pens
-and a few of the other things described in \secref{s:checklists-events}.
+配置你自己的环境至少和配置学习者的环境一样重要，
+但更复杂。
+除了有网络访问权限和你将要用的所有软件，
+你还应该有一杯水
+或一杯茶、咖啡。
+这有助于保持嗓子湿润，
+但它真正的用途，是在有人问了个难题、
+或你忘了接下来要说什么时，给你一个停顿几秒、想一想的借口。
+你大概还会想要几支白板笔
+和\secref{s:checklists-events}里描述的其他一些东西。
 
-One way to keep your day-to-day work from getting in the way of your teaching
-is to create a separate account on your computer for the latter.
-Use system defaults for everything in this second account,
-along with a larger font and a blank screen background,
-and turn off notifications so that your teaching isn't interrupted by pop-ups.
+让你日常工作不干扰教学的一个办法，
+是在电脑上另建一个账户专门用来教学。
+这个第二账户里所有东西都用系统默认，
+配上更大的字体和空白背景，
+并关掉通知，这样你的教学就不会被弹窗打断。
 
-\subsection*{Avoid Homework in All-Day Formats}
+\subsection*{整天的课程不要留作业}
 
-Learners who have spent an entire day programming will be tired.
-If you give them homework to do after hours,
-they'll start the next day tired as well,
-so don't.
+学了一整天编程的学习者会很累。
+如果你再给他们留课后作业，
+第二天他们开始上课时也会很累，
+所以别留。
 
-\subsection*{Don't Touch the Learner's Keyboard}
+\subsection*{不要碰学习者的键盘}
 
-It's often tempting to fix things for learners,
-but even if you narrate every step,
-it's likely to demotivate them
-by emphasizing the gap between their knowledge and yours.
-Instead,
-keep your hands off the keyboard and talk your learners through whatever they need to do:
-it will take longer,
-but it's more likely to stick.
+替学习者把东西修好往往很诱人，
+但即便你把每一步都讲出来，
+这也可能打击他们的积极性，
+因为它凸显了他们和你的知识差距。
+相反，
+把手从键盘上拿开，用言语引导学习者完成他们该做的事：
+这会花更长时间，
+但更可能真正被他们掌握。
 
-\subsection*{Repeat the Question}
+\subsection*{把问题重复一遍}
 
-Whenever someone asks a question in class,
-repeat it back to them before answering
-to check that you've understood it
-and to give people who might not have heard it a chance to do so.
-This is particularly important when presentations are being recorded or broadcast,
-since your microphone will usually not pick up what other people are saying.
-Repeating questions back also gives you a chance
-to redirect the question to something you're more comfortable answering{\ldots}
+每当有人在课上提问，
+在回答之前先把问题重复给他听，
+以确认你听懂了，
+也给可能没听清的人一个机会。
+当讲课正在被录像或直播时，这一点尤其重要，
+因为你的麦克风通常收不到别人说的话。
+把问题重复一遍，也给了你一个机会，
+把问题引向你更擅长回答的方向{\ldots}
 
-\subsection*{One Up, One Down}
+\subsection*{一条上、一条下}
 
-An adjunct to minute cards is to ask for summary feedback at the end of each day.
-Learners alternately give either one positive or one negative point about the day
-without repeating anything that has already been said.
-The ban on repeats forces people to say things they otherwise might not:
-once all the ``safe'' feedback has been given,
-participants will start saying what they really think.
+一分钟卡片的一个补充，是在每天结束时征求总结性反馈。
+学习者轮流给出关于这一天的要么一条优点、要么一条缺点，
+且不能重复已经说过的东西。
+禁止重复迫使人说出他们本来可能不会说的话：
+等所有「安全」的反馈都说完了，
+参与者就会开始说出他们真正的想法。
 
-\begin{aside}{Different Modes, Different Answers}
-  Minute cards (\secref{s:classroom-sticky-notes}) are anonymous;
-  the alternating up-and-down feedback is not.
-  You should use the two together
-  because anonymity allows both honesty and trolling.
+\begin{aside}{不同方式，不同回答}
+  一分钟卡片（\secref{s:classroom-sticky-notes}）是匿名的；
+  交替的上、下反馈则不是。
+  你应该把两者结合使用，
+  因为匿名既能带来诚实，也可能带来捣乱。
 \end{aside}
 
-\subsection*{Have Learners Make Predictions}
+\subsection*{让学习者做预测}
 
-Research has shown that people learn more from demonstrations
-if they are asked to predict what's going to happen~\cite{Mill2013}.
-Doing this fits naturally into live coding:
-after adding or changing a few lines of a program,
-ask the class what is going to happen when it runs.
-If the example is even moderately complex,
-prediction can serve as a motivating question for a round of peer instruction.
+研究表明，如果被要求预测接下来会发生什么，
+人们能从演示中学到更多~\cite{Mill2013}。
+这很自然地融入现场编程：
+在往程序里加了几行、或改了几行之后，
+问全班它运行起来会发生什么。
+如果例子哪怕只是中等复杂，
+预测也可以作为一轮同伴教学里引人入胜的问题。
 
-\subsection*{Setting Up Tables}
+\subsection*{摆放桌子}
 
-You may not have any control over the layout of the desks or tables
-in the room in which you teach,
-but if you do,
-we find it's best to have flat (dinner-style) seating
-rather than banked (theater-style) seating
-so that you can reach learners who need help more easily
-and so that it's easier for learners to pair with one another (\secref{s:classroom-mixed}).
-In-floor power outlets so that you don't have to run power cords across the floor
-make life easier as well as safer,
-but are still uncommon.
+你可能没法控制上课房间里桌椅的布局，
+但如果你能，
+我们发现最好是平摆（就餐式）座位，
+而不是阶梯（剧场式）座位，
+这样你更容易够到需要帮助的学习者，
+学习者也更容易互相结对（\secref{s:classroom-mixed}）。
+地下电源插座能让你不必把电源线拉过地板，
+既让生活更方便，也更安全，
+但仍然不常见。
 
-Whatever layout you have,
-try to make sure that every seat has an unobstructed view of the screen.
-Good back support is important too,
-since people are going to be in them for an extended period.
-Like in-floor power outlets,
-good classroom seating is still unfortunately uncommon.
+不管你是什么布局，
+都要尽量保证每个座位都能无遮挡地看到屏幕。
+良好的靠背支撑也很重要，
+因为人们会在椅子上坐很久。
+和地下电源插座一样，
+好的教室座椅至今仍然不幸地不常见。
 
-\subsection*{Cough Drops}
+\subsection*{润喉糖}
 
-If you talk all day to a room full of people,
-your throat gets raw because you are irritating the epithelial cells in your larynx and pharynx.
-This doesn't just make you hoarse---it also makes you more vulnerable to infection
-(which is part of the reason people often come down with colds after teaching).
+如果你一整天对着一屋子人讲话，
+嗓子会变哑，因为你在刺激喉部和咽部的上皮细胞。
+这不仅让你声音沙哑——还会让你更容易感染
+（这也是人们教完课后常常感冒的原因之一）。
 
-The best way to protect yourself against this is to keep your throat lined,
-and the best way to do that is to use cough drops early and often.
-Good ones will also mask the onset of coffee breath,
-for which your learners will probably be grateful.
+保护自己免受此害的最好办法，是让嗓子保持润滑，
+而最好的做法是早点、经常地含润喉糖。
+好的润喉糖还能掩盖咖啡口气的出现，
+为此你的学习者大概会很感激。
 
-\subsection*{Think-Pair-Share}
+\subsection*{思考—结对—分享}
 
-\grefdex{g:think-pair-share}{Think-pair-share}{think-pair-share} is a lightweight technique
-that helps people improve ideas
-through discussion with their peers.
-Each person starts by thinking individually about a question or problem
-and jotting down a few notes.
-They then explain their ideas to each another in pairs,
-merging them or selecting the most promising.
-Finally,
-a few pairs present their ideas to the whole group.
+\grefdex{g:think-pair-share}{思考—结对—分享}{思考—结对—分享}是一种轻量的技巧，
+帮人们通过与同伴讨论来改进想法。
+每个人先独立思考一个问题、并记几笔笔记。
+然后两人一组互相解释自己的想法，
+把它们合并起来，或挑出最有希望的那个。
+最后，
+几组把他们的想法展示给全班。
 
-Think-pair-share works because it forces people to externalize their cognition
-(\secref{s:memory-concept-maps}).
-It also gives them a chance to spot and resolve gaps or contradictions in their ideas
-\emph{before} exposing them to a larger group,
-which can make less extroverted learners a little less nervous
-about appearing foolish.
+思考—结对—分享之所以有效，是因为它迫使人们把认知外化
+（\secref{s:memory-concept-maps}）。
+它还让他们有机会在\emph{向}更大的群体公开\emph{之前}，
+发现自己想法里的空缺或矛盾，
+这能让不太外向的学习者没那么怕出丑。
 
-\subsection*{Morning, Noon, and Night}
+\subsection*{早、中、晚}
 
-\cite{Smar2018} found that
-learners do less well
-if their classes and other work are scheduled at times that don't line up with their natural body clocks,
-i.e.\ that if a morning person takes night classes or vice versa,
-their grades suffer.
-It's usually not possible to accommodate this in small groups,
-but larger ones should try to stagger start times for parallel sessions.
-This can also help people juggling childcare responsibilities and other constraints,
-and reduce the length of lineups at coffee breaks and for washrooms.
+\cite{Smar2018}发现，
+如果学习者的课程和其他任务被安排在不吻合他们自然生物钟的时间，
+他们表现会更差，
+也就是如果「早起型」的人上晚课、或反过来，
+他们的成绩会受损。
+在小班里通常没法照顾到这一点，
+但大一些的班应该试着给并行的场次错开开始时间。
+这也能帮到那些要兼顾育儿责任和其他限制的人，
+并缩短咖啡休息和上厕所时排队的长度。
 
-\subsection*{Humor}
+\subsection*{幽默}
 
-Humor should be used sparingly when teaching:
-most jokes are less funny when written down
-and become even less funny with each re-reading.
-Being spontaneously funny while teaching usually works better
-but can easily go wrong:
-what's a joke to your circle of friends
-may turn out to be a serious political issue to your audience.
-If you do make jokes when teaching,
-don't make them at the expense of any group,
-or of any individual except possibly yourself.
+讲课时应该少用幽默：
+大多数笑话写下来就没那么好笑了，
+而且每重读一遍就更不好笑。
+讲课时即兴的幽默通常效果更好，
+但也很容易出岔子：
+在你朋友圈里是个笑话的东西，
+到你的听众那儿可能变成严肃的政治议题。
+如果你讲课时确实要开玩笑，
+不要拿任何群体、
+或任何个人开涮，也许除了你自己。
 
-\seclbl{Limit Innovation}{s:classroom-innovate}
+\seclbl{限制创新}{s:classroom-innovate}
 
-Each of the techniques presented in this chapter will make your classes better,
-but you shouldn't try to adopt them all at once.
-The reason is that every new practice increases \emph{your} cognitive load as well as your learners',
-since you are all now trying to learn a new way to learn
-as well as the lesson's subject matter.
-If you are working with a group repeatedly,
-you can introduce one new technique every few lessons;
-if you only have them for a one-day workshop,
-it's best to pick just one method they haven't seen before
-and get them comfortable with that.
+本章介绍的每一种技巧都会让你的课更好，
+但你不应该想一次全盘采用。
+原因是每一种新做法都会增加\emph{你}的认知负荷，也会增加学习者的，
+因为你们现在既要学一种新的学习方式，
+又要学课程的主题内容。
+如果你是反复和同一个群体合作，
+可以每隔几节课引入一种新技巧；
+如果你只是和他们办一天的工作坊，
+最好只挑一种他们没见过的做法，
+让他们先适应它。
 
-\seclbl{Exercises}{s:classroom-exercises}
+\seclbl{练习}{s:classroom-exercises}
 
-\exercise{Create a Questionnaire}{individual}{20}
+\exercise{制作一份问卷}{个人}{20}
 
-Using the questionnaire in \secref{s:checklists-preassess} as a template,
-create a short questionnaire you could give learners before teaching a class of your own.
-What do you most want to know about their background,
-and how can both parties be sure they agree on what level of understanding you're asking about?
+以\secref{s:checklists-preassess}里的问卷为模板，
+制作一份你可以在自己上课前发给学习者的简短问卷。
+你最想了解他们的什么背景？
+双方怎么才能确保，对于你在问的理解水平，大家有共识？
 
-\exercise{One of Your Own}{whole class}{15}
+\exercise{你自己的一个做法}{全班}{15}
 
-Think of one teaching practice that hasn't been described so far.
-Present your idea to a partner,
-listen to theirs,
-and select one to present to the group as a whole.
-(This exercise is an example of think-pair-share.)
+想一个到目前为止还没被介绍过的教学做法。
+把你的想法讲给同伴听，
+也听他的，
+然后挑一个展示给全班。
+（这个练习就是思考—结对—分享的一例。）
 
-\exercise{May I Drive?}{pairs}{10}
+\exercise{能让我开吗？}{两人一组}{10}
 
-Swap computers with a partner
-(preferably one who uses a different operating system than you)
-and work through a simple programming exercise.
-How frustrating is it?
-How much insight does it give you into what novices have to go through all the time?
+和同伴交换电脑
+（最好是和你用不同操作系统的人），
+过一遍一道简单的编程练习。
+这有多让人抓狂？
+它让你对新手一直要经历的处境多了多少理解？
 
-\exercise{Pairing}{pairs}{15}
+\exercise{结对}{两人一组}{15}
 
-Watch \hreffoot{https://www.youtube.com/watch?v=vgkahOzFH2Q}{this video} of pair programming
-and then practice doing it with a partner.
-Remember to switch roles between driver and navigator every few minutes.
-How long does it take you to fall into a working rhythm?
+看\hreffoot{https://www.youtube.com/watch?v=vgkahOzFH2Q}{这段结对编程视频}，
+然后和同伴一起练习。
+记得每隔几分钟就在驾驶员和领航员之间交换角色。
+你们要多久才能进入一个顺畅的节奏？
 
-\exercise{Compare Notes}{small groups}{15}
+\exercise{比较笔记}{小组}{15}
 
-Form groups of 3--4 people
-and compare the notes you have taken on this chapter.
-What did you think was noteworthy that your peers missed and vice versa?
-What did you understand differently?
+分成 3—4 人的小组，
+比较你们在本章做的笔记。
+你认为值得一提、而同伴漏掉的是什么？反过来呢？
+你们在哪里的理解不同？
 
-\exercise{Credibility}{individual}{15}
+\exercise{可信度}{个人}{15}
 
-\cite{Fink2013} describes three things
-that make teachers credible in their learners' eyes:
+\cite{Fink2013}描述了让老师在学习者眼中可信的三样东西：
 
 \begin{description}
 
-\item[Competence:]
-  knowledge of the subject
-  as shown by the ability to explain complex ideas
-  or reference the work of others.
+\item[胜任感：]
+  对学科的掌握，
+  表现为能解释复杂想法、
+  或引用他人的工作。
 
-\item[Trustworthiness:]
-  having the learners' best interests in mind.
-  This can be shown by giving individualized feedback,
-  offering a rational explanation for grading decisions,
-  and treating all learners the same.
+\item[可信赖：]
+  把学习者的最大利益放在心上。
+  这可以通过给出个性化的反馈、
+  对评分决定给出合理的解释、
+  以及一视同仁地对待所有学习者来体现。
 
-\item[Dynamism:]
-  excitement about the subject (\chapref{s:performance}).
+\item[活力：]
+  对学科的热情（\chapref{s:performance}）。
 
 \end{description}
 
-Describe one thing you do when teaching that fits into each category,
-and then describe one thing you don't do but should.
+描述你讲课时做的一件归入每个类别的事，
+然后描述一件你没做、但应该做的事。
 
-\exercise{Measuring Effectiveness}{individual}{15}
+\exercise{衡量有效性}{个人}{15}
 
-\cite{Kirk1994} defines four levels at which to evaluate training:
+\cite{Kirk1994}定义了评估培训的四个层次：
 
 \begin{description}
 
-\item[Reaction:]
-  how did the learners feel about the training?
+\item[反应：]
+  学习者对培训感觉如何？
 
-\item[Learning:]
-  how much did they actually learn?
+\item[学习：]
+  他们实际学到了多少？
 
-\item[Behavior:]
-  how much have they changed their behavior as a result?
+\item[行为：]
+  他们因此改变了多少行为？
 
-\item[Results:]
-  how have those changes in behavior affected their output
-  or the output of their group?
+\item[结果：]
+  那些行为上的改变，如何影响了他们的产出
+  或他们所在群体的产出？
 
 \end{description}
 
-What are you doing at each level to evaluate what and how you teach?
-What could you do that you're not doing?
+为了评估你教什么、怎么教，你在每个层次上都做了什么？
+有哪些你能做、却还没做的事？
 
-\exercise{Objections and Counter-Objections}{think-pair-share}{15}
+\exercise{反对意见与反驳}{思考—结对—分享}{15}
 
-You have decided not to ask your learners if your class was useful
-because you know there is no correlation between their answers
-and how much they actually learn (\secref{s:pck-now}).
-Instead,
-you have put forward four proposals,
-each of which your colleagues have shot down:
+你决定不再问学习者你的课有没有用，
+因为你知道他们的回答
+和他们实际学到多少之间没有相关性（\secref{s:pck-now}）。
+于是你提出了四条建议，
+每一条都被你的同事驳回了：
 
 \begin{description}
 
-\item[See if they recommend the class to friends.]
-  Why would this be any more meaningful
-  than asking them how they feel about the class?
+\item[看看他们会不会把课推荐给朋友。]
+  这凭什么比问他们对课的感觉更有意义？
 
-\item[Give them an exam at the end.]
-  But how much learners know at the end of the day
-  is a poor predictor of how much they will remember two or three months later,
-  and any kind of final exam will make the class a lot more stressful.
+\item[最后给他们一次考试。]
+  但学习者在一天结束时知道多少，
+  并不能很好地预测他们两三个月后还记得多少，
+  而且任何形式的期末考试都会让课变得紧张得多。
 
-\item[Give them an exam two or three months later.]
-  That's practically impossible with free-range learners,
-  and the people who didn't get anything out of the workshop
-  are probably less likely to take part in follow-up,
-  so feedback gathered this way will be skewed.
+\item[两三个月后再给他们一次考试。]
+  对散养式学习者来说这几乎不可能，
+  而且没从工作坊里获得什么的人，
+  参与后续活动的可能性也更低，
+  所以这样收集到的反馈会有偏。
 
-\item[See if they keep using what they learned.]
-  Installing spyware on learners' computers is frowned upon,
-  so how will this be implemented?
+\item[看看他们会不会继续用学到的东西。]
+  在学习者电脑上装间谍软件是招人反感的，
+  那这个要怎么实施呢？
 
 \end{description}
 
-Working on your own,
-come up with answers to these objections,
-then share your responses with a partner
-and discuss the approaches you have come up with.
-When you are done,
-share your favored approach with the class.
+先自己想办法，
+给出对这些反对意见的回答，
+然后把你的回答分享给同伴，
+讨论你们各自想出的办法。
+做完之后，
+把你最看好的办法分享给全班。

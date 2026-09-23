@@ -1,378 +1,381 @@
-\chapter{Introduction}\label{s:intro}
+\chapter{引言}\label{s:intro}
 
-Grassroots groups have sprung up around the world
-to teach programming, web design, robotics, and other skills
-to \grefdex{g:free-range-learner}{free-range learners}{free-range learner}.
-These groups exist so that people don't have to learn these things on their own,
-but ironically,
-their founders and teachers are often teaching themselves how to teach.
+世界各地涌现出许多草根团体，
+向\grefdex{g:free-range-learner}{散养型学习者}{散养型学习者}
+教授编程、网页设计、机器人技术和其他技能，
+这些人不在传统课堂里学习。
+这些团体存在的意义，是让学习者不必独自摸索；
+但讽刺的是，
+团体的创办者和老师往往也在自学怎么教书。
 
-There's a better way.
-Just as knowing a few basic facts about germs and nutrition can help you stay healthy,
-knowing a few things about cognitive psychology,
-instructional design,
-inclusivity,
-and community organization
-can help you be a more effective teacher.
-This book presents key ideas you can use right now,
-explains why we believe they are true,
-and points you at other resources that will help you go further.
+其实有更好的办法。
+就像了解一些关于病菌和营养的基本常识有助于保持健康一样，
+了解一点认知心理学、
+教学设计、
+包容性
+和社区组织方面的知识，
+也能让你成为更有效的老师。
+本书介绍了一些你现在就能用得上的关键理念，
+解释了为什么我们相信它们是对的，
+并为你指出其他能帮你走得更远的资源。
 
-\begin{aside}{Re-Use}
-  Parts of this book were originally created for
-  \hreffoot{http://carpentries.github.io/instructor-training/}{the Software Carpentry instructor training program},
-  and all of it can be freely distributed and re-used
-  under the Creative Commons Attribution-NonCommercial 4.0 license
-  (\appref{s:license}).
-  You can use the online version at \url{http://teachtogether.tech/} in any class
-  (free or paid),
-  and can quote short excerpts under \hreffoot{https://en.wikipedia.org/wiki/Fair\_use}{fair use} provisions,
-  but cannot republish large parts in commercial works without prior permission.
+\begin{aside}{再利用}
+  本书的部分内容最初是为
+  \hreffoot{http://carpentries.github.io/instructor-training/}{Software Carpentry 讲师培训项目}
+  编写的，
+  在 Creative Commons 署名—非商业性使用 4.0 许可协议下
+  （\appref{s:license}），
+  全书都可以自由分发和再利用。
+  你可以在任何课堂（免费或收费）中使用
+  \url{http://teachtogether.tech/} 上的在线版本，
+  也可以依据\hreffoot{https://zh.wikipedia.org/wiki/合理使用}{合理使用}条款引用其中的简短片段，
+  但未经事先许可，不得在商业作品中大量转载。
 
-  Contributions, corrections, and suggestions are all welcome,
-  and all contributors will be acknowledged each time a new version is published.
-  Please see \appref{s:joining} for details
-  and \appref{s:conduct} for our code of conduct.
+  我们欢迎各种贡献、更正和建议，
+  每出版一个新版本，都会向所有贡献者致谢。
+  详情请见\appref{s:joining}，
+  行为准则请见\appref{s:conduct}。
 \end{aside}
 
-\seclbl{Who You Are}{s:intro-audience}
+\seclbl{你是谁}{s:intro-audience}
 
-\secref{s:process-personas} explains how to figure out who your learners are.
-The four that this book is for are all \grefdex{g:end-user-teacher}{end-user teachers}{end-user teacher}:
-teaching isn't their primary occupation,
-they have little or no background in pedagogy,
-and they may work outside institutional classrooms.
-
-\begin{description}
-
-\item[Emily]
-  trained as a librarian
-  and now works as a web designer and project manager in a small consulting company.
-  In her spare time she helps run web design classes for women entering tech as a second career.
-  She is now recruiting colleagues to run more classes in her area,
-  and wants to know how to make lessons others can use
-  and grow a volunteer teaching organization.
-
-\item[Moshe]
-  is a professional programmer with two teenage children
-  whose school doesn't offer programming classes.
-  He has volunteered to run a monthly after-school programming club,
-  and while he frequently gives presentations to colleagues,
-  he has no classroom experience.
-  He wants to learn how to build effective lessons in reasonable time,
-  and would like to know more about the pros and cons of self-paced online classes.
-
-\item[Samira]
-  is an undergraduate in robotics who is thinking about becoming a teacher after she graduates.
-  She wants to help at weekend robotics workshops for her peers,
-  but has never taught a class before
-  and feels a lot of \gref{g:impostor-syndrome}{impostor syndrome}.
-  She wants to learn more about education in general in order to decide if it's for her,
-  and is also looking for specific tips to help her deliver lessons more effectively.
-
-\item[Gene]
-  is a professor of computer science.
-  They have been teaching undergraduate courses on operating systems for six years,
-  and increasingly believe that there has to be a better way.
-  The only training available through their university's teaching and learning center
-  is about posting assignments and submitting grades in the online learning management system,
-  so they want to find out what else they should be asking for.
-
-\end{description}
-
-These people have \emph{a variety of technical backgrounds}
-and \emph{some previous teaching experience},
-but \emph{no formal training in teaching, lesson design, or community organization}.
-Most work with \emph{free-range learners}
-and are \emph{focused on teenagers and adults}
-rather than children;
-all \emph{have limited time and resources}.
-We expect our quartet to use this material as follows:
+\secref{s:process-personas}介绍了如何弄清你的学习者是谁。
+本书面向的四类人都是\grefdex{g:end-user-teacher}{终端用户教师}{终端用户教师}：
+教书并不是他们的主业，
+他们几乎没有或完全没有教育学背景，
+而且可能在体制内课堂之外工作。
 
 \begin{description}
 
 \item[Emily]
-  will take part in a weekly online reading group with her volunteers.
+  学的是图书情报专业，
+  现在在一家小型咨询公司做网页设计和项目管理。
+  业余时间，她帮忙为想转行进入科技行业的女性开设网页设计课。
+  她正在招募同事，想在本地多开一些课，
+  并且想知道如何做出别人也能用的课程，
+  以及怎样把一个志愿者教学组织发展起来。
 
 \item[Moshe]
-  will cover part of this book in a one-day weekend workshop
-  and study the rest on his own.
+  是一名职业程序员，有两个十几岁的孩子，
+  孩子们的学校不开设编程课。
+  他自愿每月办一次课后编程俱乐部；
+  虽然经常给同事做演示，
+  却没有任何课堂教学经验。
+  他想学会如何在合理的时间内做出有效的课程，
+  也想多了解自主进度的在线课程的利弊。
 
 \item[Samira]
-  will use this book in a one-semester undergraduate course with assignments, a project, and a final exam.
+  是机器人专业的本科生，正在考虑毕业后当老师。
+  她想在面向同龄人的周末机器人工作坊里帮忙，
+  但从未教过课，
+  而且\gref{g:impostor-syndrome}{冒充者综合征}很严重。
+  她想多了解教育这一行，好判断自己是否适合，
+  同时也在寻找能帮她更有效地讲课的具体技巧。
 
 \item[Gene]
-  will read the book on their own in their office or while commuting,
-  wishing all the while that universities did more to support high-quality teaching.
+  是计算机科学教授。
+  他们已经教了六年操作系统本科课程，
+  越来越觉得一定有更好的办法。
+  他们所在大学的教学发展中心提供的培训，
+  只有关于在在线学习管理系统里发布作业和提交成绩的内容，
+  所以他们想知道还应该去争取些什么。
 
 \end{description}
 
-\seclbl{What to Read Instead}{s:intro-instead}
+这些人有\emph{各种各样的技术背景}
+和\emph{一些教学经验}，
+但\emph{没有受过教学、课程设计或社区组织方面的正规训练}。
+他们大多面对的是\emph{散养型学习者}，
+\emph{关注的是青少年和成年人}
+而不是儿童；
+他们\emph{时间和资源都很有限}。
+我们预计这四个人会这样使用本书：
 
-If you are in a hurry or want a taste of what this book will cover,
-\cite{Brow2018} presents ten evidence-based tips for teaching computing.
-You may also enjoy:
+\begin{description}
+
+\item[Emily]
+  会和她的志愿者们一起参加每周的在线读书会。
+
+\item[Moshe]
+  会在某个周末的一天工作坊里覆盖本书的一部分，
+  其余部分自己学。
+
+\item[Samira]
+  会在一门一个学期的本科课程里使用本书，配有作业、一个项目和一个期末考试。
+
+\item[Gene]
+  会在办公室里或通勤路上自己读这本书，
+  一路读，一路希望大学能为高质量教学提供更多支持。
+
+\end{description}
+
+\seclbl{可以读些什么代替}{s:intro-instead}
+
+如果你很忙，或者只想尝尝这本书会讲些什么，
+\cite{Brow2018}给出了十条基于证据的计算机教学建议。
+你可能还会喜欢：
 
 \begin{itemize}
 
 \item
-  \hreffoot{http://carpentries.github.io/instructor-training/}{The Carpentries instructor training},
-  from which this book is derived.
+  \hreffoot{http://carpentries.github.io/instructor-training/}{The Carpentries 讲师培训}，
+  本书正是由它衍生而来。
 
 \item
-  \cite{Lang2016} and~\cite{Hust2012}, which are short and approachable,
-  and which connect things you can do right now to the research that backs them.
+  \cite{Lang2016} 和~\cite{Hust2012}，
+  简短易读，
+  把你能立刻上手做的事和支撑它们的科研联系了起来。
 
 \item
   \cite{Berg2012,Lemo2014,Majo2015,Broo2016,Rice2018,Wein2018b}
-  are all full of practical suggestions for things you can do in your classroom,
-  but may make more sense once you have a framework for understanding why their ideas work.
+  都充满了可以在课堂上落地的实用建议，
+  但等你有了一个框架、能理解这些点子为什么管用之后，它们可能会更有意义。
 
 \item
-  \cite{DeBr2015},
-  which explains what's true about education by explaining what isn't,
-  and~\cite{Dida2016},
-  which grounds learning theory in cognitive psychology.
+  \cite{DeBr2015}，
+  它通过说明什么不是真的，来解释教育中什么是真的；
+  还有~\cite{Dida2016}，
+  它把学习理论建立在认知心理学的基础上。
 
 \item
-  \cite{Pape1993},
-  which remains an inspiring vision of how computers could change education.
-  \hreffoot{https://medium.com/bits-and-behavior/mindstorms-what-did-papert-argue-and-what-does-it-mean-for-learning-and-education-c8324b58aca4}{Amy Ko's excellent description}
-  does a better job of summarizing Papert's ideas than I possibly could,
-  and~\cite{Craw2010} is a thought-provoking companion to both.
+  \cite{Pape1993}，
+  它至今仍描绘着一个关于计算机如何能改变教育的鼓舞人心的愿景。
+  \hreffoot{https://medium.com/bits-and-behavior/mindstorms-what-did-papert-argue-and-what-does-it-mean-for-learning-and-education-c8324b58aca4}{Amy Ko 的精彩解读}
+  对 Papert 思想的总结比我所能做到的更好，
+  而~\cite{Craw2010} 则是与前两者相配的一本引人深思的读物。
 
 \item
-  \cite{Gree2014,McMi2017,Watt2014} explain why so many attempts at educational reform have failed over the past forty years,
-  how for-profit colleges are exploiting and exacerbating the growing inequality in our society,
-  and how technology has repeatedly failed to revolutionize education.
+  \cite{Gree2014,McMi2017,Watt2014} 解释了为什么过去四十年里那么多教育改革都失败了、
+  营利性大学是如何利用并加剧社会不平等的，
+  以及技术如何一再未能给教育带来革命。
 
 \item
-  \cite{Brow2007} and~\cite{Mann2015},
-  because you can't teach well without changing the system in which we teach,
-  and you can't do that on your own.
+  \cite{Brow2007} 和~\cite{Mann2015}，
+  因为你若不去改变我们教书所处的这个系统，就没法教好，
+  而单靠你自己又是改变不了的。
 
 \end{itemize}
 
-Those who want more academic material may also find~\cite{Guzd2015a,Hazz2014,Sent2018,Finc2019,Hpl2018} rewarding,
-while \hreffoot{http://computinged.wordpress.com}{Mark Guzdial's blog} has consistently been informative and thought-provoking.
+想要更学术的材料的人，可能也会觉得~\cite{Guzd2015a,Hazz2014,Sent2018,Finc2019,Hpl2018} 颇有收获，
+而 \hreffoot{http://computinged.wordpress.com}{Mark Guzdial 的博客}则一直信息量大、发人深思。
 
-\seclbl{Acknowledgments}{s:intro-acknowledgments}
+\seclbl{致谢}{s:intro-acknowledgments}
 
-This book would not exist without the contributions of
-Laura Acion,
-Jorge Aranda,
-Mara Averick,
-Erin Becker,
-Yanina Bellini Saibene,
-Azalee Bostroem,
-Hugo Bowne-Anderson,
-Neil Brown,
-Gerard Capes,
-Francis Castro,
-Daniel Chen,
-Dav Clark,
-Warren Code,
-Ben Cotton,
-Richie Cotton,
-Karen Cranston,
-Katie Cunningham,
-Natasha Danas,
-Matt Davis,
-Neal Davis,
-Mark Degani,
-Tim Dennis,
-Paul Denny,
-Michael Deutsch,
-Brian Dillingham,
-Grae Drake,
-Kathi Fisler,
-Denae Ford,
-Auriel Fournier,
-Bob Freeman,
-Nathan Garrett,
-Mark Guzdial,
-Rayna Harris,
-Ahmed Hasan,
-Ian Hawke,
-Felienne Hermans,
-Kate Hertweck,
-Toby Hodges,
-Roel Hogervorst,
-Mike Hoye,
-Dan Katz,
-Christina Koch,
-Shriram Krishnamurthi,
-Katrin Leinweber,
-Colleen Lewis,
-Dave Loyall,
-Paweł Marczewski,
-Lenny Markus,
-Sue McClatchy,
-Jessica McKellar,
-Ian Milligan,
-Julie Moronuki,
-Lex Nederbragt,
-Aleksandra Nenadic,
-Jeramia Ory,
-Joel Ostblom,
-Elizabeth Patitsas,
-Aleksandra Pawlik,
-Sorawee Porncharoenwase,
-Emily Porta,
-Alex Pounds,
-Thomas Price,
-Danielle Quinn,
-Ian Ragsdale,
-Erin Robinson,
-Rosario Robinson,
-Ariel Rokem,
-Pat Schloss,
-Malvika Sharan,
-Florian Shkurti,
-Dan Sholler,
-Juha Sorva,
-Igor Steinmacher,
-Tracy Teal,
-Tiffany Timbers,
-Richard Tomsett,
-Preston Tunnell Wilson,
-Matt Turk,
-Fiona Tweedie,
-Martin Ukrop,
-Anelda van der Walt,
-Stéfan van der Walt,
-Allegra Via,
-Petr Viktorin,
-Belinda Weaver,
-Hadley Wickham,
-Jason Williams,
-Simon Willison,
-Karen Word,
-John Wrenn,
-and Andromeda Yelton.
-I am also grateful to Lukas Blakk for the logo,
-to Shashi Kumar for LaTeX help,
-to Markku Rontu for making the diagrams look better,
-and to everyone who has used this material over the years.
-Any mistakes that remain are mine.
+没有以下诸位的贡献，就不会有这本书：
+Laura Acion、
+Jorge Aranda、
+Mara Averick、
+Erin Becker、
+Yanina Bellini Saibene、
+Azalee Bostroem、
+Hugo Bowne-Anderson、
+Neil Brown、
+Gerard Capes、
+Francis Castro、
+Daniel Chen、
+Dav Clark、
+Warren Code、
+Ben Cotton、
+Richie Cotton、
+Karen Cranston、
+Katie Cunningham、
+Natasha Danas、
+Matt Davis、
+Neal Davis、
+Mark Degani、
+Tim Dennis、
+Paul Denny、
+Michael Deutsch、
+Brian Dillingham、
+Grae Drake、
+Kathi Fisler、
+Denae Ford、
+Auriel Fournier、
+Bob Freeman、
+Nathan Garrett、
+Mark Guzdial、
+Rayna Harris、
+Ahmed Hasan、
+Ian Hawke、
+Felienne Hermans、
+Kate Hertweck、
+Toby Hodges、
+Roel Hogervorst、
+Mike Hoye、
+Dan Katz、
+Christina Koch、
+Shriram Krishnamurthi、
+Katrin Leinweber、
+Colleen Lewis、
+Dave Loyall、
+Paweł Marczewski、
+Lenny Markus、
+Sue McClatchy、
+Jessica McKellar、
+Ian Milligan、
+Julie Moronuki、
+Lex Nederbragt、
+Aleksandra Nenadic、
+Jeramia Ory、
+Joel Ostblom、
+Elizabeth Patitsas、
+Aleksandra Pawlik、
+Sorawee Porncharoenwase、
+Emily Porta、
+Alex Pounds、
+Thomas Price、
+Danielle Quinn、
+Ian Ragsdale、
+Erin Robinson、
+Rosario Robinson、
+Ariel Rokem、
+Pat Schloss、
+Malvika Sharan、
+Florian Shkurti、
+Dan Sholler、
+Juha Sorva、
+Igor Steinmacher、
+Tracy Teal、
+Tiffany Timbers、
+Richard Tomsett、
+Preston Tunnell Wilson、
+Matt Turk、
+Fiona Tweedie、
+Martin Ukrop、
+Anelda van der Walt、
+Stéfan van der Walt、
+Allegra Via、
+Petr Viktorin、
+Belinda Weaver、
+Hadley Wickham、
+Jason Williams、
+Simon Willison、
+Karen Word、
+John Wrenn、
+和 Andromeda Yelton。
+我也感谢 Lukas Blakk 设计了标志，
+感谢 Shashi Kumar 提供 LaTeX 方面的帮助，
+感谢 Markku Rontu 让图表更好看，
+还要感谢多年来使用这些材料的所有人。
+书中若仍有错误，都由我负责。
 
-\seclbl{Exercises}{s:intro-exercises}
+\seclbl{练习}{s:intro-exercises}
 
-Each chapter ends with a variety of exercises that include a suggested format
-and how long they usually take to do in person.
-Most can be used in other formats---in particular,
-if you are going through this book on your own,
-you can still do many of the exercises that are intended for groups---and
-you can always spend more time on them than what's suggested.
+每一章最后都有各种练习，
+标注了建议的形式，
+以及面对面进行时通常需要多长时间。
+大多数练习也可以换成别的形式来做——尤其是，
+如果你在自学这本书，
+很多原本为小组设计的练习你依然可以做——
+而且你随时可以比建议的时间多花些功夫。
 
-If you are using this material in a teacher training workshop,
-you can give the exercises below to participants a day or two in advance
-to get an idea of who they are and how best you can help them.
-Please read the caveats in \secref{s:classroom-prior} before doing this.
+如果你在讲师培训工作坊里使用这些材料，
+可以在活动前一两天把下面的练习发给学员，
+以便了解他们是谁、怎样最好地帮助他们。
+动手之前，请先读一读\secref{s:classroom-prior}里的注意事项。
 
-\exercise{Highs and Lows}{whole class}{5}
+\exercise{高峰与低谷}{全班}{5}
 
-Write brief answers to the following questions and share with your peers.
-(If you are taking notes together online as described in \secref{s:classroom-notetaking},
-put your answers there.)
+简要回答以下问题，并与同伴分享。
+（如果你按\secref{s:classroom-notetaking}所述在网上一起记笔记，
+就把答案写在那里。）
 
 \begin{enumerate}
 
 \item
-  What is the best class or workshop you ever took?
-  What made it so good?
+  你上过的最好的课或工作坊是哪一次？
+  它好在哪儿？
 
 \item
-  What was the worst one?
-  What made it so bad?
+  最糟的是哪一次？
+  它糟在哪儿？
 
 \end{enumerate}
 
-\exercise{Know Thyself}{whole class}{10}
+\exercise{认识你自己}{全班}{10}
 
-Share brief answers to the following questions with your peers.
-Record your answers so that you can refer back to them
-as you go through the rest of this book.
+与同伴分享以下问题的简要答案。
+把答案记下来，方便你在读本书其余部分时回头翻看。
 
 \begin{enumerate}
 
 \item
-  What do you most want to teach?
+  你最想教什么？
 
 \item
-  Who do you most want to teach?
+  你最想教谁？
 
 \item
-  Why do you want to teach?
+  你为什么想教书？
 
 \item
-  How will you know if you're teaching well?
+  你怎么知道自己教得好？
 
 \item
-  What do you most want to learn about teaching and learning?
+  关于教与学，你最想了解什么？
 
 \item
-  What is one specific thing you believe is true about teaching and learning?
+  关于教与学，你坚信的一条具体看法是什么？
 
 \end{enumerate}
 
-\exercise{Why Learn to Program?}{individual}{20}
+\exercise{为什么要学编程？}{个人}{20}
 
-Politicians, business leaders, and educators often say that
-people should learn to program because the jobs of the future will require it.
-However,
-as Benjamin Doxtdator \hreffoot{http://www.longviewoneducation.org/field-guide-jobs-dont-exist-yet/}{pointed out},
-many of those claims are built on shaky ground.
-Even if they were true, education shouldn't prepare people for the jobs of the future:
-it should give them the power to decide what kinds of jobs there are
-and to ensure that those jobs are worth doing.
-And as \hreffoot{https://computinged.wordpress.com/2017/10/18/why-should-we-teach-programming-hint-its-not-to-learn-problem-solving/}{Mark Guzdial points out},
-there are actually many reasons to learn how to program:
+政客、商界领袖和教育工作者常说，
+人们应该学编程，因为未来的工作会需要它。
+然而，
+正如 Benjamin Doxtdator \hreffoot{http://www.longviewoneducation.org/field-guide-jobs-dont-exist-yet/}{所指出的}，
+这类说法很多都站不住脚。
+就算它们是真的，教育也不该是为了让人们胜任未来的工作：
+教育应该赋予人们权力，去决定有哪些工作，
+并确保这些工作值得去做。
+正如\hreffoot{https://computinged.wordpress.com/2017/10/18/why-should-we-teach-programming-hint-its-not-to-learn-problem-solving/}{Mark Guzdial 所指出的}，
+学编程的理由其实有很多：
 
 \begin{enumerate}
 
 \item
-  To understand our world.
+  理解我们所在的世界。
 
 \item
-  To study and understand processes.
+  研究和理解各种过程。
 
 \item
-  To be able to ask questions about the influences on their lives.
+  能够对影响自己生活的事物提出问题。
 
 \item
-  To use an important new form of literacy.
+  使用一种重要的新读写能力。
 
 \item
-  To have a new way to learn art, music, science, and mathematics.
+  有一种学习艺术、音乐、科学和数学的新方式。
 
 \item
-  As a job skill.
+  作为一项职业技能。
 
 \item
-  To use computers better.
+  更好地使用计算机。
 
 \item
-  As a medium in which to learn problem-solving.
+  作为学习解决问题的一种媒介。
 
 \end{enumerate}
 
-Draw a $3{\times}3$ grid whose axes are labeled ``low,'' ``medium,'' and ``high''
-and place each reason in one sector
-according to how important it is to you (the X axis)
-and to the people you plan to teach (the Y axis).
+画一个 $3{\times}3$ 的网格，坐标轴标上「低」「中」「高」，
+然后把每条理由放进其中一个格子里，
+依据是它对你有多重要（X 轴）
+以及对你打算教的人有多重要（Y 轴）。
 
 \begin{enumerate}
 
 \item
-  Which points are closely aligned in importance
-  (i.e.\ on the diagonal in your grid)?
+  哪些点的重要性彼此接近
+  （也就是位于网格的对角线上）？
 
 \item
-  Which points are misaligned
-  (i.e.\ in the off-diagonal corners)?
+  哪些点彼此不匹配
+  （也就是位于非对角线的角上）？
 
 \item
-  How should this affect what you teach?
+  这应该怎样影响你教什么？
 
 \end{enumerate}

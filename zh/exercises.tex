@@ -1,70 +1,67 @@
-\chapter{Exercise Types}\label{s:exercises}
+\chapter{练习类型}\label{s:exercises}
 
-Every good carpenter has a set of screwdrivers,
-and every good teacher has different kinds of exercises
-to check what learners are actually learning,
-help them practice their new skills,
-and keep them engaged.
-This chapter starts by describing several kinds of exercises
-you can use to check if your teaching has been effective.
-It then looks at the state of the art in automated grading,
-and closes by exploring discussion, projects, and other important kinds of work
-that require more human attention to assess.
-Our discussion draws in part on
-the \hreffoot{http://web-cat.org/questionbank/}{Canterbury Question Bank}~\cite{Sand2013},
-which has entries for various languages and topics in introductory computing.
+每个好木匠都有一套螺丝刀，
+每个好老师都有不同种类的练习，
+用来检查学习者到底在学什么、
+帮他们练习新技能、
+并让他们保持投入。
+本章先描述几种可以用来检查教学是否有效的练习，
+然后看自动评分的最新技术，
+最后探讨讨论、项目，以及其他需要更多人工作判断来评估的重要工作类型。
+我们的讨论部分取材于
+\hreffoot{http://web-cat.org/questionbank/}{坎特伯雷题库}~\cite{Sand2013}，
+它为入门计算的各种语言和主题提供了条目。
 
-\seclbl{The Classics}{s:exercises-classics}
+\seclbl{经典题型}{s:exercises-classics}
 
-As \secref{s:models-formative-assessment} discussed,
-\emph{multiple choice questions} (MCQs) are most effective\index{multiple choice question}
-when the wrong answers probe for specific misconceptions.
-They are usually designed to test the lower levels of Bloom's Taxonomy\index{Bloom's Taxonomy}
-(\secref{s:process-objectives}),
-but can also require learners to exercise judgment.
+正如\secref{s:models-formative-assessment}里讨论的，
+当错误答案能探查具体误解时，\emph{多项选择题}（MCQ）最有效。\index{多项选择题}
+它们通常被设计来测试布鲁姆分类法的较低层次\index{布鲁姆分类法}
+（\secref{s:process-objectives}），
+但也可以要求学习者运用判断力。
 
-\begin{aside}{A Multiple Choice Question}
-  In what order do operations occur when the computer evaluates the
-  expression \texttt{price\ =\ addTaxes(cost\ -\ discount)}?
+\begin{aside}{一道多项选择题}
+  当计算机求表达式 \texttt{price\ =\ addTaxes(cost\ -\ discount)} 的值时，
+  各运算按什么顺序发生？
   \begin{enumerate}
   \item
-    subtraction, function call, assignment
+    减法、函数调用、赋值
   \item
-    function call, subtraction, assignment
+    函数调用、减法、赋值
   \item
-    function call, then assignment and subtraction simultaneously
+    函数调用，然后同时进行赋值和减法
   \item
-    none of the above
+    以上都不对
   \end{enumerate}
 \end{aside}
 
-The second classic type of programming exercise is \emph{code and run} (C\&R),
-in which the learner writes code that produces a specified output.
-C\&R exercises can be as simple or as complex as the teacher wants,
-but when used in class,
-they should be brief and have only one or two plausible correct answers.
-It's often enough to ask novices to calculate and print a single value
-or call a specific function:
-experienced teachers often forget
-how hard it can be to figure out which parameters go where.
-For more advanced learners,
-figuring out which function to call is more engaging
-and a better gauge of their understanding.
+第二类经典的编程练习是\emph{写并运行}（C\&R），
+学习者编写代码，产生指定的输出。
+C\&R 练习可以像老师想要的那么简单或复杂，
+但在课堂上使用时，
+它们应该简短，并且只有一两个看似合理的正确答案。
+对新手来说，让他们计算并打印一个值、
+或调用一个特定函数，往往就够了：
+有经验的老师常常忘了，
+弄清哪个参数该放哪儿可能有多难。
+对更进阶的学习者来说，
+弄清该调用哪个函数更有趣，
+也更能衡量他们的理解。
 
-\begin{aside}{Code \& Run}
-  The variable \texttt{picture} contains a full-color image read from a file.
-  Using one function,
-  create a black and white version of the image
-  and assign it to a new variable called \texttt{monochrome}.
+\begin{aside}{写并运行}
+  变量 \texttt{picture} 装着从文件读入的一幅全彩图像。
+  用同一个函数，
+  创建这幅图像的黑白版本，
+  并把它赋给一个叫 \texttt{monochrome} 的新变量。
 \end{aside}
 
-Write and run exercises can be combined with MCQs.
-For example,
-this MCQ can only be answered by running the Unix \texttt{ls} command:
+写并运行的练习可以和 MCQ 结合。
+例如，
+下面这道 MCQ 只有运行 Unix 的 \texttt{ls} 命令才能作答：
 
-\begin{aside}{Combining MCQ with Code \& Run}
-  You are in the directory \texttt{/home}.
-  Which of the following files is \emph{not} in that directory?
+\begin{aside}{把 MCQ 与写并运行结合}
+  你处在目录 \texttt{/home} 下。
+  下列文件里，哪一个\emph{不}在该目录中？
 
   \begin{enumerate}
   \item
@@ -78,59 +75,58 @@ this MCQ can only be answered by running the Unix \texttt{ls} command:
   \end{enumerate}
 \end{aside}
 
-C\&Rs help people practice the skills they most want to learn,
-but they can be hard to assess:
-there can be lots of unexpected ways to get the right answer,
-and people will be demoralized if an automatic grading system rejects their code
-because it doesn't match the teacher's.
-One way to reduce how often this occurs is to assess only their output,
-but that doesn't give them feedback on how they are programming.
-Another is to give them a small test suite they can run their code against
-before they submit it
-(at which point it is run against a more comprehensive set of tests).
-Doing this helps them figure out if they have completely misunderstood the intent of the exercise
-before they do anything that they think might cost them grades.
+C\&R 能帮人练习他们最想学的技能，
+但它们很难评估：
+得到正确答案的方式可能有很多出乎意料，
+而且如果自动评分系统因为代码和老师的不一样就拒绝它，
+人们会很受打击。
+减少这种情况发生的一种办法，是只评估他们的输出，
+但这样就没法反馈他们在编程方式上的问题。
+另一种办法是给他们一套小测试，让他们在提交前自己跑一跑
+（提交时再对照一套更全面的测试运行）。
+这有助于他们在做任何自认为会影响成绩的事之前，
+弄清自己是不是完全误解了练习的意图。
 
-Instead of writing code that satisfies some specification,
-learners can be asked to write tests
-to determine whether a piece of code conforms to a spec.
-This is a useful skill in its own right,
-and doing it may give learners a bit more sympathy for how hard their teachers work.
+除了编写满足某些规格的代码，
+还可以让学习者写测试，
+来判断一段代码是否符合规格。
+这本身就是一项有用的技能，
+而且这么做也能让学习者对老师有多辛苦多一点共情。
 
-\begin{aside}{Inverting Code \& Run}
-  The function \texttt{monotonic\_sum} calculates the sum of each section
-  of a list of numbers in which the values are strictly increasing.
-  For example,
-  given the input \texttt{[1,\ 3,\ 3,\ 4,\ 5,\ 1]},
-  the output is \texttt{[4,\ 12,\ 1]}.
-  Write and run unit tests to determine which of the following bugs the function contains:
+\begin{aside}{把写并运行反过来}
+  函数 \texttt{monotonic\_sum} 计算一个数字列表中每一段的和，
+  这些段里的值严格递增。
+  例如，
+  给定输入 \texttt{[1,\ 3,\ 3,\ 4,\ 5,\ 1]}，
+  输出是 \texttt{[4,\ 12,\ 1]}。
+  写并运行单元测试，判断下列哪个 bug 是该函数包含的：
 
   \begin{itemize}
   \item
-    Considers every negative number the start of a new sub-sequence.
+    把每个负数都当作一个新子序列的开始。
   \item
-    Does not include the first value of each sub-sequence in the sub-sum.
+    子和不包括每个子序列的第一个值。
   \item
-    Does not include the last value of each sub-sequence in the sub-sum.
+    子和不包括每个子序列的最后一个值。
   \item
-    Only re-starts the sum when values decrease rather than fail to increase.
+    只在值下降时（而不是在值未能递增时）重新开始求和。
   \end{itemize}
 \end{aside}
 
-\emph{Fill in the blanks} is a refinement of C\&R
-in which the learner is given some starter code and has to complete it.
-(In practice, most C\&R exercises are actually fill in the blanks
-because the teacher provides comments
-to remind the learners of the steps they should take.)
-Questions of this type are the basis for faded examples;
-as discussed in \chapref{s:architecture},
-novices often find them less intimidating than writing all the code from scratch,
-and since the teacher has provided most of the answer's structure,
-submissions are much more predictable and therefore easier to check.
+\emph{填空}是 C\&R 的一种细化，
+学习者拿到一些起始代码，必须把它补全。
+（实践中，大多数 C\&R 练习其实都是填空，
+因为老师会提供注释，
+提醒学习者该采取哪些步骤。）
+这类题目是渐隐示例的基础；
+正如\chapref{s:architecture}里讨论的，
+新手往往觉得它们比从头写全部代码更不吓人，
+而且既然老师已经给出了答案的大部分结构，
+提交的内容就可预测得多，因此也更容易检查。
 
-\begin{aside}{Fill in the Blanks}
-  Fill in the blanks
-  so that the code below prints the string \texttt{'hat'}.
+\begin{aside}{填空}
+  填空，
+  让下面的代码打印字符串 \texttt{'hat'}。
 
 \begin{minted}{text}
 text = 'all that it is'
@@ -139,16 +135,16 @@ print(slice)
 \end{minted}
 \end{aside}
 
-Parsons Problems \index{Parsons Problem} also avoid the ``blank screen of terror'' problem
-while allowing learners to concentrate on control flow separately from vocabulary
-\cite{Pars2006,Eric2015,Morr2016,Eric2017}.
-Tools for building and doing Parsons Problems online exist~\cite{Ihan2011},
-but they can be emulated (albeit somewhat clumsily)
-by asking learners to rearrange lines of code in an editor.
+帕森斯问题\index{帕森斯问题}也避免了「令人恐惧的空白屏幕」问题，
+同时让学习者能把控制流和词汇分开来集中练习
+\cite{Pars2006,Eric2015,Morr2016,Eric2017}。
+在线构建和完成帕森斯问题的工具有现成的~\cite{Ihan2011}，
+但也可以通过让学习者在编辑器里重排代码行来模拟
+（尽管有点笨拙）。
 
-\begin{aside}{Parsons Problem}
-  Rearrange and indent these lines to sum the positive values in a list.
-  (You will need to add colons in appropriate places as well.)
+\begin{aside}{帕森斯问题}
+  重排并缩进下面这些行，来求一个列表中正数之和。
+  （你还需要在合适的地方加上冒号。）
 
 \begin{minted}{text}
 total = 0
@@ -158,27 +154,27 @@ for v in values
 \end{minted}
 \end{aside}
 
-Note that giving learners more lines than they need,
-or asking them to rearrange some lines and add a few more,
-makes Parsons Problems significantly harder~\cite{Harm2016}.
+注意，给学习者的行数多于他们所需的行数，
+或让他们重排一些行、再加几行，
+都会让帕森斯问题显著变难~\cite{Harm2016}。
 
-\seclbl{Tracing}{s:exercises-tracing}
+\seclbl{追踪}{s:exercises-tracing}
 
-\emph{Tracing execution} is the inverse of a Parsons Problem:
-given a few lines of code,
-the learner has to trace the order in which those lines are executed.
-This is an essential debugging skill\index{debugging}
-and a good way to solidify learners' understanding of loops, conditionals,
-and the evaluation order of function and method calls.
-The easiest way to implement it is to have learners write out a sequence of labeled steps.
-Having them choose the correct sequence from a set
-(i.e.\ presenting this as an MCQ)
-adds cognitive load without adding value,
-since they have to do all the work of figuring out the correct sequence,
-then search for it in the list of options.
+\emph{追踪执行}是帕森斯问题的逆过程：
+给定几行代码，
+学习者必须追踪这些行的执行顺序。
+这既是一项基本的调试技能，\index{调试}
+也是巩固学习者对循环、条件、
+以及函数和方法调用求值顺序理解的好办法。
+最简单的实现方式，是让学习者写出一串带标注的步骤。
+让他们从一组选项里选出正确的序列
+（也就是把它做成 MCQ）
+会增加认知负荷却不增加价值，
+因为他们得先费劲弄出正确序列，
+再到选项列表里去找它。
 
-\begin{aside}{Tracing Execution Order}
-  In what order are the labeled lines in this block of code executed?
+\begin{aside}{追踪执行顺序}
+  这个代码块里带标注的各行，按什么顺序执行？
 
 \begin{minted}{text}
 A)     vals = [-1, 0, 1]
@@ -191,18 +187,17 @@ D)         pass
 \end{minted}
 \end{aside}
 
-\emph{Tracing values} is similar to tracing execution,
-but instead of spelling out the order in which code is executed,
-the learner lists the values that one or more variables take on
-as the program runs.
-One way to implement this is to give the learner a table
-whose columns are labeled with variable names
-and whose rows are labeled with line numbers,
-and ask them to fill in the values taken on by the variables on those lines.
+\emph{追踪取值}和追踪执行类似，
+但不是列出代码执行的顺序，
+而是由学习者列出程序运行时一个或多个变量所取的值。
+一种实现方式，是给学习者一张表，
+它的列标注变量名、
+行标注行号，
+让他填出这些行上变量所取的值。
 
 \newpage
-\begin{aside}{Tracing Values}
-  What values do \texttt{left} and \texttt{right} take on as this program executes?
+\begin{aside}{追踪取值}
+  这个程序执行时，\texttt{left} 和 \texttt{right} 各取什么值？
 
 \begin{minted}{text}
 A) left = 23
@@ -215,7 +210,7 @@ D)     left, right = right, left % right
 \begin{center}
 \begin{tabular}{|l|l|l|}
   \hline
-  Line & \texttt{left} & \texttt{right} \\
+  行 & \texttt{left} & \texttt{right} \\
   \hline
   & & \\
   \hline
@@ -232,16 +227,15 @@ D)     left, right = right, left % right
 \end{tabular}
 \end{center}
 
-You can also require learners to trace code backwards
-to figure out what the input must have been
-for the code to produce a particular result~\cite{Armo2008}.
-These \emph{reverse execution} problems require search and deductive reasoning,
-and when the output is an error message,
-they help learners develop valuable debugging skills.
+你也可以要求学习者反向追踪代码，
+弄清要产生某个特定结果，输入必须是什么~\cite{Armo2008}。
+这类\emph{反向执行}问题需要搜索和演绎推理，
+而当输出是一条错误信息时，
+它们能帮学习者发展宝贵的调试技能。
 
-\begin{aside}{Reverse Execution}
-  Fill in the missing number in \texttt{values}
-  that caused this function to crash.
+\begin{aside}{反向执行}
+  填出 \texttt{values} 里缺失的那个数，
+  它导致了这个函数崩溃。
 
 \begin{minted}{text}
 values = [ [1.0, -0.5], [3.0, 1.5], [2.5, ___] ]
@@ -251,16 +245,16 @@ for (reading, scaling) in values:
 \end{minted}
 \end{aside}
 
-\emph{Minimal fix} exercises also help learners develop debugging skills.
-Given a few lines of code that contain a bug,
-the learner must find it and make one small change to fix it.
-Making the change can be done using C\&R,
-while identifying it can be done as a multiple choice question.
+\emph{最小修改}练习也能帮学习者发展调试技能。
+给定几行包含 bug 的代码，
+学习者必须找到它，并做一处小改动来修复。
+做改动可以用 C\&R，
+而定位它可以用多项选择题。
 
-\begin{aside}{Minimal Fix}
-  This function is supposed to test
-  whether a number lies within a range.
-  Make one small change so that it actually does so.
+\begin{aside}{最小修改}
+  这个函数本该测试
+  一个数是否落在某个范围内。
+  做一处小改动，让它真正能做到。
 
 \begin{minted}{text}
 def inside(point, lower, higher):
@@ -273,21 +267,21 @@ def inside(point, lower, higher):
 \end{minted}
 \end{aside}
 
-\emph{Theme and variation} exercises are similar,
-but the learner is asked to make a small alteration that changes the output in some specific way
-instead of making a change to fix a bug.
-Allowed changes can include changing a variable's initial value,
-replacing one function call with another,
-swapping inner and outer loops,
-or changing the order of tests in a complex conditional.
-Again,
-this kind of exercise gives learners a chance to practice a useful real-world skill:
-the fastest way to produce the code they need
-is to tweak code that already does something close.
+\emph{主题与变奏}练习类似，
+但要求学习者做一处小改动，以某种特定方式改变输出，
+而不是为修 bug 做改动。
+允许的改动可以包括改变变量的初值、
+把一次函数调用换成另一次、
+交换内外层循环、
+或改变复杂条件里各测试的顺序。
+再说一遍，
+这类练习给了学习者练习一项有用的真实技能的机会：
+产出他们所需代码的最快方式，
+就是微调一段已经能把事情做成的代码。
 
-\begin{aside}{Theme and Variations}
-  Change the inner loop in the function below
-  so that it fills the upper left triangle of an image with a specified color.
+\begin{aside}{主题与变奏}
+  改动下面函数里的内层循环，
+  让它把图像的左上三角形填成指定的颜色。
 
 \begin{minted}{text}
 function fillTriangle(picture, color) is
@@ -300,19 +294,19 @@ end
 \end{minted}
 \end{aside}
 
-\emph{Refactoring exercises} are the complement of theme and variation exercises:
-given a working piece of code,
-the learner has to modify it in some way \emph{without} changing its output.
-For example,
-the learner could replace loops with vectorized expressions
-or simplify the condition in a while loop.
-This is also a useful real-world skill,
-but there are often so many ways to refactor code
-that grading requires human inspection.
+\emph{重构}练习是主题与变奏练习的补充：
+给定一段能工作的代码，
+学习者必须在不\emph{不}改变其输出的前提下以某种方式修改它。
+例如，
+学习者可以把循环换成向量化表达式，
+或化简 while 循环里的条件。
+这也是一项有用的真实技能，
+但重构代码的方式往往太多，
+所以评分需要人工检查。
 
-\begin{aside}{Refactoring}
-  Write a single list comprehension
-  that has the same effect as this loop.
+\begin{aside}{重构}
+  写一个列表推导式，
+  效果和这个循环相同。
 
 \begin{minted}{text}
 result = []
@@ -322,234 +316,227 @@ for v in values:
 \end{minted}
 \end{aside}
 
-\seclbl{Diagrams}{s:exercises-diagrams}
+\seclbl{图表}{s:exercises-diagrams}
 
-Having learners draw concept maps and other diagrams
-gives insight into how they're thinking (\secref{s:memory-concept-maps}),
-but free-form diagrams take human time and judgment to assess.
-\emph{Labeling diagrams},
-on the other hand,
-is almost as powerful pedagogically
-but much easier to scale.
+让学习者画概念图和其他图表，
+能让人洞察他们是怎么思考的（\secref{s:memory-concept-maps}），
+但自由形式的图表需要人工花时间和判断来评估。
+而\emph{标注图表}，
+在教学上几乎同样有力，
+却容易规模化得多。
 
-Rather than having learners create diagrams from scratch,
-provide them with a diagram and a set of labels
-and have them put the latter in the right places on the former.
-The diagram can be a data structure
-(``after this code is executed, which variables point to which parts of this structure?''),
-a chart (``match each of these pieces of code with the part of the chart it generated''),
-or the code itself (``match each term to an example of that program element'').
+与其让学习者从头创建图表，
+不如给他们一张图和一组标签，
+让他们把标签放到图上正确的位置。
+图可以是数据结构
+（「这段代码执行之后，哪些变量指向这个结构的哪些部分？」）、
+一张图表（「把每一段代码和它生成的那部分图表匹配起来」），
+或代码本身（「把每个术语和该程序元素的一个例子匹配起来」）。
 
-\begin{aside}{Labeling a Diagram}
-  \figref{f:exercises-labeling} shows
-  how a small fragment of HTML is represented in memory.
-  Put the labels 1--9 on the elements of the tree
-  to show the order in which they are reached in a depth-first traversal.
+\begin{aside}{标注图表}
+  \figref{f:exercises-labeling}展示了
+  一小段 HTML 在内存里是如何表示的。
+  把标签 1—9 放到树的各个元素上，
+  以显示在深度优先遍历中到达它们的顺序。
 \end{aside}
 
-\figpdf{figures/labeling.pdf}{Labeling a diagram}{f:exercises-labeling}{}
+\figpdf{figures/labeling.pdf}{标注图表}{f:exercises-labeling}{}
 
-Another way to use diagrams is
-to give learners the pieces of the diagram and ask them to arrange them correctly.
-This is a visual equivalent of a Parsons Problem,
-and you can provide as much or as little of a skeleton to help with placement
-as you think they're ready for.
-I have fond memories of trying to place resistors and capacitors in a circuit diagram
-in order to get the right voltage at a certain point,
-and have seen teachers give learners a fixed set of Scratch blocks\index{Scratch}
-and ask them to create a particular drawing using only those blocks.
+使用图表的另一种办法，
+是给学习者图表的各个部件，让他们正确地摆出来。
+这是帕森斯问题在视觉上的等价物，
+你可以视他们准备好与否，提供或多或少的骨架来帮他们定位。
+我至今怀念当年为了在某个点得到正确电压、
+而试着在电路图里摆放电阻和电容的经历；
+也见过老师给学习者一组固定的 Scratch 积木，\index{Scratch}
+让他们只用这些积木画出某个特定图形。
 
-\emph{Matching problems} can be thought of as a special case of labeling
-in which the ``diagram'' is a column of text
-and the labels are taken from the other column.
-\emph{One-to-one matching} gives the learner two lists of equal length
-and asks them to pair corresponding items,
-e.g.\ ``match each piece of code with the output it produces.''
+\emph{匹配题}可以看作标注题的一个特例，
+其中「图」是一列文字，
+标签则取自另一列。
+\emph{一对一匹配}给学习者两份等长的列表，
+让他们把对应的项配对，
+例如「把每段代码和它产生的输出匹配起来」。
 
-\begin{aside}{Matching}
-  Match each regular expression operator in \figref{f:exercises-matching}
-  with what it does.
+\begin{aside}{匹配}
+  把\figref{f:exercises-matching}里每个正则表达式运算符
+  和它的作用匹配起来。
 \end{aside}
 
-\figpdfhere{figures/matching.pdf}{Matching items}{f:exercises-matching}{}
+\figpdfhere{figures/matching.pdf}{匹配题}{f:exercises-matching}{}
 
-With \emph{many-to-many matching} the lists aren't the same length,
-so some items may be matched to several others
-and others may not be matched at all.
-Many-to-many are more difficult
-because learners can't do easy matches first to reduce their search space.
-Matching problems can be implemented by having learners submit lists of matching pairs
-(such as ``A3, B1, C2''),
-but that's clumsy and error-prone.
-Having them recognize a set of correct pairs in an MCQ is even worse,
-as it's painfully easy to misread.
-Drawing or dragging works much better,
-but may require some work to implement.
+在\emph{多对多匹配}里，两份列表长度不等，
+所以有些项可能匹配到好几个，
+另一些则可能一个也匹配不上。
+多对多更难，
+因为学习者没法先做容易的匹配来缩小搜索空间。
+匹配题可以通过让学习者提交配对列表来实现
+（比如「A3, B1, C2」），
+但那很笨拙、容易出错。
+让他们在 MCQ 里识别一组正确配对更糟，
+因为看错实在太容易了。
+画或拖拽要好得多，
+但可能需要花些功夫来实现。
 
-\emph{Ranking} is a special case of matching
-that is (slightly) more amenable to answering via lists,
-since our minds are pretty good at detecting errors or anomalies in sequences.
-The ranking criteria determine the level of reasoning required.
-If you have learners order sorting algorithms from fastest to slowest
-you are probably exercising recall
-(i.e.\ asking them recognizing the algorithms' names and know their properties),
-while asking them to rank solutions from most robust to most brittle
-exercises reasoning and judgment.
+\emph{排序}是匹配题的一个特例，
+它（稍微）更适合通过列表来作答，
+因为我们的头脑相当擅长发现序列里的错误或异常。
+排序标准决定了所需的推理层次。
+如果你让学习者把各种排序算法从最快排到最慢，
+你大概考的是回忆
+（也就是要求他们认出算法名字、知道它们的性质）；
+而让他们把各种解从最稳健排到最脆弱，
+考的则是推理和判断。
 
-\emph{Summarization} also requires learners to use higher-order thinking
-and gives them a chance to practice a skill that is very useful when reporting bugs.
-For example,
-you can ask learners,
-``Which sentence best describes how the output of f changes as x varies from 0 to 10?''
-and then given several options as a multiple choice question.
-You can also ask for very short free-form answers to questions in constrained domains,
-such as, ``What is the key feature of a stable sorting algorithm?''
-We can't fully automate checks for these without a frustrating number of false positives (accepting wrong answers)
-and false negatives (rejecting correct ones),
-but questions of this kind lend themselves well to peer grading (\secref{s:individual-peer}).
+\emph{概括}也要求学习者运用高阶思维，
+并给他们机会练习一项报告 bug 时非常有用的技能。
+例如，你可以问学习者：
+「哪一句话最能描述当 x 从 0 变到 10 时 f 的输出如何变化？」
+然后用一道多项选择题给出几个选项。
+你也可以在限定领域里要求非常简短的自由作答，
+比如「稳定排序算法的关键特征是什么？」
+不用人工，我们没法为这些问题做全自动检查而不产生多得令人沮丧的
+假阳性（接受错误答案）
+和假阴性（拒绝正确答案），
+但这类问题很适合同伴评分（\secref{s:individual-peer}）。
 
-\seclbl{Automatic Grading}{s:exercises-grading}
-\index{automatic grading}
+\seclbl{自动评分}{s:exercises-grading}
+\index{自动评分}
 
-Automatic program grading tools have been around longer than I have been alive:
-the earliest published mention dates from 1960~\cite{Holl1960},
-and the surveys published in~\cite{Douc2005,Ihan2010} mention many specific tools by name.
-Building such tools is a lot more complex than it might first seem.
-How are assignments represented?
-How are submissions tracked and reported?
-Can learners co-operate?
-How can submissions be executed safely?
-\cite{Edwa2014a} is an entire paper devoted to
-an adaptive scheme for detecting and managing infinite loops in code submissions,
-and that's just one of the many issues that comes up.
+自动程序评分工具存在的时间比我活的年头还长：
+最早的公开记载可以追溯到 1960 年~\cite{Holl1960}，
+而~\cite{Douc2005,Ihan2010}里发表的综述按名字提到了许多具体工具。
+构建这类工具远比乍看起来复杂。
+作业是怎么表示的？
+提交是如何跟踪和报告的？
+学习者能协作吗？
+提交如何安全地执行？
+\cite{Edwa2014a}整整一篇论文都在讲
+一种自适应检测和管理代码提交里死循环的方案，
+而这还只是冒出来的众多问题之一。
 
-When discussing auto-graders,
-it is important to distinguish learner satisfaction from learning outcomes.
-For example,
-\cite{Magu2018} switched informal programming labs for a second-year CS course
-to a weekly machine-evaluated test using an auto-grader.
-Learners didn't like the automated system,
-but the overall failure rate for the course was halved
-and the number of learners gaining first class honors tripled.
-In contrast,
-\cite{Rubi2014} also began to use an auto-grader designed for competitions,
-but saw no significant decrease in their learners' dropout rates;
-once again,
-learners made some negative comments about the tool,
-which the authors attribute to the quality of its feedback messages
-rather than to dislike of auto-grading.
+讨论自动评分器时，
+重要的是把学习者满意度和学习成效区分开。
+例如，
+\cite{Magu2018}把一门二年级 CS 课的非正式编程实验
+换成使用自动评分器的每周机评测验。
+学习者不喜欢这套自动化系统，
+但整门课的不及格率减半了，
+拿到一等荣誉的学习者人数增加了两倍。
+相反，
+\cite{Rubi2014}也开始使用一套为竞赛设计的自动评分器，
+却没看到学习者的退课率有显著下降；
+再一次，
+学习者对工具发表了一些负面评论，
+作者把这归因于它反馈信息的质量，
+而不是因为他们不喜欢自动评分。
 
-\cite{Srid2016} took a different approach.
-They used \gref{g:fuzz-testing}{fuzz testing}
-(i.e.\ randomly generated test cases)
-to check whether learner code does the same thing as a reference implementation supplied by the teacher.
-In the first project of a 1400-learner introductory course,
-fuzz testing caught errors that were missed by a suite of hand-written test cases
-for more than 48\% of learners.
+\cite{Srid2016}采取了另一种做法。
+他们用\gref{g:fuzz-testing}{fuzz testing}
+（也就是随机生成的测试用例）
+来检查学习者代码是否和老师提供的参考实现做同样的事。
+在一门 1400 人的入门课程的第一个项目里，
+fuzz testing 抓住了手写测试用例套件漏掉的错误，
+涉及超过 48\% 的学习者。
 
-\cite{Basu2015} gave learners a suite of solution test cases,
-but learners had to unlock each one by answering questions about its expected behavior
-before they were allowed to apply it to their proposed solution.
-For example,
-suppose learners had to write a function to find the largest adjacent pair of numbers in a list.
-Before being allowed to use the question's tests,
-they had to choose the right answer to,
-``What does \texttt{largestPair(4, 3, -1, 5, 3, 3)} produce?''
-In a 1300-person university course,
-the vast majority of learners chose to validate their understanding of test cases this way
-before attempting to solve problems,
-and then asked fewer questions and expressed less confusion about assignments.
+\cite{Basu2015}给学习者一套解答测试用例，
+但学习者必须先回答关于其预期行为的问题，才能解锁每一个用例、
+从而把它用在自己的解上。
+例如，
+假设学习者要写一个函数，找出列表里相邻数字之和最大的一对。
+在被允许使用该题的测试之前，
+他们必须为「\texttt{largestPair(4, 3, -1, 5, 3, 3)} 会产出什么？」
+选出正确答案。
+在一门 1300 人的大学课程里，
+绝大多数学习者都选择用这种方式先确认自己对测试用例的理解，
+再动手解题，
+随后他们提问更少，对作业的困惑也更少。
 
-\begin{aside}{Against Off-the-Shelf Tools}
-  It's tempting to use off-the-shelf style checking tools to grade learners' code.
-  However,
-  \cite{Nutb2016} initially found no correlation between human-provided marks
-  and style-checker rule violations.
-  Sometimes this was because learners violated one rule many times
-  (thereby losing more points than they should have),
-  but other times it was because they submitted the assignment starter code with few alterations
-  and got more points than they should have.
+\begin{aside}{反对现成工具}
+  用现成的风格检查工具来给学习者代码打分很诱人。
+  然而，
+  \cite{Nutb2016}起初发现，人工给的分数
+  和风格检查器报出的规则违反之间没有相关性。
+  有时这是因为学习者多次违反同一条规则
+  （因此丢的分比该丢的多），
+  但另一些时候是因为他们提交的是几乎没有改动的作业起始代码，
+  却拿到了比该得的分更多的分数。
 
-  Even tools built specifically for teaching can fall short of teachers' needs.
-  \cite{Keun2016a,Keun2016b} looked at the messages produced by 69 auto-grading tools.
-  They found that the tools often do not give feedback on how to fix problems and take the next step.
-  They also found that most teachers cannot easily adapt most of the tools to their needs:
-  like many workflow tools,
-  they tend to enforce their creators' unrecognized assumptions about how institutions work.
-  Their classification scheme is a useful shopping list
-  when looking at tools of this kind.
+  即便是专门为教学构建的工具，也可能达不到老师的需要。
+  \cite{Keun2016a,Keun2016b}考察了 69 个自动评分工具产生的信息。
+  他们发现，这些工具常常不给出关于如何修问题、如何走下一步的反馈。
+  他们还发现，大多数老师没法轻易地把这些工具改成自己需要的：
+  像许多工作流工具一样，
+  它们往往把创造者对机构如何运作的、连自己都没意识到的假设强加于人。
+  他们的分类方案，是挑选这类工具时一份有用的购物清单。
 \end{aside}
 
-\cite{Buff2015} presents a well-informed reflection on the whole idea of providing automated feedback.
-Their starting point is that,
-``Automated grading systems help learners identify bugs in their code,
-[but] may inadvertently discourage learners from thinking critically and testing thoroughly
-and instead encourage dependence on the teacher's tests.''
-One of the key issues they identified is that
-a learner may thoroughly test their code,
-but the feature may still not be implemented according to the teacher's specifications.
-In this case,
-the ``failure'' is not caused by a lack of testing
-but by a misunderstanding of the requirements,
-and it is unlikely that more testing will expose the problem.
-If the auto-grading system doesn't provide insightful, actionable feedback,
-this experience will only frustrate the learner.
+\cite{Buff2015}对提供自动反馈的整个想法做了见识广博的反思。
+他们的出发点是：
+「自动评分系统能帮学习者找出代码里的 bug，
+[但]可能无意中让学习者不愿批判性地思考和充分地测试，
+反而鼓励他们依赖老师的测试。」
+他们识别出的关键问题之一是，
+学习者可能已经充分地测试了自己的代码，
+但某个功能可能仍然没有按老师的规格实现。
+在这种情况下，
+「失败」不是因为没有测试，
+而是因为误解了要求，
+而且更多的测试也不太可能暴露这个问题。
+如果自动评分系统不提供有洞见、可行动的反馈，
+这段经历只会让学习者受挫。
 
-In order to provide that feedback,
-\cite{Buff2015}'s system identifies which methods in the learner's code
-are executed by failing tests
-so that the system can associate failed tests
-with particular features within the learner's submission.
-The system decides whether specific hints have been ``earned''
-by seeing whether the learner has tested the associated feature enough,
-so learners cannot rely on hints instead of doing tests.
+为了提供那种反馈，
+\cite{Buff2015}的系统会找出学习者代码里哪些方法被失败的测试执行过，
+这样系统就能把失败的测试
+和学习者提交里特定的功能关联起来。
+系统通过看学习者是否已经充分测试了相关功能，
+来判断具体提示是否已经「挣得」，
+所以学习者没法靠提示来替代做测试。
 
-\cite{Srid2016} describes some other approaches for sharing feedback with learners
-when automatically testing their code.
-The first is to provide the expected output for the tests---but
-then learners hard-code output for those inputs
-(because anything that can be gamed will be).
-The second is to report the pass/fail results for the learners' code,
-but only supply the actual inputs and outputs of the tests after the submission date.
-However,
-telling learners that they are wrong but not telling them why is frustrating.
+\cite{Srid2016}描述了其他一些在自动测试学习者代码时与他们分享反馈的办法。
+第一种是提供测试的预期输出——但
+那样学习者就会为这些输入写死输出
+（因为任何能被钻空子的东西都会被钻）。
+第二种是报告学习者代码的通过/失败结果，
+但只在提交截止日期之后才提供测试的实际输入和输出。
+然而，
+告诉学习者他们错了却不告诉他们为什么，会让人沮丧。
 
-A third option is to use a technique called \gref{g:hashing}{hashing}
-to generate a value that depends on the output but doesn't reveal it.
-If the user produces exactly the right output
-then its hash will unlock the solution,
-but it is impossible to work backward from the hash to figure out
-what the output is supposed to be.
-Hashing requires more work and explanation to set up,
-but strikes a good balance between revealing answers prematurely
-and not revealing them when it would help.
+第三种做法是用一种叫\gref{g:hashing}{哈希}的技巧，
+生成一个依赖输出、却不泄露输出的值。
+如果用户产出的输出完全正确，
+它的哈希就能解锁答案，
+但没法从哈希反推出输出应该是什么。
+哈希需要更多工作来解释和搭建，
+但它在过早给出答案
+和在该给出答案时却不给出之间，取得了不错的平衡。
 
-\seclbl{Higher-Level Thinking}{s:exercises-higher}
+\seclbl{高阶思维}{s:exercises-higher}
 
-Many other kinds of programming exercises
-are hard for teachers to assess in a class with more than handful of learners
-and equally hard for automated platforms to assess at all.
-Larger programming projects are (hopefully) what classes are building toward,
-but the only way to give feedback is case by case.
+许多其他种类的编程练习，
+在超过一小撮学习者的班里，老师就很难评估，
+对自动平台来说更难评估。
+更大的编程项目（但愿）是课程正在指向的目标，
+但给出反馈的唯一方式就是逐个来。
 
-\emph{Code review} is also hard to grade automatically in general,
-but can be tackled if learners are given a list of faults to look for
-and asked to match particular comments against particular lines of code.
-For example,
-the learner can be told that there are two indentation errors and one bad variable name
-and asked to point them out.
-If they are more advanced,
-they could be given half a dozen kinds of remarks they could make about the code
-without being told how many of each they should find.
+\emph{代码评阅}一般来说也难以自动评分，
+但如果给学习者一份要查找的缺陷清单，
+并让他们把具体的评语和具体的代码行匹配起来，就可以处理。
+例如，可以告诉学习者有两处缩进错误和一处糟糕的变量名，
+让他们指出来。
+如果他们更进阶，
+可以给他们半打关于这段代码能做出的评论种类，
+而不告诉他们每种各该找到几处。
 
-\cite{Steg2016b} is a good starting point for a code style rubric,
-while~\cite{Luxt2009} looks at peer review in programming classes more generally.
-If you are going to have learners do reviews,
-use calibrated peer review (\secref{s:individual-peer})\index{calibrated peer review}
-so that they have models of what good feedback should look like.
+\cite{Steg2016b}是代码风格评分标准的一个好起点，
+而~\cite{Luxt2009}更一般地考察了编程课里的同伴评阅。
+如果你要让学习者做评阅，
+就用校准式同伴互评（\secref{s:individual-peer}），\index{校准式同伴互评}
+好让他们有「好的反馈该长什么样」的范本。
 
-\begin{aside}{Code Review}
-  Mark the problems in each line of code using the rubric provided.
+\begin{aside}{代码评阅}
+  用提供的评分标准标出每行代码里的问题。
 
 \begin{minted}{text}
 01)  def addem(f):
@@ -563,81 +550,80 @@ so that they have models of what good feedback should look like.
 \end{minted}
 
   \begin{longtable}{ll}
-    1. poor variable name   & 2. use of undefined variable \\
-    3. missing return value & 4. unused variable
+    1. 变量名差   & 2. 使用了未定义的变量 \\
+    3. 缺少返回值 & 4. 未使用的变量
   \end{longtable}
 \end{aside}
 
-\seclbl{Exercises}{s:exercises-exercises}
+\seclbl{练习}{s:exercises-exercises}
 
-\exercise{Code and Run}{pairs}{10}
+\exercise{写并运行}{两人一组}{10}
 
-Create a short C\&R exercise,
-then trade with a partner
-and see how long it takes each of you to understand and do the other's exercise.
-Were there any ambiguities or misunderstandings in the exercise description?
+创建一道简短的 C\&R 练习，
+然后和同伴交换，
+看看你们各自要多久才能看懂并做完对方的练习。
+练习描述里有歧义或误解吗？
 
-\exercise{Inverting Code and Run}{small groups}{15}
+\exercise{把写并运行反过来}{小组}{15}
 
-Form groups of 4--6 people.
-Have each member of the group create an inverted C\&R exercise
-that requires people to figure out what input produces a particular output.
-Pick two at random
-and see how many different inputs the group can find that satisfy the requirements.
+分成 4—6 人的小组。
+让组里每个成员创建一道反向 C\&R 练习，
+要求人们弄清什么输入能产生某个特定输出。
+随机挑两道，
+看看全组能找到多少个满足要求的、各不相同的输入。
 
-\exercise{Tracing Values}{pairs}{10}
+\exercise{追踪取值}{两人一组}{10}
 
-Write a short program (10--15 lines),
-trade with a partner,
-and trace how the variables in the program change value over time.
-What differences are there in how you and your partner wrote down your traces?
+写一个简短的程序（10—15 行），
+和同伴交换，
+并追踪程序里各个变量随时间如何变化取值。
+你和同伴记录追踪过程的方式有什么不同？
 
-\exercise{Refactoring}{small groups}{15}
+\exercise{重构}{小组}{15}
 
-Form groups of 3--4 people.
-Have each person select a short piece of code (10--30 lines long) they have written
-that isn't as tidy as it could be,
-then choose one at random and have everyone in the group tidy it up independently.
-How do your cleaned-up versions differ?
-How well or how poorly would you be able to accommodate all of these variations
-if marking automatically or in a large class?
+分成 3—4 人的小组。
+让每个人选一段自己写过的、还不够整洁的短代码（10—30 行），
+然后随机挑一段，让组里每个人各自把它整理干净。
+你们整理后的版本有什么不同？
+如果自动评分、或在大班里评分，
+你应付得了所有这些变体的程度有多好或多差？
 
-\exercise{Labeling a Diagram}{pairs}{10}
+\exercise{标注图表}{两人一组}{10}
 
-Draw a diagram showing something that you have explained recently:
-how browsers fetch data from servers,
-the relationship between objects and classes,
-or how data frames are indexed in R.
-Put the labels on the side and ask your partner to place them.
+画一张能展示你最近讲过的东西的图：
+浏览器如何从服务器取数据、
+对象和类之间的关系、
+或者 R 里数据框是如何被索引的。
+把标签放在旁边，让同伴来放。
 
-\exercise{Pencil-and-Paper Puzzles}{whole class}{15}
+\exercise{纸笔谜题}{全班}{15}
 
-\cite{Butl2017} describes a set of pencil-and-paper puzzles
-that can be turned into introductory programming assignments
-and reports that these assignments are enjoyed by learners and encourage meta-cognition.
-Think of a simple pencil-and-paper puzzle or game you played as a child
-and describe how you would turn it into a programming exercise.
+\cite{Butl2017}描述了一组纸笔谜题，
+它们可以变成入门编程作业，
+并报告说这些作业被学习者喜爱、也能鼓励元认知。
+想一个你小时候玩过的简单纸笔谜题或游戏，
+描述你会怎样把它变成一道编程练习。
 
-\exercise{Counting Failures}{pairs}{15}
+\exercise{数一数失败}{两人一组}{15}
 
-Any useful estimate of how much time an exercise needs
-must take into account how frequent failures are
-and how much time is lost to them.
-For example,
-editing text files seems like a simple task,
-but what about finding those files?
-Most GUI editors save things to the user's desktop or home directory;
-if the files used in a course are stored somewhere else,
-a substantial fraction won't be able to navigate to the right directory without help.
-(If this seems like a small problem to you,
-please revisit the discussion of expert blind spot in \chapref{s:memory}.)
+任何对练习需要多少时间的有用估计，
+都必须把失败出现的频率、
+以及失败损失的时间考虑进去。
+例如，
+编辑文本文件看起来是个简单任务，
+但找到这些文件呢？
+大多数 GUI 编辑器把东西存到用户的桌面或主目录；
+如果课程用到的文件存在别处，
+相当一部分人没有帮助就没法导航到正确的目录。
+（如果你觉得这是个小问题，
+请重新读一读\chapref{s:memory}里关于专家盲区的讨论。）
 
-Working with a partner,
-make a list of ``simple'' things you have seen go wrong in exercises you have used or taken.
-How often do they come up?
-How long do they take learners to fix on their own or with help?
-How much time do you currently budget in class to deal with them?
+和同伴一起，
+列出你用过或做过的练习里见过的那些出岔子的「简单」事。
+它们多久出现一次？
+学习者自己或靠帮助修好它们要多久？
+你现在在课堂上为应对它们留了多少时间预算？
 
-\exercise{Speaking of Timings}{individual}{10}
+\exercise{说到时间}{个人}{10}
 
-How accurate have the time estimates on the exercises in this book been so far?
+到目前为止，本书里练习的时间估计有多准？

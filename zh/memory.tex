@@ -1,113 +1,110 @@
-\chapter{Expertise and Memory}\label{s:memory}
+\chapter{专长与记忆}\label{s:memory}
 
 \begin{quote}
 
-  Memory is the residue of thought. \\
-  --- Daniel Willingham\index{Willingham, Daniel}, \emph{Why Students Don't Like School}
+  记忆是思考的残留物。\\
+  —— Daniel Willingham\index{Willingham, Daniel}，\emph{Why Students Don't Like School}
 
 \end{quote}
 
-The previous chapter explained the differences between novices and competent practitioners.
-This one looks at expertise:
-what it is,
-how people acquire it,
-and how it can be harmful as well as helpful.
-We then introduce one of the most important limits on learning
-and look at how drawing pictures of mental models can help us turn knowledge into lessons.
+上一章讲了新手和胜任者之间的差别。
+这一章来看专长：
+它是什么，
+人是怎么获得它的，
+以及它为何既能帮上忙、又能帮倒忙。
+之后我们会介绍学习最重要的一个限制，
+并看看画出心智模型的图，如何帮助我们把握知识转化成课程。
 
-To start,
-what do we mean when we say someone is an expert?\index{expert}
-The usual answer is that they can solve problems much faster than people who are ``merely competent'',
-or that they can recognize and deal with cases where the normal rules don't apply.
-They also somehow make this look effortless:
-in many cases,
-they seem to know the right answer at a glance~\cite{Parn2017}.
+先说，我们说某人是专家时，指的是什么？\index{专家}
+通常的回答是：他们解决问题比「仅仅胜任」的人快得多，
+或者他们能认出并处理那些常规规则不适用的情况。
+他们还不知怎的把这一切做得不费吹灰之力：
+在许多情况下，
+他们似乎一眼就能看出正确答案~\cite{Parn2017}。
 
-Expertise is more than just knowing more facts:
-competent practitioners can memorize a lot of trivia without noticeably improving their performance.
-Instead,
-imagine for a moment that we store knowledge as a network or graph
-in which facts are nodes
-and relationships are arcs\footnote{This is definitely \emph{not} how our brains work, but it's a useful metaphor.}.
-The key difference between experts and competent practitioners is that
-experts' mental models are much more densely connected,
-i.e.\ they are more likely to know a connection between any two facts.
+专长不只是知道更多事实：
+胜任者也能记住大量琐碎知识，而表现看不出有什么提升。
+不如换个角度，暂且想象我们把知识存成一张网络或图，
+其中事实是节点，
+关系是弧\footnote{这\emph{绝对}不是我们大脑的工作方式，但它是个有用的比喻。}。
+专家和胜任者的关键区别在于，
+专家的心智模型连接要密集得多，
+也就是他们更有可能知道任意两个事实之间的关联。
 
-The graph metaphor explains why helping learners make connections
-is as important as introducing them to facts:
-without those connections,
-people can't recall and use what they know.
-It also explains many observed aspects of expert behavior:
+图这个比喻解释了为什么帮学习者建立连接，
+和把事实介绍给他们一样重要：
+没有这些连接，
+人就无法回忆并运用自己知道的东西。
+它也解释了专家行为的许多被观察到的特点：
 
 \begin{itemize}
 
 \item
-  Experts can often jump directly from a problem to a solution
-  because there actually is a direct link between the two in their mind.
-  Where a competent practitioner would have to reason
-  $A{\rightarrow}B{\rightarrow}C{\rightarrow}D{\rightarrow}E$,
-  an expert can go from $A$ to $E$ in a single step.
-  We call this \gref{g:intuition}{intuition}:
-  instead of reasoning their way to a solution,
-  the expert recognizes a solution in the same way that they would recognize a familiar face.
+  专家往往能从一个问题直接跳到答案，
+  因为在他们的脑子里，两者之间确实有一条直接连线。
+  胜任者可能要推演
+  $A{\rightarrow}B{\rightarrow}C{\rightarrow}D{\rightarrow}E$，
+  专家却能一步从 $A$ 到 $E$。
+  我们把这叫做\gref{g:intuition}{直觉}：
+  专家不是一路推理出答案，
+  而是像认出一张熟脸那样认出答案。
 
 \item
-  Densely-connected graphs are also the basis for experts'
-  \grefdex{g:fluid-representation}{fluid representations}{fluid representation},
-  i.e.\ their ability to switch back and forth between different views of a problem~\cite{Petr2016}.
-  For example,
-  when trying to solve a problem in mathematics,
-  an expert might switch between tackling it geometrically
-  and representing it as a set of equations.
+  连接密集的图也是专家\grefdex{g:fluid-representation}{流畅表征}{流畅表征}的基础，
+  也就是他们能够在问题的不同视角之间来回切换的能力~\cite{Petr2016}。
+  例如，
+  在解一道数学题时，
+  专家可能一会儿用几何方式处理它，
+  一会儿又把它表示成一组方程。
 
 \item
-  This metaphor also explains why experts are better at diagnosis than competent practitioners:
-  more linkages between facts makes it easier to reason backward from symptoms to causes.
-  (This in turn is why asking programmers to debug during job interviews
-  gives a more accurate impression of their ability than asking them to program.)
+  这个比喻还解释了为什么专家的诊断能力比胜任者强：
+  事实之间的连线越多，就越容易从症状反推到原因。
+  （这也就解释了为什么在求职面试中让程序员调试，
+  比让他编程更能准确反映他的能力。）
 
 \item
-  Finally,
-  experts are often so familiar with their subject that
-  they can no longer imagine what it's like to \emph{not} see the world that way.
-  This means they are often less able to teach the subject than people with less expertise
-  who still remember learning it themselves.
+  最后，
+  专家往往对自己的学科熟悉到了
+  再也无法想象\emph{不}用那种方式看世界是什么样子。
+  这意味着他们教这门学科的能力，往往还不如专业程度较低、
+  但仍记得自己当初是怎么学的人。
 
 \end{itemize}
 
-The last of these points is called \gref{g:expert-blind-spot}{expert blind spot}.
-As originally defined in~\cite{Nath2003},
-it is the tendency of experts to organize explanation according to the subject's deep principles
-rather than being guided by what their learners already know.
-It can be overcome with training,
-but it is part of reason there is no correlation between
-how good someone is at doing research in an area
-and how good they are at teaching it~\cite{Mars2002}.
+最后这一点叫做\gref{g:expert-blind-spot}{专家盲区}。
+按照它在~\cite{Nath2003}里的原始定义，
+它指专家倾向于按学科的深层原理来组织讲解，
+而不是依据学习者已经知道什么来引导。
+它可以通过训练克服，
+但它正是这样一个现象的原因之一：
+某人在某一领域做研究有多好，
+和教这门学科有多好，两者之间没有相关性~\cite{Mars2002}。
 
-\begin{aside}{The J Word}
-  Experts often betray their blind spot by using the word ``just,''
-  as in,
-  ``Oh, it's easy, you just fire up a new virtual machine
-  and then you just install these four patches to Ubuntu
-  and then you just re-write your entire program in a pure functional language.''
-  As we discuss in \chapref{s:motivation},
-  doing this signals that the speaker thinks the problem is trivial
-  and that the person struggling with it must therefore be stupid,
-  so don't do this.
+\begin{aside}{那个「就」字}
+  专家常常会用「就」这个字暴露自己的盲区，
+  比如：
+  「哦，这很简单，你只要开一台新虚拟机，
+  然后只要给 Ubuntu 装这四个补丁，
+  然后只要把整个程序用纯函数式语言重写一遍就行了。」
+  正如我们在\chapref{s:motivation}里讨论的，
+  这么说等于在暗示讲的人觉得这个问题微不足道，
+  那么在这个问题上卡住的人想必就是个笨蛋，
+  所以别这么干。
 \end{aside}
 
-\seclbl{Concept Maps}{s:memory-concept-maps}
+\seclbl{概念图}{s:memory-concept-maps}
 
-Our tool of choice for representing someone's mental model is a \gref{g:concept-map}{concept map},
-in which facts are bubbles and connections are labeled connections.
-As examples,
-\figref{f:memory-seasons} shows why the Earth has seasons (from \hreffoot{https://cmap.ihmc.us/}{IHMC}),
-and \appref{s:conceptmaps} presents concept maps for libraries from three points of view.
+我们用来表示某人心智模型的首选工具是\gref{g:concept-map}{概念图}，
+其中事实是气泡，连接是带标注的连线。
+作为例子，
+\figref{f:memory-seasons}展示了地球为什么有四季（来自\hreffoot{https://cmap.ihmc.us/}{IHMC}），
+而\appref{s:conceptmaps}从三个视角给出了图书馆的概念图。
 
-\figpdf{figures/seasons.pdf}{Concept map for seasons}{f:memory-seasons}{}
+\figpdf{figures/seasons.pdf}{四季的概念图}{f:memory-seasons}{}
 
-To show how concept maps can be using in teaching programming,
-consider this \texttt{for} loop in Python:\index{Python}
+为了展示概念图在编程教学中怎么用，
+看看 Python 里的这个 \texttt{for} 循环：\index{Python}
 
 \begin{minted}{text}
 for letter in "abc":
@@ -115,7 +112,7 @@ for letter in "abc":
 \end{minted}
 
 \noindent
-whose output is:
+它的输出是：
 
 \begin{minted}{text}
 a
@@ -123,280 +120,273 @@ b
 c
 \end{minted}
 
-The three key ``things'' in this loop are shown in the top of \figref{f:memory-loop},
-but they are only half the story.
-The expanded version in the bottom shows the relationships between those things,
-which are as important for understanding as the concepts themselves.
+这个循环里的三个关键「东西」显示在\figref{f:memory-loop}的上半部分，
+但它们只是故事的一半。
+下半部分的扩展版展示了这些东西之间的关系，
+这些关系和概念本身一样，对理解至关重要。
 
-\figpdf{figures/for-loop.pdf}{Concept map for a \texttt{for} loop}{f:memory-loop}{}
+\figpdf{figures/for-loop.pdf}{一个 \texttt{for} 循环的概念图}{f:memory-loop}{}
 
 \newpage
-Concept maps can be used in many ways:
+概念图有很多种用法：
 
 \begin{description}
 
-\item[Helping teachers figure out what they're trying to teach.]
-  A concept map separates content from order:
-  in our experience,
-  people rarely wind up teaching things in the order in which they first drew them.
+\item[帮老师弄清自己想教什么。]
+  概念图把内容和顺序分开了：
+  依我们的经验，
+  人们很少会按自己最初画图时的顺序去教。
 
-\item[Aiding communication between lesson designers.]
-  Teachers with very different ideas of what they're trying to teach
-  are likely to pull their learners in different directions.
-  Drawing and sharing concept maps can help prevent this.
-  And yes,
-  different people may have different concept maps for the same topic,
-  but concept mapping makes those differences explicit.
+\item[协助课程设计者之间的沟通。]
+  对教什么想法很不一致的老师，
+  很可能会把各自的学习者往不同方向拽。
+  画概念图并相互分享有助于避免这种情况。
+  是的，
+  不同的人对同一个主题可能有不同的概念图，
+  但概念图的绘制会让这些差异变得明确。
 
-\item[Aiding communication with learners.]
-  While it's possible to give learners a pre-drawn map at the start of a lesson for them to annotate,
-  it's better to draw it piece by piece while teaching
-  to reinforce the ties between what's in the map and what the teacher said.
-  We will return to this idea in \secref{s:architecture-brain}.
+\item[协助与学习者沟通。]
+  虽然可以在课程开始时给学习者一张预先画好的图让他们自己标注，
+  但更好的做法是一边教一边一块一块地画出来，
+  以强化图里的内容与老师说过的内容之间的联系。
+  我们会在\secref{s:architecture-brain}回到这个想法。
 
-\item[For assessment.]
-  Having learners draw pictures of what they think they just learned
-  shows the teacher what they missed and what was miscommunicated.
-  Reviewing learners' concept maps is too time-consuming to do as a formative assessment during class,
-  but very useful in weekly lectures \emph{once learners are familiar with the technique}.
-  The qualification is necessary because
-  any new way of doing things initially slows people down---if a learner is trying to make sense of basic programming,
-  asking them to figure out how to draw their thoughts at the same time is an unfair load.
+\item[用于评价。]
+  让学习者画出他们觉得自己刚学到的东西，
+  能向老师表明他们漏掉了什么、哪里被讲错了。
+  评阅学习者的概念图太费时间，没法当作课上的形成性评价，
+  但\emph{一旦学习者熟悉了这种技巧}，它在每周的讲授课里就非常有用。
+  这个限定是必要的，因为
+  任何新的做事方式一开始都会拖慢人——如果学习者正忙着弄懂基础编程，
+  同时又让他去琢磨怎么把脑子里想的画出来，那是不公平的负担。
 
 \end{description}
 
-Some teachers are also skeptical of whether novices can effectively map their understanding,
-since introspection and explanation of understanding are generally more advanced skills than understanding itself.
-For example,
-\cite{Kepp2008} looked at the use of concept mapping in computing education.
-One of their findings was that,
-``{\ldots}concept mapping is troublesome for many students because
-it tests personal understanding rather than knowledge that was merely learned by rote.''
-As someone who values understanding over rote knowledge,
-I consider that a benefit.
+有些老师也怀疑新手能不能有效地把他们的理解画成图，
+因为自我反省和解释自己的理解，通常比理解本身是更高级的技能。
+例如，
+\cite{Kepp2008}考察了概念图在计算机教育中的使用。
+他们的发现之一是：
+「{\ldots}概念图对许多学生来说很麻烦，因为
+它考的是个人的理解，而不是仅仅死记硬背来的知识。」
+作为一个看重理解胜过死记硬背的人，
+我认为这是好事。
 
-\begin{aside}{Start Anywhere}
-  When first asked to draw a concept map, many people will not know where to start.
-  When this happens,
-  write down two words associated with the topic you're trying to map,
-  then draw a line between them and add a label explaining how those two ideas are related.
-  You can then ask what other things are related in the same way,
-  what parts those things have,
-  or what happens before or after the concepts already on the page
-  in order to discover more nodes and arcs.
-  After that, the hard part is often stopping.
+\begin{aside}{从哪儿开始都行}
+  第一次被要求画概念图时，很多人不知道该从哪儿下手。
+  碰到这种情况，
+  写下两个与你打算画的主题相关的词，
+  然后在它们之间画一条线，并加一个标注说明这两个想法是怎么关联的。
+  接着你可以问：还有哪些东西以同样的方式相关联？
+  这些东西各有什么组成部分？
+  或者，在纸上已有的概念之前或之后会发生什么？
+  这样就能发现更多的节点和弧。
+  再往后，难的地方往往是怎么停下来。
 \end{aside}
 
-Concept maps are just one way to represent our understanding of a subject~\cite{Eppl2006};
-others include Venn diagrams, flowcharts, and decision trees~\cite{Abel2009}.
-All of these \grefdex{g:externalized-cognition}{externalize cognition}{externalized cognition},
-i.e.\ make mental models visible so that they can be compared and combined\footnote{To paraphrase
-Oscar Wilde's Lady Windermere,\index{Wilde, Oscar}
-people often don't know what they're thinking until they've heard themselves say it.}.
+概念图只是我们表示对某一学科理解的一种方式~\cite{Eppl2006}；
+其他的还有韦恩图、流程图和决策树~\cite{Abel2009}。
+所有这些都\grefdex{g:externalized-cognition}{把认知外化}{把认知外化}，
+也就是让心智模型变得可见，从而可以比较和组合\footnote{套用
+奥斯卡·王尔德的温德米尔夫人说的话，\index{Wilde, Oscar}
+人们往往要听到自己说出口，才知道自己在想什么。}。
 
-\begin{aside}{Rough Work and Honesty}
-  Many user interface designers believe that
-  it's better to show people rough sketches of their ideas rather than polished mock-ups
-  because people are more likely to give honest feedback on something that they think
-  only took a few minutes to create:
-  if it looks as though what they're critiquing took hours to create,
-  most will pull their punches.
-  When drawing concept maps to motivate discussion,
-  you should therefore use pencils and scrap paper (or pens and a whiteboard)
-  rather than fancy computer drawing tools.
+\begin{aside}{草稿与诚实}
+  许多用户界面设计师认为，
+  与其给人看精心打磨的样稿，不如给他们看粗糙的想法草图，
+  因为对于自己觉得只花了几分钟做出来的东西，人们更可能给出诚实的反馈：
+  如果看起来被批评的东西是花了好几个小时做出来的，
+  大多数人就会手下留情。
+  所以，在画概念图来激发讨论时，
+  你应该用铅笔和废纸（或者笔和白板），
+  而不是花哨的计算机绘图工具。
 \end{aside}
 
-\seclbl{Seven Plus or Minus Two}{s:memory-seven-plus-or-minus}
+\seclbl{七加减二}{s:memory-seven-plus-or-minus}
 
-While the graph model of knowledge is wrong but useful,
-another simple model has a sounder physiological basis.
-As a rough approximation,
-human memory can be divided into two distinct layers.
-The first,
-called \grefdex{g:long-term-memory}{long-term}{long-term memory}
-or \gref{g:persistent-memory}{persistent memory},
-is where we store things like our friends' names,
-our home address,
-and what the clown did at our eighth birthday party that scared us so much.
-Its capacity is essentially unlimited,
-but it is slow to access---too slow to help us cope with hungry lions and disgruntled family members.
+知识的图模型虽然错、但有用，
+另一个简单模型却有更可靠的生理基础。
+大致而言，
+人的记忆可以分为两个截然不同的层次。
+第一层叫做\grefdex{g:long-term-memory}{长期记忆}{长期记忆}
+或\gref{g:persistent-memory}{持久记忆}，
+我们把它用来存朋友的名字、
+家里的地址、
+以及八岁生日派对上小丑做了什么把我们吓得那么惨之类的事。
+它的容量基本上是无限的，
+但读取很慢——慢到帮不上我们应付饥饿的狮子和闹脾气的家人。
 
-Evolution has therefore given us a second system
-called \grefdex{g:short-term-memory}{short-term}{short-term memory}
-or \gref{g:working-memory}{working memory}.
-It is much faster,
-but also much smaller:~\cite{Mill1956} estimated that the average adult's working memory could only hold 7±2 items at a time.
-This is why \hreffoot{https://www.quora.com/Why-did-Bell-Labs-create-phone-numbers-of-7-digits-10-digits-Is-there-a-reason-that-dashes-and-brackets-are-used}{phone numbers}
-are 7 or 8 digits long:
-back when phones had dials instead of keypads,
-that was the longest string of numbers most adults could remember accurately for as long as it took the dial to go around several times.
+所以进化给了我们第二套系统，
+叫做\grefdex{g:short-term-memory}{短期记忆}{短期记忆}
+或\gref{g:working-memory}{工作记忆}。
+它快得多，
+但也小得多：~\cite{Mill1956}估计，成年人的工作记忆平均一次只能容纳 7±2 个条目。
+这就是为什么\hreffoot{https://www.quora.com/Why-did-Bell-Labs-create-phone-numbers-of-7-digits-10-digits-Is-there-a-reason-that-dashes-and-brackets-are-used}{电话号码}
+是 7 位或 8 位：
+从前电话用的是拨号盘而不是键盘时，
+这已经是大多数成年人能在拨号盘转上好几圈的时间里准确记住的最长数字串。
 
-\begin{aside}{Participation}
-  The size of working memory is sometimes used to explain
-  why sports teams tend to have about half a dozen members
-  or are broken into sub-groups like the forwards and backs in rugby.
-  It is also used to explain why meetings are only productive up to a certain number of participants:
-  if twenty people try to discuss something,
-  either three meetings are going on at once
-  or half a dozen people are talking while everyone else listens.
-  The argument is that people's ability to keep track of their peers is constrained by the size of working memory,
-  but so far as I know,
-  the link has never been proven.
+\begin{aside}{参与}
+  工作记忆的大小有时被用来说明，
+  为什么运动队往往有六个左右的成员，
+  或者会被分成橄榄球里的前锋和后卫这样的小组。
+  它也被用来说明，为什么会议只有到一定人数以内才有效率：
+  如果二十个人试着讨论一件事，
+  要么是三个会议同时在开，
+  要么就是六个人在说话，其他所有人都在听。
+  这个论点的意思是，人追踪同伴的能力受工作记忆大小的限制，
+  但据我所知，
+  这一联系从未被证实过。
 \end{aside}
 
-7±2 is the single most important number in teaching.
-A teacher cannot place information directly in a learner's long-term memory.
-Instead,
-whatever they present is first stored in the learner's short-term memory,
-and is only transferred to long-term memory after it has been held there and rehearsed (\secref{s:individual-strategies}).
-If the teacher presents too much information too quickly,
-the new information displaces the old
-before the latter is transferred.
+7±2 是教学里最重要的一个数字。
+老师没法把信息直接放进学习者的长期记忆。
+相反，
+老师呈现的任何东西都先存进学习者的短期记忆，
+只有在那里保持并反复演练（\secref{s:individual-strategies}）之后，才会转移到长期记忆。
+如果老师呈现信息太多太快，
+新信息就会在后一批信息被转移之前把前一批挤掉。
 
-This is one of the ways to use a concept map when designing a lesson:
-it helps make sure learners' short-term memories won't be overloaded.
-Once the map is drawn,
-the teacher chooses a subsection that will fit in short-term memory
-and lead to a formative assessment (\figref{f:memory-photosynthesis}),\index{formative assessment}
-then adds another subsection for the next lesson episode and so on.
+这是设计课程时使用概念图的方法之一：
+它有助于确保学习者的短期记忆不会超载。
+图画好之后，
+老师挑选一个能放进短期记忆、并导向一次形成性评价的子部分（\figref{f:memory-photosynthesis}），\index{形成性评价}
+然后为下一段课程再加一个子部分，依此类推。
 
-\figpdf{figures/photosynthesis.pdf}{Using concept maps in lesson design}{f:memory-photosynthesis}{}
+\figpdf{figures/photosynthesis.pdf}{在课程设计中使用概念图}{f:memory-photosynthesis}{}
 
-\begin{aside}{Building Concept Maps Together}
-  The next time you have a team meeting,
-  give everyone a sheet of paper
-  and have them spend a few minutes drawing their own concept map of the project you're all working on.
-  On the count of three,
-  have everyone reveal their concept maps to their group.
-  The discussion that follows may help people understand
-  why they've been tripping over each other.
+\begin{aside}{一起画概念图}
+  下次开团队会议时，
+  给每人发一张纸，
+  让他们花几分钟为你们正在做的项目画一张自己的概念图。
+  数到三，
+  让所有人把自己的概念图展示给小组。
+  随后的讨论，或许能帮大家明白
+  为什么他们之前总是互相磕磕绊绊。
 \end{aside}
 
-Note that the simple model of memory presented here has largely been replaced by a more sophisticated one
-in which short-term memory is broken down into several modal stores
-(e.g.\ for visual vs. linguistic memory),
-each of which does some involuntary preprocessing~\cite{Mill2016a}.
-Our presentation is therefore an example of a mental model that aids learning and everyday work.
+请注意，这里呈现的简单记忆模型，在很大程度上已经被一个更精密的模型取代了。
+在那个新模型里，短期记忆被拆成若干个模态存储
+（例如视觉记忆与语言记忆），
+每个存储都会做一些不自觉的预处理~\cite{Mill2016a}。
+因此我们的呈现，是心智模型有助于学习和日常工作的一例。
 
-\subsection*{Pattern Recognition}
+\subsection*{模式识别}
 
-Recent research suggests that the actual size of short-term memory
-might be as low as 4±1 items~\cite{Dida2016}.
-In order to handle larger sets of information,
-our minds create \grefdex{g:chunking}{chunks}{chunking}.
-For example,
-most of us remember words as single items rather than as sequences of letters.
-Similarly,
-the pattern made by five spots on cards or dice is remembered as a whole
-rather than as five separate pieces of information.
+近期研究表明，短期记忆的实际容量
+可能低至 4±1 个条目~\cite{Dida2016}。
+为了处理更大的信息量，
+我们的头脑会形成\grefdex{g:chunking}{组块}{组块}。
+例如，
+我们大多数人记单词时，是把整个词当作一个条目，而不是一串字母。
+同样，
+纸牌或骰子上五个点的图案，是被当作一个整体记住的，
+而不是五条分开的信息。
 
-Experts have more and larger chunks than non-experts,
-i.e.\ experts ``see'' larger patterns and have more patterns to match things against.
-This allows them to reason at a higher level
-and to search for information more quickly and more accurately.
-However,
-chunking can also mislead us if we mis-identify things:
-newcomers really can sometimes see things that experts have looked at and missed.
+专家拥有比非专家更多、更大的组块，
+也就是专家「看到」的是更大的模式，且有更多的模式可以用来匹配事物。
+这使他们能在更高的层面推理，
+并更快、更准地搜索信息。
+然而，
+如果我们认错了东西，组块也会误导我们：
+新来的人有时确实能看到专家看过却漏掉的东西。
 
-Given how important chunking is to thinking,
-it is tempting to identify \hreffoot{https://en.wikipedia.org/wiki/Software\_design\_pattern}{design patterns}\index{design patterns}
-and teach them directly.
-These patterns help competent practitioners think and talk to each other in many domains (including teaching~\cite{Berg2012}),
-but pattern catalogs are too dry and too abstract for novices to make sense of on their own.
-That said,
-giving names to a small number of patterns does seem to help with teaching,
-primarily by giving the learners a richer vocabulary to think and communicate with \cite{Kuit2004,Byck2005,Saja2006}.
-We will return to this in \secref{s:pck-programming}.
+考虑到组块对思维如此重要，
+人们很自然会想找出\hreffoot{https://en.wikipedia.org/wiki/Software\_design\_pattern}{设计模式}\index{设计模式}
+并直接教它。
+这些模式在许多领域（包括教学~\cite{Berg2012}）帮助胜任者思考和相互交流，
+但模式目录对新手来说太枯燥、太抽象，光靠他们自己没法理解。
+话虽如此，
+给少数模式起名字，似乎确实对教学有帮助，
+主要是因为它给了学习者一套更丰富的词汇来思考和交流~\cite{Kuit2004,Byck2005,Saja2006}。
+我们会在\secref{s:pck-programming}回到这一点。
 
-\seclbl{Becoming an Expert}{s:memory-becoming-expert}
+\seclbl{成为专家}{s:memory-becoming-expert}
 
-So how does someone become an expert?
-The idea that ten thousand hours of practice will do it is widely quoted
-but \hreffoot{http://www.goodlifeproject.com/podcast/anders-ericsson/}{probably not true}:
-doing the same thing over and over again is much more likely to solidify bad habits than improve performance.
-What actually works is doing similar but subtly different things,
-paying attention to what works and what doesn't,
-and then changing behavior in response to that feedback to get cumulatively better.
-This is called \grefdex{g:deliberate-practice}{deliberate}{deliberate practice}
-or \gref{g:reflective-practice}{reflective practice},
-and a common progression is for people to go through three stages:
+那么，一个人怎么成为专家？
+「一万小时练习就能成」这个说法被广为引用，
+但\hreffoot{http://www.goodlifeproject.com/podcast/anders-ericsson/}{大概并不是真的}：
+把同一件事一遍遍重复，更可能巩固坏习惯，而不是提高表现。
+真正管用的是做相似但又略有不同的事，
+留心上什么管用、什么不管用，
+然后根据这些反馈改变行为，从而越来越好。
+这叫做\grefdex{g:deliberate-practice}{刻意练习}{刻意练习}
+或\gref{g:reflective-practice}{反思性实践}，
+一个常见的进程是人会经历三个阶段：
 
 \begin{description}
 
-\item[Act on feedback from others.]
-  A learner might write an essay about what they did on their summer holiday
-  and get feedback from a teacher telling them how to improve it.
+\item[根据他人的反馈行动。]
+  学习者可能写一篇关于自己暑假做了什么作文，
+  然后从老师那里得到反馈，告诉他怎么改进。
 
-\item[Give feedback on others' work.]
-  The learner might critique character development in a Harry Potter novel
-  and get feedback from the teacher on their critique.
+\item[对他人的作品给出反馈。]
+  学习者可能评论《哈利·波特》小说里的人物塑造，
+  然后从老师那里得到关于他这篇评论的反馈。
 
-\item[Give feedback to themselves.]
-  At some point,
-  the learner starts critiquing their own work as they do it
-  using the skills they have now built up.
-  Doing this is so much faster than waiting for feedback from others
-  that proficiency suddenly starts to take off.
+\item[给自己反馈。]
+  到了某个时候，
+  学习者开始在做的时候，用自己已经积累起来的技能评论自己的作品。
+  这样做比等别人的反馈快得多，
+  于是熟练度会突然开始突飞猛进。
 
 \end{description}
 
-\begin{aside}{What Counts as Deliberate Practice?}
-  \cite{Macn2014} found that,
-  ``{\ldots}deliberate practice explained 26\% of the variance in performance for games,
-  21\% for music,
-  18\% for sports,
-  4\% for education,
-  and less than 1\% for professions.''
-  However,~\cite{Eric2016} critiqued this finding by saying,
-  ``Summing up every hour of any type of practice during an individual's career
-  implies that the impact of all types of practice activity on performance is equal---an assumption
-  that{\ldots}is inconsistent with the evidence.''
-  To be effective,
-  deliberate practice requires both a clear performance goal
-  and immediate informative feedback,
-  both of which are things teachers should strive for anyway.
+\begin{aside}{什么算刻意练习？}
+  \cite{Macn2014}发现，
+  「{\ldots}刻意练习解释了游戏表现方差的 26\%、
+  音乐的 21\%、
+  体育的 18\%、
+  教育的 4\%，
+  以及职业的不到 1\%。」
+  不过，~\cite{Eric2016}对这一发现提出了批评，说：
+  「把一个人生涯中任何类型的练习时间统统加起来，
+  等于是在假设所有类型的练习活动对表现的影响都一样——这个假设
+  {\ldots}与证据不符。」
+  要有效，刻意练习需要一个清晰的表现目标，
+  以及即时的、有信息量的反馈，
+  而这两样本来就是老师应该努力去做到的。
 \end{aside}
 
-\seclbl{Exercises}{s:memory-exercises}
+\seclbl{练习}{s:memory-exercises}
 
-\exercise{Concept Mapping}{pairs}{30}
+\exercise{概念图绘制}{两人一组}{30}
 
-Draw a concept map for something you would teach in five minutes.
-Trade with a partner and critique each other's maps.
-Do they present concepts or surface detail?
-Which of the relationships in your partner's map do you consider concepts and vice versa?
+为你能在五分钟内讲清楚的东西画一张概念图。
+和同伴交换，互相评论对方的图。
+它们呈现的是概念，还是表面的细节？
+同伴图里的哪些关系，你认为其实是概念？反过来呢？
 
-\exercise{Concept Mapping (Again)}{small groups}{20}
+\exercise{再画一次概念图}{小组}{20}
 
-Working in groups of 3--4,
-have each person independently draw a concept map showing their mental model of what goes on in a classroom.
-When everyone is done,
-compare the concept maps.
-Where do your mental models agree and disagree?
+以 3—4 人为一组，
+每人独立画一张概念图，展示自己对课堂上会发生什么的心智模型。
+大家都画完后，
+比较这些概念图。
+你们的心智模型在哪里一致、哪里不一致？
 
-\exercise{Enhancing Short-Term Memory}{individual}{5 minutes}
+\exercise{增强短期记忆}{个人}{5 分钟}
 
-\cite{Cher2007} suggests that
-the main reason people draw diagrams when they are discussing things
-is to enlarge their short-term memory:
-pointing at a wiggly bubble drawn a few minutes ago triggers recall of several minutes of debate.
-When you exchanged concept maps in the previous exercise,
-how easy was it for other people to understand what your map meant?
-How easy would it be for you if you set it aside for a day or two and then looked at it again?
+\cite{Cher2007}提出，
+人们讨论事情时画图的主要原因，
+是为自己的短期记忆扩容：
+指着几分钟前画的一个歪歪扭扭的气泡，就能触发对好几分钟辩论的回忆。
+在上一个练习里交换概念图时，
+别人有多容易看懂你的图是什么意思？
+如果你把图搁上一两天再看，你自己又会有多容易看懂？
 
-\exercise{That's a Bit Self-Referential, Isn't It?}{whole class}{30}
+\exercise{这有点自我指涉了，不是吗？}{全班}{30}
 
-Working independently,
-draw a concept map for concept maps.
-Compare your concept map with those drawn by other people.
-What did most people include?
-What were the significant differences?
+各自独立，
+为「概念图」画一张概念图。
+把你的概念图与别人画的比较。
+大多数人放了哪些内容？
+又有哪些显著的不同？
 
-\exercise{Noticing Your Blind Spot}{small groups}{10}
+\exercise{注意你的盲区}{小组}{10}
 
-Elizabeth Wickes listed
-\hreffoot{https://twitter.com/elliewix/status/981285432922202113}{all the things you need to understand}
-in order to read this one line of Python:
+Elizabeth Wickes 列出了
+\hreffoot{https://twitter.com/elliewix/status/981285432922202113}{读懂下面这一行 Python 所需理解的所有东西}：
 
 \begin{minted}{text}
 answers = ['tuatara', 'tuataras', 'bus', "lick"]
@@ -405,51 +395,50 @@ answers = ['tuatara', 'tuataras', 'bus', "lick"]
 \begin{itemize}
 
 \item
-  The square brackets surrounding the content mean we're working with a list
-  (as opposed to square brackets immediately to the right of something,
-  which is a data extraction notation).
+  内容两侧的方括号意味着我们在处理一个列表
+  （而不是紧跟在某个东西右边的方括号，那是数据提取的记法）。
 
 \item
-  The elements are separated by commas outside and between the quotes
-  (rather than inside, as they would be for quoted speech).
+  各元素之间用逗号分隔，逗号在引号外面、元素之间
+  （而不是像引语里那样放在引号里面）。
 
 \item
-  Each element is a character string,
-  and we know that because of the quotes.
-  We could have number or other data types in here if we wanted;
-  we need quotes because we're working with strings.
+  每个元素都是一个字符串，
+  我们从引号知道这一点。
+  如果想要，这里也可以放数字或其他数据类型；
+  之所以需要引号，是因为我们在处理字符串。
 
 \item
-  We're mixing our use of single and double quotes;
-  Python doesn't care so long as they balance around the individual strings.
+  我们单引号和双引号混着用；
+  只要每一对在单个字符串两侧是配对的，Python 并不在意。
 
 \item
-  Each comma is followed by a space,
-  which is not required by Python,
-  but which we prefer for readability.
+  每个逗号后面都跟了一个空格，
+  这不是 Python 要求的，
+  但我们为了可读性更愿意这样写。
 
 \end{itemize}
 
-Each of these details might be overlooked by an expert.
-Working in groups of 3--4,
-select something equally short from a lesson you have recently taught or learned
-and break it down to this level of detail.
+这些细节中的每一个，专家都可能忽略。
+以 3—4 人为一组，
+从你最近教过或学过的一课里挑出一段同样短的内容，
+把它拆解到这个细致程度。
 
-\exercise{What to Teach Next}{individual}{5}
+\exercise{接下来教什么}{个人}{5}
 
-Refer back to the concept map for photosynthesis in \figref{f:memory-photosynthesis}.
-How many concepts and links are in the selected chunks?
-What would you include in the next chunk of the lesson and why?
+回头看看\figref{f:memory-photosynthesis}里那张光合作用的概念图。
+选中的区块里有多少概念和连线？
+你会在课程的下一块里放什么？为什么？
 
-\exercise{The Power of Chunking}{individual}{5}
+\exercise{组块的力量}{个人}{5}
 
-Look at \figref{f:memory-unchunked} for 10 seconds,
-then look away and try to write out your phone number with these symbols\footnote{
-  My thanks to Warren Code\index{Code, Warren} for introducing me to this example.
-}.
-(Use a space for '0'.)
-When you are finished,
-look at the alternative representation in \appref{s:chunking}.
-How much easier are the symbols to remember when the pattern is made explicit?
+看\figref{f:memory-unchunked} 10 秒钟，
+然后移开视线，试着用这些符号写出你的电话号码\footnote{
+  感谢 Warren Code\index{Code, Warren}向我介绍这个例子。
+}。
+（用空格表示「0」。）
+写完后，
+看看\appref{s:chunking}里的另一种表示。
+当模式被明确呈现出来之后，这些符号好记了多少？
 
-\figpdfhere{figures/chunking-unchunked.pdf}{Unchunked representation}{f:memory-unchunked}{}
+\figpdfhere{figures/chunking-unchunked.pdf}{未组块的表示}{f:memory-unchunked}{}

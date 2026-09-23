@@ -1,204 +1,193 @@
-\chapter{Cognitive Architecture}\label{s:architecture}
+\chapter{认知架构}\label{s:architecture}
 
-We have been talking about mental models as if they were real things,
-but what actually goes on in a learner's brain when they're learning?
-The short answer is that we don't know;
-the longer answer is that we know a lot more than we used to.
-This chapter will dig a little deeper into what brains do while they're learning
-and how we can leverage that to design and deliver lessons more effectively.
+我们一直在说心智模型，好像它们是真实存在的东西，
+但学习者在学习时，他们的大脑里究竟发生了什么？
+简短的回答是我们不知道；
+长一点的回答是，我们知道的比过去多得多。
+本章会更深入地挖一挖大脑在学习时做些什么，
+以及我们如何利用这些来更有效地设计和讲授课程。
 
-\seclbl{What's Going On In There?}{s:architecture-brain}
+\seclbl{那里在发生什么？}{s:architecture-brain}
 
-\figpdf{figures/cognitive-architecture.pdf}{Cognitive architecture}{f:arch-model}{}
+\figpdf{figures/cognitive-architecture.pdf}{认知架构}{f:arch-model}{}
 
-\figref{f:arch-model} is a simplified model of human cognitive architecture.\index{cognitive architecture}
-The core of this model is
-the separation between short-term and long-term memory discussed in \secref{s:memory-seven-plus-or-minus}.
-Long-term memory is like your basement:\index{long-term memory}
-it stores things more or less permanently,
-but you can't access its contents directly.
-Instead,
-you rely on your short-term memory,\index{short-term memory}
-which is the cluttered kitchen table of your mind.
+\figref{f:arch-model}是人的认知架构的一个简化模型。\index{认知架构}
+这个模型的核心，
+是\secref{s:memory-seven-plus-or-minus}里讨论过的短期记忆与长期记忆之间的分离。
+长期记忆就像你家的地下室：\index{长期记忆}
+它差不多永久地存放东西，
+但你没法直接读取里面的内容。
+相反，
+你得依靠你的短期记忆，\index{短期记忆}
+它是你脑海里那张堆得乱七八糟的厨房桌子。
 
-When you need something,
-your brain retrieves it from long-term memory and puts it in short-term memory.
-Conversely,
-new information that arrives in short-term memory
-has to be encoded to be stored in long-term memory.
-If that information isn't encoded and stored,
-it's not remembered and learning hasn't taken place.
+你需要某样东西时，
+大脑把它从长期记忆里取出来，放进短期记忆。
+反过来，
+进入短期记忆的新信息，
+必须经过编码才能存进长期记忆。
+如果这些信息没有被编码和存储，
+它就不会被记住，学习也就没有发生。
 
-Information gets into short-term memory primarily through
-your verbal channel (for speech)\index{verbal channel}
-and visual channel\index{visual channel}
-(for images)\footnote{
-  A more complete model
-  would also include your senses of touch, smell, and taste,
-  but we'll ignore those for now.}.
-Most people rely primarily on their visual channel,
-but when images and words complement each other,
-the brain does a better job of remembering them both:
-they are encoded together,
-so recall of one later on helps trigger recall of the other.
+信息主要通过你的言语通道（用于语言）\index{言语通道}
+和视觉通道\index{视觉通道}
+（用于图像）进入短期记忆\footnote{
+  一个更完整的模型
+  还会把触觉、嗅觉和味觉也算进去，
+  但我们暂且忽略它们。}。
+大多数人主要依靠视觉通道，
+但当图像和文字彼此互补时，
+大脑把两者都记得更好：
+它们被一起编码，
+所以后来回忆其中之一，有助于触发对另一者的回忆。
 
-Linguistic and visual input are processed by different parts of the human brain,
-and linguistic and visual memories are stored separately as well.
-This means that correlating linguistic and visual streams of information takes cognitive effort:
-when someone reads something while hearing it spoken aloud,
-their brain can't help but check that it's getting the same information on both channels.
+语言输入和视觉输入由人脑的不同部位处理，
+语言记忆和视觉记忆也是分开存储的。
+这意味着，把语言和视觉这两股信息流关联起来需要耗费认知努力：
+当某人一边看某段文字、一边听它被念出来时，
+他的大脑会不由自主地核对两条通道得到的是不是同样的信息。
 
-Learning is therefore increased when information is presented simultaneously in two different channels,
-but is reduced when that information is redundant rather than complementary,
-a phenomenon called the \gref{g:split-attention-effect}{split-attention effect}~\cite{Maye2003}.
-For example,
-people generally find it harder to learn from a video that has both narration and on-screen captions
-than from one that has either the narration or the captions but not both,
-because some of their attention has to be devoted to checking
-that the narration and the captions agree with each other.
-Two notable exceptions to this are people who do not yet speak the language well
-and people with hearing impairments or other special needs,
-both of whom may find that the value of the redundant information
-outweighs the extra processing effort.
+所以，当信息以两条不同的通道同时呈现时，学习会增强；
+但当这些信息是冗余的而不是互补的时，学习反而会减弱，
+这一现象叫做\gref{g:split-attention-effect}{注意分散效应}~\cite{Maye2003}。
+例如，
+人们通常觉得，从既有旁白、又有屏幕字幕的视频里学习，
+比从只有旁白或只有字幕的视频里学习更难，
+因为他们得把一部分注意力用在核对外
+旁白和字幕是否一致上。
+有两个显著的例外：还不太会说这门语言的人，
+以及有听觉障碍或其他特殊需求的人；
+对这两类人来说，冗余信息带来的价值
+可能超过额外的加工负担。
 
-\begin{aside}{Piece by Piece}
-  The split attention effect explains why
-  it's more effective to draw a diagram piece by piece while teaching
-  than to present the whole thing at once.
-  If parts of the diagram appear at the same time as things are being said,
-  the two will be correlated in the learner's memory.
-  Pointing at part of the diagram later
-  is then more likely to trigger recall of what was being said when that part was being drawn.
+\begin{aside}{一块一块地画}
+  注意分散效应解释了为什么
+  一边讲一边把图一块一块地画出来，比一次把整张图呈现出来更有效。
+  如果图的某些部分和正在说的话同时出现，
+  两者就会在学习者的记忆里关联起来。
+  之后再指着图上的某一部分，
+  就更有可能触发对画那一部分时所说内容的回忆。
 \end{aside}
 
-The split-attention effect does \emph{not} mean
-that learners shouldn't try to reconcile multiple incoming streams of information---after all,
-this is what they have to do in the real world~\cite{Atki2000}.
-Instead,
-it means that instruction shouldn't require people to do it
-while they are first mastering unit skills;
-instead,
-using multiple sources of information simultaneously should be treated as a separate learning task.
+注意分散效应\emph{并不}意味着
+学习者不该试着去调和来自多条渠道的信息——毕竟，
+这正是他们在真实世界里必须要做的事~\cite{Atki2000}。
+它意味着的是：教学不应该要求人们在刚掌握单元技能时就去这么做；
+相反，
+同时使用多个信息来源，应该被当作一项单独的学习任务。
 
-\begin{aside}{Not All Graphics are Created Equal}
-  \cite{Sung2012} presents an elegant study that distinguishes \emph{seductive} graphics\index{graphics!seductive}
-  (which are highly interesting but not directly relevant to the instructional goal),
-  \emph{decorative} graphics\index{graphics!decorative}
-  (which are neutral but not directly relevant to the instructional goal),
-  and \emph{instructive} graphics\index{graphics!instructive}
-  (which are directly relevant to the instructional goal).
-  Learners who received any kind of graphic gave material higher satisfaction ratings
-  than those who didn't get graphics,
-  but only learners who got instructive graphics actually performed better.
+\begin{aside}{图形并非生来平等}
+  \cite{Sung2012}呈现了一项精巧的研究，它区分了\emph{诱惑性}图形\index{图形!诱惑性}
+  （非常有趣，但与教学目标并不直接相关）、
+  \emph{装饰性}图形\index{图形!装饰性}
+  （中性，但与教学目标并不直接相关）
+  和\emph{指导性}图形\index{图形!指导性}
+  （与教学目标直接相关）。
+  拿到任何一类图形的学习者，对材料的满意度评分都比没拿到图形的学习者高，
+  但只有拿到指导性图形的学习者，实际表现才更好。
 
-  Similarly,~\cite{Stam2013,Stam2014} found that
-  having more information can actually lower performance.
-  They showed children pictures, pictures and numbers, or just numbers for two tasks.
-  For some,
-  having pictures or pictures and numbers outperformed having numbers only,
-  but for others,
-  having pictures outperformed pictures and numbers,
-  which outperformed just having numbers.
+  同样，~\cite{Stam2013,Stam2014}发现，
+  信息更多反而可能让表现更差。
+  他们向孩子们呈现图片、图片加数字，或只有数字，来完成两项任务。
+  对一些人来说，
+  有图片或有图片加数字的表现胜过只有数字，
+  但对另一些人来说，
+  有图片胜过图片加数字，而图片加数字又胜过只有数字。
 \end{aside}
 
-\seclbl{Cognitive Load}{s:architecture-load}
+\seclbl{认知负荷}{s:architecture-load}
 
-In~\cite{Kirs2006}, Kirschner, Sweller and Clark wrote:
+在~\cite{Kirs2006}中，Kirschner、Sweller 和 Clark 写道：
 
 \begin{quote}
 
-  Although unguided or minimally guided instructional approaches
-  are very popular and intuitively appealing{\ldots}these approaches ignore
-  both the structures that constitute human cognitive architecture
-  and evidence from empirical studies over the past half-century
-  that consistently indicate that minimally guided instruction is less effective and less efficient
-  than instructional approaches that place a strong emphasis on guidance of the student learning process.
-  The advantage of guidance begins to recede
-  only when learners have sufficiently high prior knowledge to provide ``internal'' guidance.
+  尽管无引导或最少引导的教学方法
+  非常流行、也符合直觉{\ldots}这些方法忽略了
+  构成人类认知架构的那些结构，
+  也忽略了半个世纪以来实证研究得到的证据，
+  这些证据一致表明，最少引导的教学在效果和效率上
+  都低于那些强烈强调引导学生学习过程的教学方法。
+  只有当学习者已经拥有足够高的先备知识、能提供「内部」引导时，
+  引导的优势才开始消退。
 
 \end{quote}
 
-Beneath the jargon,
-the authors were claiming that having learners ask their own questions,
-set their own goals,
-and find their own path through a subject
-is less effective than showing them how to do things step by step.
-The ``choose your own adventure'' approach is known as \gref{g:inquiry-based-learning}{inquiry-based learning},
-and is intuitively appealing:
-after all,
-who would argue \emph{against} having learners use their own initiative
-to solve real-world problems in realistic ways?
-However,
-asking learners to do this in a new domain overloads them
-by requiring them to master a domain's factual content
-and its problem-solving strategies
-at the same time.
+抛开那些行话，
+作者们的主张是：让学习者自己提问题、
+自己定目标、
+自己找一条穿过某个学科的路径，
+不如一步步教他们怎么做有效。
+这种「自己选冒险路线」的做法叫做\gref{g:inquiry-based-learning}{探究式学习}，
+它很符合直觉：
+毕竟，
+谁会\emph{反对}让学习者主动去以贴近现实的方式解决真实世界的问题呢？
+然而，
+在一个全新的领域里要求学习者这么做，会把他们压垮，
+因为这要求他们同时掌握一个领域的事实内容
+和它的问题解决策略。
 
-More specifically,
-\gref{g:cognitive-load}{cognitive load theory} proposed that
-people have to deal with three things when they're learning:
+更具体地说，
+\gref{g:cognitive-load}{认知负荷理论}提出，
+人们在学习时必须应付三样东西：
 
 \begin{description}
 
-\item[\grefdex{g:intrinsic-load}{Intrinsic load}{cognitive load!intrinsic}]
-  is what people have to keep in mind in order to absorb new material.
+\item[\grefdex{g:intrinsic-load}{内在负荷}{认知负荷!内在}]
+  是人们为了吸收新材料而必须放在心上的东西。
 
-\item[\grefdex{g:germane-load}{Germane Load}{cognitive load!germane}]
-  is the (desirable) mental effort required to link new information to old,
-  which is one of the things that distinguishes learning from memorization.
+\item[\grefdex{g:germane-load}{关联负荷}{认知负荷!关联}]
+  是把新信息与旧信息联系起来所需的（有益的）心理努力，
+  这也是区分「学习」与「记忆」的要素之一。
 
-\item[\grefdex{g:extraneous-load}{Extraneous Load}{cognitive load!extraneous}]
-  is anything that distracts from learning.
+\item[\grefdex{g:extraneous-load}{外在负荷}{认知负荷!外在}]
+  是任何会分散学习注意力的东西。
 
 \end{description}
 
-Cognitive load theory holds that
-people have to divide a fixed amount of working memory between these three things.
-Our goal as teachers is to maximize the memory available to handle intrinsic load,
-which means reducing the germane load at each step and eliminating the extraneous load.
+认知负荷理论认为，
+人们必须在一份固定的工作记忆里，把它分配给这三样东西。
+作为老师，我们的目标是让可用于处理内在负荷的记忆最大化，
+这就意味着在每一步都减少关联负荷、并消除外在负荷。
 
-\subsection*{Parsons Problems}
+\subsection*{帕森斯问题}
 
-One kind of exercise that can be explained in terms of cognitive load
-is often used when teaching languages.
-Suppose you ask someone to translate the sentence, ``How is her knee today?'' into Frisian.
-To solve the problem,
-they need to recall both vocabulary and grammar,
-which is a double cognitive load.
-If you ask them to put ``hoe,'' ``har,'' ``is,'' ``hjoed,'' and ``knie'' in the right order,
-on the other hand,
-you are allowing them to focus solely on learning grammar.
-If you write these words in five different fonts or colors,
-though,
-you have increased the extraneous cognitive load,
-because they will involuntarily (and possibly unconsciously) expend some effort
-trying to figure out if the differences are meaningful
-(\figref{f:architecture-frisian}).
+有一类可以用认知负荷来解释的练习，
+在语言教学中经常使用。
+假设你让某人把「How is her knee today?」这句话翻译成弗里西语。
+要解决这个问题，
+他们既得回忆起词汇、又得回忆起语法，
+这是双重的认知负荷。
+但如果你让他们把「hoe」「har」「is」「hjoed」「knie」这几个词排成正确的顺序，
+你就是在让他们把注意力完全集中在学语法上。
+不过，如果你把这几个词写成五种不同的字体或颜色，
+你就增加了外在认知负荷，
+因为他们会不由自主地（可能还不知不觉地）花一些力气，
+去弄清这些差异有没有意义
+（\figref{f:architecture-frisian}）。
 
-\figimg{figures/frisian.png}{Constructing a sentence}{f:architecture-frisian}{}
+\figimg{figures/frisian.png}{构造一个句子}{f:architecture-frisian}{}
 
-The coding equivalent of this
-is called a \gref{g:parsons-problem}{Parsons Problem}\footnote{Named after one of its creators.}~\cite{Pars2006}.
-When teaching people to program,
-you can give them the lines of code they need to solve a problem
-and ask them to put them in the right order.
-This allows them to concentrate on control flow and data dependencies
-without being distracted by variable naming or trying to remember what functions to call.
-Multiple studies have shown that Parsons Problems take less time for learners to do
-but produce equivalent educational outcomes~\cite{Eric2017}.
+这件事在编程里的对应物，
+叫做\gref{g:parsons-problem}{帕森斯问题}\footnote{以它的创建者之一命名。}~\cite{Pars2006}。
+教人编程时，
+你可以把解决问题需要的几行代码给他们，
+让他们排出正确的顺序。
+这样他们就能专注于控制流和数据依赖，
+而不被变量命名分心，也不必费劲去记该调用哪些函数。
+多项研究表明，帕森斯问题让学习者花的时间更少，
+却产生同等的教学效果~\cite{Eric2017}。
 
-\subsection*{Faded Examples}
+\subsection*{渐隐示例}
 
-Another type of exercise that can be explained in terms of cognitive load
-is to give learners a series of \grefdex{g:faded-example}{faded examples}{faded example}.
-The first example in a series presents a complete use of a particular problem-solving strategy.
-The next problem is of the same type,
-but has some gaps for the learner to fill in.
-Each successive problem gives the learner less \gref{g:scaffolding}{scaffolding},
-until they are asked to solve a complete problem from scratch.
-When teaching high school algebra,
-for example,
-we might start with this:
+另一类可以用认知负荷来解释的练习，
+是给学习者一系列\grefdex{g:faded-example}{渐隐示例}{渐隐示例}。
+一系列中的第一个例子，完整地展示某种问题解决策略的用法。
+下一个问题类型相同，
+但留了几个空让学习者填。
+每往后一个问题，给学习者的\gref{g:scaffolding}{脚手架}都更少，
+直到最后要求他们从头独立解决一个完整的问题。
+例如，在教高中数学代数时，
+我们可能先给出这个：
 
 \begin{center}
 \begin{tabular}{rcl}
@@ -213,7 +202,7 @@ we might start with this:
 \end{center}
 
 \noindent
-and then ask learners to solve this:
+然后让学习者解这个：
 
 \begin{center}
 \begin{tabular}{rcl}
@@ -227,7 +216,7 @@ and then ask learners to solve this:
 \end{center}
 
 \noindent
-and this:
+再解这个：
 
 \begin{center}
 \begin{tabular}{rcl}
@@ -239,7 +228,7 @@ and this:
 \end{center}
 
 \noindent
-and finally this:
+最后是这个：
 
 \begin{center}
 \begin{tabular}{rcl}
@@ -248,8 +237,8 @@ and finally this:
 \end{tabular}
 \end{center}
 
-A similar exercise for teaching Python might start by showing learners\index{Python}
-how to find the total length of a list of words:
+在教 Python 时，一个类似的练习可以先给学习者看\index{Python}
+如何求一个单词列表的总长度：
 
 \begin{minted}{text}
 # total_length(["red", "green", "blue"]) => 12
@@ -261,8 +250,8 @@ define total_length(list_of_words):
 \end{minted}
 
 \noindent
-and then ask them to fill in the blanks in this
-(which focuses their attention on control structures):
+然后让他们填出下面这段的空
+（这会把他们的注意力集中在控制结构上）：
 
 \begin{minted}{text}
 # word_lengths(["red", "green", "blue"]) => [3, 5, 4]
@@ -273,8 +262,8 @@ define word_lengths(list_of_words):
     return list_of_lengths
 \end{minted}
 
-The next problem might be this
-(which focuses their attention on updating the final result):
+下一个问题可能是这个
+（这会把他们的注意力集中在更新最终结果上）：
 
 \begin{minted}{text}
 # join_all(["red", "green", "blue"]) => "redgreenblue"
@@ -285,7 +274,7 @@ define join_all(list_of_words):
     return joined_words
 \end{minted}
 
-Learners would finally be asked to write an entire function on their own:
+最后会要求学习者自己写出一个完整的函数：
 
 \begin{minted}{text}
 # make_acronym(["red", "green", "blue"]) => "RGB"
@@ -293,298 +282,294 @@ define make_acronym(list_of_words):
     ____
 \end{minted}
 
-Faded examples work because
-they introduce the problem-solving strategy piece by piece:
-at each step,
-learners have one new problem to tackle,
-which is less intimidating than a blank screen or a blank sheet of paper (\secref{s:classroom-practices}).
-It also encourages learners to think about the similarities and differences between various approaches,
-which helps create the linkages in their mental models that help retrieval.
+渐隐示例之所以有效，
+是因为它把问题解决策略一块一块地引入：
+每一步，
+学习者只需要应付一个新问题，
+这比面对一块空屏幕或一张白纸更不吓人（\secref{s:classroom-practices}）。
+它也鼓励学习者去思考各种方法之间的异同，
+这有助于在他们的心智模型里建立连接，从而帮助回忆。
 
-The key to constructing a good faded example is
-to think about the problem-solving strategy it is meant to teach.
-For example,
-the programming problems above all use the accumulator design pattern,
-in which the results of processing items from a collection
-are repeatedly added to a single variable in some way to create the final result.
+构造一个好的渐隐示例，关键在于
+想清楚它打算教的是什么问题解决策略。
+例如，
+上面那些编程问题全都用了累加器设计模式，
+也就是把处理集合中各个条目的结果
+以某种方式反复加到同一个变量上，从而得出最终结果。
 
-\begin{aside}{Cognitive Apprenticeship}
-  An alternative model of learning and instruction that also uses scaffolding and fading
-  is \gref{g:cognitive-apprenticeship}{cognitive apprenticeship},
-  which emphasizes the way in which a master passes on skills and insights to an apprentice.
-  The master provides models of performance and outcomes,
-  then coaches novices by explaining what they are doing and why~\cite{Coll1991,Casp2007}.
-  The apprentice reflects on their own problem solving,
-  e.g.\ by thinking aloud or critiquing their own work,
-  and eventually explores problems of their own choosing.
+\begin{aside}{认知学徒制}
+  另一种同样使用脚手架和渐隐的学习与教学模型，
+  是\gref{g:cognitive-apprenticeship}{认知学徒制}，
+  它强调师傅把技能和洞见传授给学徒的方式。
+  师傅提供表现和结果的范本，
+  然后通过解释自己在做什么、为什么这样做来指导新手~\cite{Coll1991,Casp2007}。
+  学徒反思自己的问题解决过程，
+  例如把思路说出来，或评论自己的作品，
+  最终去探索自己选择的问题。
 
-  This model tells us that
-  teachers should present several examples when presenting a new idea
-  so that learners can see what to generalize,
-  and that we should vary the form of the problem to make it clear
-  what are and aren't superficial features\footnote{For a long time,
-    I believed that the variable holding the value a function was going to return
-    \emph{had} to be called \texttt{result}
-    because my teacher always used that name in examples.}.
-  Problems should be presented in real-world contexts,
-  and we should encourage self-explanation to help learners organize and make sense of what they have just been taught
-  (\secref{s:individual-strategies}).
+  这个模型告诉我们：
+  老师在呈现一个新想法时应该给出好几个例子，
+  好让学习者看出该概括什么；
+  我们还应该变换问题的形式，以讲清
+  哪些是表面特征、哪些不是\footnote{有很长一段时间，
+    我相信用来存放函数将要返回的值的那个变量
+    \emph{必须}叫做 \texttt{result}，
+    因为我的老师在例子里总是用这个名字。}。
+  问题应该放在真实世界的语境里呈现，
+  我们还应该鼓励自我解释，帮学习者组织和弄懂刚学到的内容
+  （\secref{s:individual-strategies}）。
 \end{aside}
 
-\subsection*{Labeled Subgoals}
+\subsection*{标注子目标}
 
-\grefdex{g:subgoal-labeling}{Labeling subgoals}{labeled subgoals} means
-giving names to the steps in a step-by-step description of a problem-solving process.
-\cite{Marg2016,Morr2016} found that learners with labeled subgoals
-solved Parsons Problems better than learners without,
-and the same benefit is seen in other domains~\cite{Marg2012}.
-Returning to the Python example used earlier,
-the subgoals in finding the total length of a list of words or constructing an acronym are:
+\grefdex{g:subgoal-labeling}{标注子目标}{标注子目标}是指
+为问题解决过程的分步描述中的各个步骤命名。
+\cite{Marg2016,Morr2016}发现，有标注子目标的学习者
+在解帕森斯问题上比没有标注的学习者做得更好，
+其他领域也观察到同样的好处~\cite{Marg2012}。
+回到前面用过的 Python 例子，
+在求单词列表总长度或构造首字母缩写时，子目标是：
 
 \begin{enumerate}
 
 \item
-  Create an empty value of the type to be returned.
+  创建一个要返回类型的空值。
 
 \item
-  Get the value to be added to the result from the loop variable.
+  从循环变量中取得要加到结果上的值。
 
 \item
-  Update the result with that value.
+  用那个值更新结果。
 
 \end{enumerate}
 
-Labeling subgoals works because grouping related steps into named chunks (\secref{s:memory-seven-plus-or-minus})\index{chunking}
-helps learners distinguish what's generic from what is specific to the problem at hand.
-It also helps them build a mental model of that kind of problem
-so that they can solve other problems of that kind,
-and gives them a natural opportunity for self-explanation (\secref{s:individual-strategies}).
+标注子目标之所以有效，是因为把相关步骤归并成有名字的组块（\secref{s:memory-seven-plus-or-minus}）\index{组块}
+有助于学习者区分，什么是通用的、什么是当前问题特有的。
+它还有助于他们为那类问题建立一个心智模型，
+从而能解决同类别的其他问题，
+并给他们一个自我解释的自然机会（\secref{s:individual-strategies}）。
 
-\subsection*{Minimal Manuals}
+\subsection*{极简手册}
 
-The purest application of cognitive load theory may be John Carroll's\index{Carroll, John}
-\gref{g:minimal-manual}{minimal manual}~\cite{Carr1987,Carr2014}.
-Its starting point is a quote from a user:
-``I want to do something, not learn how to do everything.''
-Carroll and colleagues redesigned training to present every idea as a single-page self-contained task:
-a title describing what the page was about,
-step-by-step instructions of how to do just one thing
-(e.g.\ how to delete a blank line in a text editor),
-and then several notes on how to recognize and debug common problems.
-They found that rewriting training materials this way made them shorter overall,
-and that people using them learned faster.
-Later studies confirmed that this approach outperformed the traditional approach
-regardless of prior experience with computers~\cite{Lazo1993}.
-\cite{Carr2014} summarized this work by saying:
+认知负荷理论最纯粹的应用，也许是 John Carroll 的\index{Carroll, John}
+\gref{g:minimal-manual}{极简手册}~\cite{Carr1987,Carr2014}。
+它的出发点是引用一位用户的话：
+「我想做一件事，而不是学会怎么做所有的事。」
+Carroll 和同事重新设计了培训，把每个想法都呈现为一页独立的自包含任务：
+一个描述这一页讲什么的小标题、
+只讲一件事怎么做的分步说明
+（例如，如何在一个文本编辑器里删除一个空行），
+然后是若干条关于如何识别和调试常见问题的说明。
+他们发现，以这种方式重写培训材料，总体上让材料变得更短，
+而且使用这些材料的人学得更快。
+后续研究证实，无论使用者此前有没有计算机经验，
+这种方法都胜过传统方法~\cite{Lazo1993}。
+\cite{Carr2014}这样总结这项工作：
 
 \begin{quote}
 
-  Our ``minimalist'' designs sought to leverage user initiative and prior knowledge,
-  instead of controlling it through warnings and ordered steps.
-  It emphasized that users typically bring much expertise and insight to this learning,
-  for example,
-  knowledge about the task domain,
-  and that such knowledge could be a resource to instructional designers.
-  Minimalism leveraged episodes of error recognition, diagnosis, and recovery,
-  instead of attempting to merely forestall error.
-  It framed troubleshooting and recovery as learning opportunities instead of as aberrations.
+  我们的「极简主义」设计力图利用用户的主动性和先备知识，
+  而不是用警告和规定的步骤去控制它。
+  它强调，用户通常会给这种学习带来大量专长和洞见，
+  例如关于任务领域的知识，
+  并且这类知识可以成为教学设计者的资源。
+  极简主义利用错误识别、诊断和恢复的环节，
+  而不是仅仅试图预防错误。
+  它把排错和恢复框定为学习机会，而不是异常。
 
 \end{quote}
 
-\seclbl{Other Models of Learning}{s:architecture-theory}
+\seclbl{其他的学习模型}{s:architecture-theory}
 
-Critics of cognitive load theory have sometimes argued that\index{cognitive load!criticism of}
-any result can be justified after the fact by labeling things that hurt performance as extraneous load
-and things that don't as intrinsic or germane.
-However,
-instruction based on cognitive load theory is undeniably effective.
-For example,
-\cite{Maso2016} redesigned a database course to remove split attention and redundancy effects
-and to provide worked examples and sub-goals.
-The new course reduced the exam failure rate by 34\%
-and increased learner satisfaction.
+认知负荷理论的批评者有时主张，\index{认知负荷!批评}
+任何结果都可以事后通过把损害表现的东西贴上外在负荷的标签、
+把无害的东西贴上内在或关联负荷的标签来合理化。
+然而，
+基于认知负荷理论的教学是不可否认地有效的。
+例如，
+\cite{Maso2016}重新设计了一门数据库课程，以消除注意分散和冗余效应，
+并提供示例和子目标。
+新课程把考试不及格率降低了 34\%，
+还提高了学习者满意度。
 
-A decade after the publication of~\cite{Kirs2006},
-a growing number of people believe that cognitive load theory and inquiry-based approaches are compatible
-if viewed in the right way.
-\cite{Kaly2015} argues that cognitive load theory is basically micro-management of learning
-within a broader context that considers things like motivation,
-while~\cite{Kirs2018} extends cognitive load theory to include collaborative aspects of learning.
-As with~\cite{Mark2018} (discussed in \secref{s:individual-strategies}),
-researchers' perspectives may differ,
-but the practical implementation of their theories often wind up being the same.
+在~\cite{Kirs2006}发表十年之后，
+越来越多的人相信，如果以正确的方式看待，
+认知负荷理论和探究式方法是可以兼容的。
+\cite{Kaly2015}主张，认知负荷理论基本上是在一个更大的语境里对学习进行微观管理，
+这个语境还考虑动机之类的东西；
+而~\cite{Kirs2018}把认知负荷理论扩展到包含学习的协作层面。
+正如~\cite{Mark2018}（在\secref{s:individual-strategies}里讨论过）那样，
+研究者的视角可能不同，
+但他们理论的实际落地方式往往殊途同归。
 
-One of the challenges in educational research is that
-what we mean by ``learning'' turns out to be complicated
-once you look beyond the standardized Western classroom.
-Two specific perspectives from \gref{g:educational-psychology}{educational psychology} have influenced this book.
-The one we have used so far is \gref{g:cognitivism}{cognitivism},
-which focuses on things like pattern recognition, memory formation, and recall.
-It is good at answering low-level questions,
-but generally ignores larger issues like,
-``What do we mean by `learning'?''
-and, ``Who gets to decide?''
-The other is \gref{g:situated-learning}{situated learning},
-which focuses on bringing people into a community
-and recognizes that
-teaching and learning are always rooted in who we are and who we aspire to be.
-We will discuss it in more detail in \chapref{s:community}.
+教育研究中的一个挑战是，
+一旦你跳出标准化的西方课堂，
+我们所说的「学习」究竟是什么，就变得很复杂。
+\gref{g:educational-psychology}{教育心理学}里有两个具体视角影响了本书。
+我们到目前为止用的是\gref{g:cognitivism}{认知主义}，
+它关注模式识别、记忆形成和回忆之类的东西。
+它擅长回答低层次的问题，
+但通常忽略更大的问题，比如
+「我们所说的『学习』是什么意思？」
+以及「谁有资格来定义它？」
+另一个是\gref{g:situated-learning}{情境学习}，
+它关注把人带进一个共同体，
+并承认
+教与学总是植根于我们是谁、以及我们渴望成为谁。
+我们会在\chapref{s:community}里更详细地讨论它。
 
-The \hreffoot{http://www.learning-theories.com/}{Learning Theories website}
-and~\cite{Wibu2016}
-have good summaries of these and other perspectives.
-Besides cognitivism,
-those encountered most frequently include \gref{g:behaviorism}{behaviorism}
-(which treats education as stimulus/response conditioning),
-\gref{g:constructivism}{constructivism}
-(which considers learning an active process during which learners construct knowledge for themselves),
-and \gref{g:connectivism}{connectivism}
-(which holds that knowledge is distributed,
-that learning is the process of navigating, growing, and pruning connections,
-and which emphasizes the social aspects of learning made possible by the internet).
-These perspectives can help us organize our thoughts,
-but in practice,
-we always have to try new methods in the class,
-with actual learners,
-in order to find out how well they balance the many forces in play.
+\hreffoot{http://www.learning-theories.com/}{Learning Theories 网站}
+和~\cite{Wibu2016}
+对这些以及其他视角都有很好的概述。
+除认知主义之外，
+最常遇到的还包括\gref{g:behaviorism}{行为主义}
+（把教育当作刺激/反应的条件作用）、
+\gref{g:constructivism}{建构主义}
+（把学习看作一个主动的过程，学习者在此过程中为自己建构知识）、
+以及\gref{g:connectivism}{联通主义}
+（认为知识是分布式的，
+学习就是建立、生长和修剪连接的过程，
+并强调互联网使学习具有的社会性）。
+这些视角能帮我们整理思路，
+但在实践中，
+我们总得在课堂上、面对真实的学习者去尝试新方法，
+才能弄清它们在多大程度上摆平了各种相互作用的力量。
 
-\seclbl{Exercises}{s:architecture-exercises}
+\seclbl{练习}{s:architecture-exercises}
 
-\exercise{Create a Faded Example}{pairs}{30}
+\exercise{创建一个渐隐示例}{两人一组}{30}
 
-It's very common for programs to count how many things fall into different categories:
-for example,
-how many times different colors appear in an image,
-or how many times different words appear in a paragraph of text.
+程序里很常见的一种操作，是统计有多少东西分属不同类别：
+例如，
+一个图像里不同颜色各出现了多少次，
+或者一段文字里不同的词各出现了多少次。
 
 \begin{enumerate}
 \item
-  Create a short example (no more than 10 lines of code) that shows people how to do this,
-  and then create a second example that solves a similar problem in a similar way
-  but has a couple of blanks for learners to fill in.
-  How did you decide what to fade out?
-  What would the next example in the series be?
+  创建一个简短的例子（不超过 10 行代码），向人们展示怎么做这件事，
+  然后再创建第二个例子，以相似的方式解决一个相似的问题，
+  但留出几个空让学习者填。
+  你是怎么决定哪些地方该渐隐掉的？
+  这一系列里的下一个例子会是什么？
 
 \item
-  Define the audience for your examples.
-  For example,
-  are these beginners who only know some basics programming concepts?
-  Or are these learners with some experience in programming?
+  为你的例子确定受众。
+  例如，
+  这些是只懂一些基础编程概念的初学者吗？
+  还是已经有一些编程经验的学习者？
 
 \item
-  Show your example to a partner,
-  but do \emph{not} tell them what level you think it is for.
-  Once they have filled in the blanks,
-  ask them to guess the intended level.
-
+  把你的例子给同伴看，
+  但\emph{不要}告诉他们你觉得这是给哪个水平的。
+  等他们填完空之后，
+  让他们猜一猜目标水平。
 \end{enumerate}
 
-If there are people among the trainees who don't program at all,
-try to place them in different groups
-and have them play the part of learners for those groups.
-Alternatively,
-choose a different problem domain and develop a faded example for it.
+如果参加培训的人里有完全不会编程的，
+尽量把他们分到不同的小组里，
+让他们在那些小组里扮演学习者。
+或者，
+换一个别的任务领域，为它做一个渐隐示例。
 
-\exercise{Classifying Load}{small groups}{15}
+\exercise{给负荷分类}{小组}{15}
 
 \begin{enumerate}
 
 \item
-  Choose a short lesson that a member of your group has taught or taken recently.
+  选一节你们小组某个成员最近教过或上过的短课。
 
 \item
-  Make a point-form list of the ideas, instructions, and explanations it contains.
+  把其中包含的想法、指令和解释列成一个要点清单。
 
 \item
-  Classify each as intrinsic, germane, or extraneous.
-  What did you all agree on?
-  Where did you disagree and why?
+  把它们分别归为内在负荷、关联负荷或外在负荷。
+  你们一致同意的是哪些？
+  在哪里有分歧？为什么？
 
 \end{enumerate}
 
-(The exercise ``Noticing Your Blind Spot'' in \secref{s:memory-exercises}
-will give you an idea of how detailed your point-form list should be.)
+（\secref{s:memory-exercises}里的练习「注意你的盲区」
+会让你明白这个要点清单该做到多细。）
 
-\exercise{Create a Parsons Problem}{pairs}{20}
+\exercise{创建一个帕森斯问题}{两人一组}{20}
 
-Write five or six lines of code that does something useful,
-jumble them,
-and ask your partner to put them in order.
-If you are using an indentation-based language like Python,
-do not indent any of the lines;
-if you are using a curly-brace language like Java,
-do not include any of the curly braces.
-(If your group includes people who aren't programmers,
-use a different problem domain,
-such as making banana bread.)
+写五六行能做某件有用之事的代码，
+把它们打乱，
+让你的同伴排出顺序。
+如果你用的是像 Python 这样靠缩进的语言，
+就不要给任何行加缩进；
+如果你用的是像 Java 这样用花括号的语言，
+就不要包含任何花括号。
+（如果你的小组里有不会编程的人，
+换一个别的任务领域，比如做香蕉面包。）
 
-\exercise{Minimal Manuals}{individual}{20}
+\exercise{极简手册}{个人}{20}
 
-Write a one-page guide to doing something that your learners might encounter in one of your classes,
-such as centering text horizontally
-or printing a number with a certain number of digits after the decimal point.
-Try to list at least three or four incorrect behaviors or outcomes the learner might see
-and include a one- or two-line explanation
-of why each happens and how to correct it.
+写一页指南，讲怎么完成学习者可能在你课上遇到的某件事，
+比如把文字水平居中，
+或者打印一个带指定位数小数的数字。
+尽量列出学习者可能看到的至少三四种错误行为或结果，
+并为每一种加一两行说明，
+解释它为什么会发生、该怎么纠正。
 
-\exercise{Cognitive Apprenticeship}{pairs}{15}
+\exercise{认知学徒制}{两人一组}{15}
 
-Pick a coding problem that you can do in two or three minutes
-and think aloud as you work through it
-while your partner asks questions about what you're doing and why.
-Do not just explain what you're doing,
-but also why you're doing it,
-how you know it's the right thing to do,
-and what alternatives you've considered but discarded.
-When you are done,
-swap roles with your partner and repeat the exercise.
+挑一个你两三分钟就能做完的编程问题，
+一边做一边把思路说出来，
+而你的同伴就你在做什么、为什么这么做提问。
+不要只解释你在做什么，
+还要解释你为什么这么做、
+你怎么知道这是对的做法、
+以及你考虑过但又放弃了哪些别的做法。
+做完之后，
+和同伴交换角色，重复这个练习。
 
-\exercise{Worked Examples}{pairs}{15}
+\exercise{示例}{两人一组}{15}
 
-Seeing worked examples helps people learn to program faster than just writing lots of code~\cite{Skud2014},
-and deconstructing code by tracing it or debugging it also increases learning~\cite{Grif2016}.
-Working in pairs,
-go through a 10--15 line piece of code and explain what every statement does
-and why it is necessary.
-How long does it take?
-How many things do you feel you need to explain per line of code?
+看例子能让人比只写大量代码更快地学会编程~\cite{Skud2014}，
+而通过追踪或调试来拆解代码也能增加学习~\cite{Grif2016}。
+两人一组，
+拿一段 10—15 行的代码，解释每一条语句做什么、
+以及为什么需要它。
+花了多长时间？
+你觉得每行代码需要解释的东西有多少？
 
-\exercise{Critiquing Graphics}{individual}{30}
+\exercise{评论图形}{个人}{30}
 
-\cite{Maye2009,Mill2016a} presents six principles for good teaching graphics:
+\cite{Maye2009,Mill2016a}提出了好教学图形的六条原则：
 
 \begin{description}
 
-\item[Signalling:]
-  visually highlight the most important points
-  so that they stand out from less-critical material.
+\item[信号提示：]
+  在视觉上突出最重要的点，
+  让它们从不太关键的材料中脱颖而出。
 
-\item[Spatial contiguity:]
-  place captions as close to the graphics as practical to offset the cost of shifting between the two.
+\item[空间邻近：]
+  把图注放得尽量靠近图形，以抵消在两者之间来回切换的代价。
 
-\item[Temporal contiguity:]
-  present spoken narration and graphics as close in time as practical.
-  (Presenting both at once is better than presenting them one after another.)
+\item[时间邻近：]
+  让口头旁白和图形在时间上尽量靠近。
+  （两者同时呈现比一前一后呈现更好。）
 
-\item[Segmenting:]
-  when presenting a long sequence of material or when learners are inexperienced with the subject,
-  break the presentation into short segments
-  and let learners control how quickly they advance from to the next.
+\item[分段：]
+  在呈现一长串材料，或学习者对主题没有经验时，
+  把呈现切分成短小的片段，
+  让学习者自己控制以多快进入下一段。
 
-\item[Pre-training:]
-  if learners don't know the major concepts and terminology used in your presentation,
-  teach just those concepts and terms beforehand.
+\item[预训练：]
+  如果学习者不知道你的呈现里用到的主要概念和术语，
+  就在事先只教这些概念和术语。
 
-\item[Modality:]
-  people learn better from pictures plus narration than from pictures plus text,
-  unless they are non-native speakers
-  or there are technical words or symbols.
+\item[模态：]
+  人们从图片加旁白中学得比从图片加文字中学得好，
+  除非他们是非母语者，
+  或者其中含有技术词汇或符号。
 
 \end{description}
 
-Choose a video of a lesson or talk online that uses slides or other static presentations
-and rate its graphics as ``poor,'' ``average,'' or ``good'' according to these six criteria.
+在网上选一段使用幻灯片或其他静态呈现的课程或演讲视频，
+按这六条标准，把它的图形评为「差」「中」或「好」。
 
-\section*{Review}
+\section*{回顾}
 
-\figpdfhere{figures/conceptmap-cognitive-load.pdf}{Concepts: Cognitive load}{f:architecture-cognitive-load}{}
+\figpdfhere{figures/conceptmap-cognitive-load.pdf}{概念：认知负荷}{f:architecture-cognitive-load}{}

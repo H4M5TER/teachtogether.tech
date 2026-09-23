@@ -1,635 +1,619 @@
-\chapter{A Lesson Design Process}\label{s:process}
+\chapter{课程设计流程}\label{s:process}
 
-Most people design lessons like this:
-
-\begin{enumerate}
-
-\item
-  Someone asks you to teach something you barely know
-  or haven't thought about in years.
-
-\item
-  You start writing slides to explain what you know about the subject.
-
-\item
-  After 2 or 3 weeks,
-  you make up an assignment based on what you've taught so far.
-
-\item
-  You repeat step 3 several times.
-
-\item
-  You stay awake into the wee hours of the morning
-  to create a final exam
-  and promise yourself that you'll be more organized next time.
-
-\end{enumerate}
-
-A more effective method is similar in spirit to a programming practice called
-\gref{g:test-driven-development}{test-driven development} (TDD).
-Programmers who use TDD don't write software
-and then test that it is working correctly.
-Instead,
-they write the tests first,
-then write just enough new software to make those tests pass.
-
-TDD works because writing tests forces programmers to be precise about
-what they're trying to accomplish and what ``done'' looks like.
-TDD also prevents endless polishing:
-when the tests pass, you stop coding.
-Finally,
-it reduces the risk of confirmation bias:
-someone who hasn't yet written a piece of software
-will be more objective than someone who has just put in several hours of hard work
-and really, really wants to be done.
-
-A similar method called \gref{g:backward-design}{backward design} works very well for lesson design.
-This method was developed independently in~\cite{Wigg2005,Bigg2011,Fink2013}
-and is summarized in~\cite{McTi2013}.
-In simplified form, its steps are:
+大多数人设计课程是这样的：
 
 \begin{enumerate}
 
 \item
-  Create or recycle learner personas (discussed in the next section)
-  to figure out who you are trying to help and what will appeal to them.
+  有人请你教一样你几乎不懂、或者好几年没想过的东西。
 
 \item
-  Brainstorm to get a rough idea of what you want to cover,
-  how you're going to do it,
-  what problems or misconceptions you expect to encounter,
-  what's \emph{not} going to be included,
-  and so on.
-  Drawing concept maps can help a lot at this stage (\secref{s:memory-concept-maps}).\index{concept map}
+  你开始写幻灯片，讲解你对这个学科的所知。
 
 \item
-  Create a summative assessment (\secref{s:models-formative-assessment})\index{summative assessment}
-  to define your overall goal.
-  This can be the final exam for a course
-  or the capstone project for a one-day workshop;
-  regardless of its form or size,
-  it shows how far you hope to get
-  more clearly than a point-form list of objectives.
+  两三周后，
+  你根据到目前为止讲过的内容编一份作业。
 
 \item
-  Create formative assessments\index{formative assessment}
-  that will give people a chance to practice the things they're learning.
-  These will also tell you (and them) whether they're making progress
-  and where they need to focus their attention.
-  The best way to do this is to itemize the knowledge and skills used in
-  the summative assessment you developed in the previous step
-  and then create at least one formative assessment for each.
+  第 3 步重复好几次。
 
 \item
-  Order the formative assessments to create a course outline
-  based on their complexity,
-  their dependencies,
-  and how well topics will motivate your learners (\secref{s:motivation-authentic}).
-
-\item
-  Write material to get learners from one formative assessment to the next.
-  Each hour of instruction should consist of three to five such episodes.
-
-\item
-  Write a summary description of the course
-  to help its intended audience find it
-  and figure out whether it's right for them.
+  你熬到凌晨，编出一份期末考试，
+  并向自己保证下次会更有条理。
 
 \end{enumerate}
 
-This method helps keep teaching focused on its objectives.
-It also ensures that learners don't face anything at the end of the course
-that they are not prepared for.
+一种更有效的办法，在精神上类似于一种叫
+\gref{g:test-driven-development}{测试驱动开发}（TDD）的编程实践。
+用 TDD 的程序员不会先写软件、再测试它能正确工作。
+相反，
+他们先写测试，
+然后只写刚好能让这些测试通过的新软件。
 
-\begin{aside}{Perverse Incentives}
-  Backward design is \emph{not} the same thing as \gref{g:teaching-to-the-test}{teaching to the test}.
-  When using backward design,
-  teachers set goals to aid in lesson design;
-  they may never actually give the final exam that they wrote.
-  In many school systems,
-  on the other hand,
-  an external authority defines assessment criteria for all learners,
-  regardless of their individual situations.
-  The outcomes of those summative assessments directly affect the teachers' pay and promotion,
-  which means teachers have an incentive to focus on having learners pass tests
-  rather than on helping them learn.
+TDD 之所以有效，是因为写测试迫使程序员精确地说清
+自己想达成什么、以及「完成」是什么样子。
+TDD 还能防止无休止的打磨：
+测试一通过，你就停止写代码。
+最后，
+它降低了确认偏差的风险：
+一个还没写这份软件的人，
+会比一个刚投入了好几小时苦干、心心念念就想收工的人更客观。
 
-  \cite{Gree2014} argues that focusing on testing and measurement
-  appeals to those with the power to set the tests,
-  but is unlikely to improve outcomes
-  unless it is coupled with support for teachers to make improvements based on test outcomes.
-  The latter is often missing because
-  large organizations usually value uniformity over productivity~\cite{Scot1998}.
+一种类似的、叫做\gref{g:backward-design}{逆向设计}的方法，用在课程设计上效果很好。
+这个方法由~\cite{Wigg2005,Bigg2011,Fink2013}各自独立提出，
+并在~\cite{McTi2013}里做了总结。
+简化之后，它的步骤是：
+
+\begin{enumerate}
+
+\item
+  创建或复用学习者画像（下一节会讨论），
+  弄清你想帮的是谁、什么会吸引他们。
+
+\item
+  头脑风暴，大致想清楚你想覆盖什么、
+  打算怎么做、
+  预期会遇到哪些问题或误解、
+  哪些东西\emph{不}会包括进去，
+  等等。
+  在这个阶段，画概念图能帮上大忙（\secref{s:memory-concept-maps}）。\index{概念图}
+
+\item
+  创建一份总结性评价（\secref{s:models-formative-assessment}）\index{总结性评价}
+  来界定你的总体目标。
+  它可以是一门课的期末考试，
+  也可以是一天工作坊的结业项目；
+  不管它的形式和规模如何，
+  它都能比你列成要点的目标清单更清楚地显示你希望达到哪里。
+
+\item
+  创建形成性评价，\index{形成性评价}
+  让学习者有机会练习他们正在学的东西。
+  它们也会告诉你（以及他们）是否在取得进展、
+  以及需要把注意力放在哪里。
+  最好的做法，是把上一步里那份总结性评价用到的知识和技能逐条列出，
+  然后为每一条至少创建一个形成性评价。
+
+\item
+  根据这些形成性评价的复杂度、
+  它们之间的依赖关系、
+  以及各主题能在多大程度上激发学习者的动机（\secref{s:motivation-authentic}），
+  给它们排序，从而形成课程大纲。
+
+\item
+  编写材料，把学习者从一个形成性评价带到下一个。
+  每一小时的授课应该由三到五个这样的片段组成。
+
+\item
+  写一份课程的概要描述，
+  帮目标受众找到它、
+  并判断它是否适合自己。
+
+\end{enumerate}
+
+这个方法有助于让教学始终聚焦在目标上。
+它也确保学习者在课程结束时不会遇到
+他们没准备好的东西。
+
+\begin{aside}{扭曲的激励}
+  逆向设计\emph{不}等同于\gref{g:teaching-to-the-test}{应试教学}。
+  使用逆向设计时，
+  老师设定目标是为了辅助课程设计；
+  他们可能永远不会真正考那份自己写的期末考试。
+  而在许多学校体系里，
+  恰恰相反，
+  一个外部权威为所有学习者规定评价标准，
+  不管他们各自的情况如何。
+  这些总结性评价的结果直接关系到老师的薪水和晋升，
+  这就意味着老师有动力去盯着让学习者通过考试，
+  而不是帮他们学习。
+
+  \cite{Gree2014}主张，把重点放在考试和测量上，
+  对那些有权制定考试的人很有吸引力，
+  但除非同时给老师提供支持，让他们根据考试结果做出改进，
+  否则不大可能改善结果。
+  后者往往缺失，因为
+  大型组织通常看重整齐划一胜过产出效率~\cite{Scot1998}。
 \end{aside}
 
-Reverse design is described as a sequence,
-but it's almost never done that way.
-We may,
-for example, change our mind about what we want to teach
-based on something that occurs to us while we're writing an MCQ,
-or re-assess who we're trying to help once we have a lesson outline.
-However,
-the notes we leave behind should present things in the order described above
-so that whoever has to use or maintain the lesson after us can retrace our thinking
-\cite{Parn1986}.
+逆向设计被描述成一个序列，
+但它几乎从不按那种方式来做。
+例如，
+我们可能在写一道 MCQ 时忽然想到点什么，
+于是改变想教的内容；
+或者在有了课程大纲之后，重新评估我们想帮的是谁。
+不过，
+我们留下的笔记应该按上面描述的顺序来呈现，
+好让在我们之后使用或维护这门课的人能重走我们的思路
+\cite{Parn1986}。
 
-\seclbl{Learner Personas}{s:process-personas}
+\seclbl{学习者画像}{s:process-personas}
 
-The first step in the reverse design process is figuring out who your audience is.
-One way to do this is to write two or three
-\grefdex{g:learner-persona}{learner personas}{learner persona}
-like those in \secref{s:intro-audience}.
-This technique is borrowed from user experience designers,
-who create short profiles of typical users
-to help them think about their audience.
+逆向设计流程的第一步，是弄清你的受众是谁。
+一种办法是写两三个
+\grefdex{g:learner-persona}{学习者画像}{学习者画像}，
+就像\secref{s:intro-audience}里那些。
+这项技术是从用户体验设计师那里借来的，
+他们会为典型用户创建简短档案，
+以帮助自己思考受众。
 
-A learner persona consists of:
-
-\begin{enumerate}
-
-\item
-  the person's general background;
-
-\item
-  what they already know;
-
-\item
-  what they want to do;
-  and
-
-\item
-  any special needs they have.
-
-\end{enumerate}
-
-The personas in \secref{s:intro-audience} have the four points listed above,
-along with a short summary of how this book will help them.
-A learner persona for a volunteer group that runs weekend Python workshops might be:
+一个学习者画像包括：
 
 \begin{enumerate}
 
 \item
-  Jorge just moved from Costa Rica to Canada to study agricultural engineering.
-  He has joined the college soccer team
-  and is looking forward to learning how to play ice hockey.
+  此人的大致背景；
 
 \item
-  Other than using Excel, Word, and the internet,
-  Jorge's most significant previous experience with computers
-  is helping his sister build a WordPress site
-  for the family business back home.
+  他已经会什么；
 
 \item
-  Jorge wants to measure properties of soil from nearby farms
-  using a handheld device that sends data to his computer.
-  Right now he has to open each data file in Excel,
-  delete the first and last column,
-  and calculate some statistics on what's left.
-  He has to collect at least 600 measurements in the next few months,
-  and really doesn't want to have to do these steps by hand for each one.
+  他想做什么；
+  以及
 
 \item
-  Jorge can read English well,
-  but sometimes struggles to keep up with spoken conversation that involves a lot of jargon.
+  他有什么特殊需求。
 
 \end{enumerate}
 
-Rather than writing new personas for every lesson or course,
-teachers usually create and share half a dozen
-that cover everyone they are likely to teach,
-then pick a few from that set to describe the audience for particular material.
-Personas that are used this way become a convenient shorthand for design issues:
-when speaking with each other,
-teachers can say,
-``Would Jorge understand why we're doing this?''
-or,
-``What installation problems would Jorge face?''
+\secref{s:intro-audience}里的画像具备上面这四点，
+外加一段关于本书将如何帮到他们的简短说明。
+一个办周末 Python 工作坊的志愿者小组，其学习者画像可能是：
 
-\begin{aside}{Their Goals, Not Yours}
-  Personas should always describe what the learner wants to do
-  rather than what you think they actually need.
-  Ask yourself what they are searching for online;
-  it probably won't include jargon that they don't yet know,
-  so part of what you have to do as an instructional designer is
-  figure out how to make your lesson findable.\index{findability!of lessons}
+\begin{enumerate}
+
+\item
+  Jorge 刚从哥斯达黎加搬到加拿大，学习农业工程。
+  他加入了学院足球队，
+  正盼着学打冰球。
+
+\item
+  除了用 Excel、Word 和上网，
+  Jorge 此前最重要的计算机经验，
+  是帮他姐姐为家里的生意建一个 WordPress 网站。
+
+\item
+  Jorge 想用一台手持设备测量附近农场的土壤性质，
+  把数据发到自己的电脑上。
+  现在他得用 Excel 打开每个数据文件、
+  删掉第一列和最后一列、
+  再对剩下的部分算一些统计量。
+  他接下来几个月至少得采集 600 次测量，
+  实在不想每一个都手工做这些步骤。
+
+\item
+  Jorge 英语阅读没问题，
+  但有时跟不上满是行话的口头交谈。
+
+\end{enumerate}
+
+与其为每一节课或每一门课都写新画像，
+老师通常会创建并共享六七个
+覆盖他们可能教到的所有人的画像，
+然后从中挑几个来描述特定材料的受众。
+这样使用的画像，成了讨论设计问题时一种方便的简写：
+互相交流时，老师们可以说：
+「Jorge 会明白我们为什么这么做吗？」
+或者，
+「Jorge 会遇到哪些安装问题？」
+
+\begin{aside}{是他们的目标，不是你的}
+  画像描述的应该始终是学习者想做什么，
+  而不是你认为他们实际需要什么。
+  问问你自己，他们在网上搜索什么；
+  那多半不会包含他们还不懂的行话，
+  所以作为教学设计者，你要做的事之一，
+  就是想办法让你的课程能被搜到。\index{可发现性!课程}
 \end{aside}
 
-\seclbl{Learning Objectives}{s:process-objectives}
+\seclbl{学习目标}{s:process-objectives}
 
-Formative and summative assessments help teachers figure out what they're going to teach,
-but in order to communicate that to learners and other teachers,
-a course description should also have
-\grefdex{g:learning-objective}{learning objectives}{learning objective}.
-These help ensure that
-everyone has the same understanding of what a lesson is supposed to accomplish.
-For example,
-a statement like ``understand Git'' could mean any of the following:
+形成性评价和总结性评价帮助老师弄清他们要教什么，
+但为了把这一点传达给学习者和其他老师，
+一份课程描述还应该有
+\grefdex{g:learning-objective}{学习目标}{学习目标}。
+它们有助于确保
+每个人对一节课想要达成什么有一致的理解。
+例如，
+「理解 Git」这样一句话，可能意味着下面任何一种意思：
 
 \begin{itemize}
 
 \item
-  Learners can describe three ways
-  in which version control systems like Git are better than file-sharing tools like Dropbox
-  and two ways in which they are worse.
+  学习者能说出像 Git 这样的版本控制系统
+  在哪些三个方面优于 Dropbox 这样的文件共享工具，
+  以及在哪两个方面不如它们。
 
 \item
-  Learners can commit a changed file to a Git repository
-  using a desktop GUI tool.
+  学习者能用桌面 GUI 工具
+  把改动过的文件提交到一个 Git 仓库。
 
 \item
-  Learners can explain what a detached HEAD is
-  and recover from it using command-line operations.
+  学习者能解释什么是分离头指针（detached HEAD），
+  并用命令行操作从这种状态中恢复。
 
 \end{itemize}
 
-\begin{aside}{Objectives vs. Outcomes}
-  A learning objective is what a lesson strives to achieve.
-  A \gref{g:learning-outcome}{learning outcome} is what it actually achieves,
-  i.e.\ what learners actually take away.
-  The role of summative assessment is therefore
-  to compare learning outcomes with learning objectives.
+\begin{aside}{目标与成效}
+  学习目标是一节课努力要达成的东西。
+  \gref{g:learning-outcome}{学习成效}是它实际达成的东西，
+  也就是学习者真正带走的东西。
+  因此，总结性评价的作用就是
+  把学习成效与学习目标作比较。
 \end{aside}
 
-A learning objective describes how the learner will demonstrate what they have learned
-once they have successfully completed a lesson.
-More specifically,
-it has a \emph{measurable or verifiable verb} that states what the learner will do
-and specifies the \emph{criteria for acceptable performance}.
-Writing these may initially seem restrictive,
-but they will make you,
-your fellow teachers,
-and your learners happier in the long run:
-you will end up with clear guidelines for both your teaching and assessment,
-and your learners will appreciate having clear expectations.
+一个学习目标描述的是：学习者成功完成一节课后，
+将如何展示自己学到的东西。
+更具体地说，
+它有一个\emph{可测量或可验证的动词}，说明学习者将做什么，
+并规定\emph{可接受表现的标准}。
+写这些起初可能显得束手束脚，
+但从长远看，它们会让你、
+你的同行
+和你的学习者都更满意：
+你最终会得到清晰的教学和评估准则，
+而你的学习者会因为有了明确的预期而感激你。
 
-One way to understand what makes for a good learning objective
-is to see how a poor one can be improved:
-
-\begin{itemize}
-
-\item
-  \emph{The learner will be given opportunities to learn good programming practices.}\\
-  This describes the lesson's content,
-  not the attributes of successful learners.\\
-
-\item
-  \emph{The learner will have a better appreciation for good programming practices.}\\
-  This doesn't start with an active verb or define the level of learning,
-  and the subject of learning has no context and is not specific.\\
-
-\item
-  \emph{The learner will understand how to program in R.}\\
-  While this starts with an active verb,
-  it doesn't define the level of learning
-  and the subject of learning is still too vague for assessment.\\
-
-\item
-  \emph{The learner will write one-page data analysis scripts to read, filter, and summarize tabular data using R.}\\
-  This starts with an active verb,
-  defines the level of learning,
-  and provides context to ensure that outcomes can be assessed.
-
-\end{itemize}
-
-When it comes to choosing verbs,
-many teachers use \gref{g:blooms-taxonomy}{Bloom's Taxonomy}.
-First published in 1956 and updated at the turn of the century~\cite{Ande2001},
-it is a widely used framework for discussing levels of understanding.
-Its most recent form has six categories;
-the list below gives a few of the verbs typically used in learning objectives written for each:
-
-\begin{description}
-
-\item[Remembering:]
-  Exhibit memory of previously learned material by recalling facts, terms, basic concepts, and answers.
-  \emph{(recognize, list, describe, name, find)}
-
-\item[Understanding:]
-  Demonstrate understanding of facts and ideas
-  by organizing, comparing, translating, interpreting, giving descriptions, and stating main ideas.
-  \emph{(interpret, summarize, paraphrase, classify, explain)}
-
-\item[Applying:]
-  Solve new problems by applying acquired knowledge, facts, techniques and rules in a different way.
-  \emph{(build, identify, use, plan, select)}
-
-\item[Analyzing:]
-  Examine and break information into parts by identifying motives or causes;
-  make inferences and find evidence to support generalizations.
-  \emph{(compare, contrast, simplify)}
-
-\item[Evaluating:]
-  Present and defend opinions by making judgments about information,
-  validity of ideas,
-  or quality of work based on a set of criteria.
-  \emph{(check, choose, critique, prove, rate)}
-
-\item[Creating:]
-  Compile information together in a different way by combining elements in a new pattern or proposing alternative solutions.
-  \emph{(design, construct, improve, adapt, maximize, solve)}
-
-\end{description}
-
-Bloom's Taxonomy appears in almost every textbook on education,
-but~\cite{Masa2018} found that
-even experienced educators have trouble agreeing on how to classify specific things.
-The verbs are still useful,
-though,
-as is the notion of building understanding in steps:
-as Daniel Willingham has said,\index{Willingham, Daniel}
-people can't think without something to think about~\cite{Will2010},
-and this taxonomy can help teachers ensure that learners have those somethings when they need them.
-
-Another way to think about learning objectives comes from~\cite{Fink2013},
-which defines learning in terms of the change it is meant to produce in the learner.
-\gref{g:finks-taxonomy}{Fink's Taxonomy} also has six categories,
-but unlike Bloom's they are complementary rather than hierarchical:
-
-\begin{description}
-
-\item[Foundational Knowledge:]
-  understanding and remembering information and ideas.
-  \emph{(remember, understand, identify)}
-
-\item[Application:]
-  skills, critical thinking, managing projects.
-  \emph{(use, solve, calculate, create)}
-
-\item[Integration:]
-  connecting ideas, learning experiences, and real life.
-  \emph{(connect, relate, compare)}
-
-\item[Human Dimension:]
-  learning about oneself and others.
-  \emph{(come to see themselves as, understand others in terms of, decide to become)}
-
-\item[Caring:]
-  developing new feelings, interests, and values.
-  \emph{(get excited about, be ready to, value)}
-
-\item[Learning How to Learn:]
-  becoming a better learner.
-  \emph{(identify source of information for, frame useful questions about)}
-
-\end{description}
-
-A set of learning objectives based on this taxonomy
-for an introductory course on HTML and CSS might be:
+理解什么才是一个好的学习目标，一个办法
+是看看一个差的目标如何被改进：
 
 \begin{itemize}
 
 \item
-  Explain what CSS properties are and how CSS selectors work.
+  \emph{学习者将获得学习良好编程实践的机会。}\\
+  这描述的是一节课的内容，
+  而不是成功学习者的特征。\\
 
 \item
-  Style a web page using common tags and CSS properties.
+  \emph{学习者将对良好编程实践有更好的体会。}\\
+  这既没有以主动动词开头，也没有界定学习的层次，
+  而且学习的对象没有语境、也不具体。\\
 
 \item
-  Compare and contrast writing HTML and CSS
-  to writing with desktop publishing tools.
+  \emph{学习者将理解如何用 R 编程。}\\
+  虽然它以主动动词开头，
+  但没有界定学习的层次，
+  而且学习的对象仍然太含糊，没法评估。\\
 
 \item
-  Identify and correct issues in sample web pages
-  that would make them difficult for the visually impaired to interact with.
-
-\item
-  Describe features of favorite web sites
-  whose design particularly appeals to you
-  and explain why.
-
-\item
-  Describe your two favorite online sources of information about CSS
-  and explain what you like about them.
+  \emph{学习者将用 R 写出单页的数据分析脚本，来读取、筛选和汇总表格数据。}\\
+  它以主动动词开头，
+  界定了学习的层次，
+  并提供了语境，以确保成效可以被评估。
 
 \end{itemize}
 
-\seclbl{Maintainability}{s:process-maintainability}
-
-Once a lesson has been created someone needs to maintain it,
-and doing that is a lot easier if it has been built in a maintainable way.
-But what exactly does ``maintainable'' mean?\index{maintainability (of lessons)}
-The short answer is that a lesson is maintainable
-if it's cheaper to update it than to replace it.
-This equation depends on four factors:
+说到挑选动词，
+很多老师使用\gref{g:blooms-taxonomy}{布鲁姆分类法}。
+它最初发表于 1956 年，并在世纪之交做了更新~\cite{Ande2001}，
+是一个被广泛使用的、讨论理解层次的框架。
+它最新的形式有六个类别；
+下面列出的是通常用于为每个类别所写学习目标的一些动词：
 
 \begin{description}
 
-\item[How well documented the course's design is.]
-  If the person doing maintenance doesn't know (or doesn't remember)
-  what the lesson is supposed to accomplish
-  or why topics are introduced in a particular order,
-  it will take them more time to update it.
-  One reason to use reverse design
-  is to capture decisions about why each course is the way it is.
+\item[记忆：]
+  通过回忆事实、术语、基本概念和答案，展现对先前所学材料的记忆。
+  \emph{（认出、列出、描述、命名、找出）}
 
-\item[How easy it is for collaborators to collaborate technically.]
-  Teachers usually share material by mailing PowerPoint files to each other
-  or by putting them in a shared drive.
-  Collaborative writing tools like \hreffoot{http://docs.google.com}{Google Docs} and wikis
-  are a big improvement,
-  as they allow many people to update the same document and comment on other people's updates.
-  The version control systems used by programmers,
-  such as \hreffoot{http://github.com}{GitHub},
-  are another approach.
-  They let any number of people work independently
-  and then merge their changes in a controlled, reviewable way.
-  Unfortunately,
-  version control systems have a steep learning curve
-  and don't handle common office document formats.
+\item[理解：]
+  通过组织、比较、翻译、解释、给出描述和陈述中心思想，
+  展现对事实和想法的理解。
+  \emph{（解释、总结、复述、分类、说明）}
 
-\item[How willing people are to collaborate.]
-  The tools needed to build a Wikipedia for lessons have been around for twenty years,
-  but most teachers still don't write and share lessons
-  the way that they write and share encyclopedia entries.
+\item[应用：]
+  通过以不同的方式运用已获得的知识、事实、技术和规则，解决新问题。
+  \emph{（构建、识别、使用、规划、选择）}
 
-\item[How useful sharing actually is.]
-  The \gref{g:reusability-paradox}{Reusability Paradox} states that
-  the more reusable a learning object is,
-  the less pedagogically effective it is~\cite{Wile2002}.
-  The reason is that a good lesson resembles a novel more than it does a program:
-  its parts are tightly coupled rather than independent black boxes.
-  Direct re-use may therefore be the wrong goal for lessons;
-  we might get further by trying to make them easier to remix.
+\item[分析：]
+  通过识别动机或原因，考查并把信息拆解成部分；
+  作出推断，并找到支持概括的证据。
+  \emph{（比较、对比、简化）}
+
+\item[评价：]
+  通过依据一套标准对信息、想法的有效性或作品的质量作出判断，
+  来提出并捍卫观点。
+  \emph{（核对、选择、批评、证明、评级）}
+
+\item[创造：]
+  通过以新的模式组合元素或提出替代方案，把信息以不同的方式汇集起来。
+  \emph{（设计、构造、改进、改编、最大化、解决）}
 
 \end{description}
 
-If the Reusability Paradox is true,
-collaboration will be more likely
-if the things being collaborated on are small.
-This fits well with Mike Caulfield's theory of\index{Caulfield, Mike}
-\hreffoot{https://hapgood.us/2016/05/13/choral-explanations/}{choral explanations},
-which argues that sites like \hreffoot{https://stackoverflow.com/}{Stack Overflow} succeed because
-they provide a chorus of answers for every question,
-each of which is most suitable for a slightly different questioner.
-If this is right,
-the lessons of tomorrow may be guided tours of community-curated Q\&A repositories
-designed for learners at widely different levels.
+布鲁姆分类法几乎出现在每一本教育教科书里，
+但~\cite{Masa2018}发现，
+即便是经验丰富的教育者，也很难就如何对具体事物分类达成一致。
+不过，那些动词仍然有用，
+一步一步构建理解这个观念也一样有用：
+正如 Daniel Willingham 所说，\index{Willingham, Daniel}
+人没有可思考的东西就没法思考~\cite{Will2010}，
+而这个分类法能帮老师确保学习者在需要的时候，手头有那些可思考的东西。
 
-\seclbl{Exercises}{s:process-exercises}
+思考学习目标的另一种方式来自~\cite{Fink2013}，
+它从学习要在学习者身上产生什么改变来定义学习。
+\gref{g:finks-taxonomy}{芬克分类法}也有六个类别，
+但与布鲁姆不同，它们是互补的而不是层级式的：
 
-\exercise{Create Learner Personas}{small groups}{30}
+\begin{description}
 
-Working in small groups,
-create a 4-point persona that describes one of your typical learners.
+\item[基础知识：]
+  理解和记住信息与想法。
+  \emph{（记住、理解、识别）}
 
-\exercise{Classify Learning Objectives}{pairs}{10}
+\item[应用：]
+  技能、批判性思维、项目管理。
+  \emph{（使用、解决、计算、创造）}
 
-Look at the example learning objectives
-for an introductory course on HTML and CSS in \secref{s:process-objectives}
-and classify each according to Bloom's Taxonomy.
-Compare your answers with those of your partner.
-Where did you agree and disagree?
+\item[整合：]
+  把想法、学习经验和真实生活联系起来。
+  \emph{（连接、关联、比较）}
 
-\exercise{Write Learning Objectives}{pairs}{20}
+\item[人的维度：]
+  了解自己和他人。
+  \emph{（开始把自己看成、从……角度理解他人、决定成为）}
 
-Write one or more learning objectives
-for something you currently teach or plan to teach
-using Bloom's Taxonomy.
-Working with a partner,
-critique and improve the objectives.
-Does each one have a verifiable verb
-and clearly state criteria for acceptable performance?
+\item[关怀：]
+  发展新的感受、兴趣和价值观。
+  \emph{（对……感到兴奋、准备好去、看重）}
 
-\exercise{Write More Learning Objectives}{pairs}{20}
+\item[学会学习：]
+  成为更好的学习者。
+  \emph{（识别……的信息来源、提出关于……的有用问题）}
 
-Write one or more learning objectives
-for something you currently teach or plan to teach
-using Fink's Taxonomy.
-Working with a partner,
-critique and improve the objectives.
+\end{description}
 
-\exercise{Help Me Do It By Myself}{small groups}{15}
+为一门 HTML 和 CSS 入门课程，
+基于这个分类法写出的一组学习目标可能是：
 
-The educational theorist Lev Vygotsky introduced the notion of a \gref{g:zpd}{Zone of Proximal Development} (ZPD),
-which includes the problems that people cannot yet solve on their own
-but are able to solve with help from a mentor.
-These are the problems that are most fruitful to tackle next,
-as they are out of reach but attainable.
+\begin{itemize}
 
-Working in small groups,
-choose one learner persona you have developed
-and describe two or three problems that are in that learner's ZPD.
+\item
+  解释什么是 CSS 属性，以及 CSS 选择器如何工作。
 
-\exercise{Building Lessons by Subtracting Complexity}{individual}{20}
+\item
+  用常见标签和 CSS 属性为网页设置样式。
 
-One way to build a programming lesson is
-to write the program you want learners to finish with,
-then remove the most complex part that you want them to write
-and make it the last exercise.
-You can then remove the next most complex part you want them to write
-and make it the penultimate exercise,
-and so on.
-Anything that's left after you have pulled out the exercises,
-such as loading libraries or reading data,
-becomes the starter code that you give them.
+\item
+  比较并对比用 HTML 和 CSS 写作
+  与用桌面出版工具写作。
 
-Take a program or web page that you want your learners to be able to create
-and work backward to break it into digestible parts.
-How many are there?
-What key idea is introduced by each one?
+\item
+  识别并纠正示例网页中
+  会让视障人士难以与之交互的问题。
 
-\exercise{Inessential Weirdness}{individual}{15}
+\item
+  描述你最喜欢的网站中特别吸引你的设计特点，
+  并解释为什么。
 
-Betsy Leondar-Wright coined the phrase
-``\hreffoot{http://www.classmatters.org/2006\_07/its-not-them.php}{inessential weirdness}''
-to describe things groups do
-that aren't really necessary,
-but which alienate people who aren't yet members of that group.
-Sumana Harihareswara later used this notion
-as the basis for a talk on
-\hreffoot{https://www.harihareswara.net/sumana/2016/05/21/0}{inessential weirdnesses in open source software},
-which includes things like using command-line tools with cryptic names.
-Take a few minutes to read these articles,
-then make a list of inessential weirdnesses you think your learners might encounter
-when you first teach them.
-How many of these can you avoid?
+\item
+  描述你最常用的两个关于 CSS 的在线信息来源，
+  并解释你喜欢它们什么。
 
-\exercise{PETE}{individual}{15}
-\index{PETE (lesson pattern)}
-\index{lesson pattern!PETE}
+\end{itemize}
 
-One pattern that works well for programming lessons is PETE:
-introduce the \textbf{P}roblem,
-work through an \textbf{E}xample,
-explain the \textbf{T}heory,
-and then \textbf{E}laborate on a second example
-so that learners can see what is specific to each case and what applies to all cases.
-Pick something you have recently taught or been taught
-and outline a short lesson for it that follows these four steps.
+\seclbl{可维护性}{s:process-maintainability}
 
-\exercise{PRIMM}{individual}{15}
-\index{PRIMM (lesson pattern)}
-\index{lesson pattern!PRIMM}
+一门课创建出来之后，总得有人维护它，
+而如果它以可维护的方式搭建起来，维护起来会容易得多。
+但「可维护」到底是什么意思？\index{可维护性（课程的）}
+简短的回答是：如果更新一门课比替换它更便宜，它就是可维护的。
+这个等式取决于四个因素：
 
-Another lesson pattern is PRIMM~\cite{Sent2019}:
-\textbf{P}redict a program's behavior or output,
-\textbf{R}un it to see what it actually does,
-\textbf{I}nvestigate why it does that by stepping through it in a debugger or drawing the flow of control,
-\textbf{M}odify it (or its inputs),
-and then \textbf{M}ake something similar from scratch.
-Pick something you have recently taught or been taught
-and outline a short lesson for it that follows these five steps.
+\begin{description}
 
-\exercise{Concrete-Representational-Abstract}{pairs}{15}
-\index{CRA (lesson pattern)}
-\index{lesson pattern!CRA}
+\item[课程设计被记录得有多好。]
+  如果做维护的人不知道（或记不得）
+  这门课想达成什么、
+  或者为什么按这个特定顺序引入主题，
+  那么更新它就会花更多时间。
+  使用逆向设计的理由之一，
+  就是记录下「每门课为什么是现在这样」的各项决策。
 
-\hreffoot{https://makingeducationfun.wordpress.com/2012/04/29/concrete-representational-abstract-cra/}{Concrete-Representational-Abstract} (CRA)
-is an approach to introducing new ideas
-that is used primarily with younger learners:
-physically manipulate a \textbf{C}oncrete object,
-\textbf{R}epresent the object with an image,
-then perform the same operations
-using numbers, symbols, or some other \textbf{A}bstraction.
+\item[合作者在技术上协作有多容易。]
+  老师通常靠互相邮寄 PowerPoint 文件，
+  或者把它们放到共享盘里来共享材料。
+  像 \hreffoot{http://docs.google.com}{Google Docs} 这样的协作文档工具和 wiki
+  是一大进步，
+  因为它们允许多人更新同一份文档、并对别人的更新发表评论。
+  程序员使用的版本控制系统，
+  比如 \hreffoot{http://github.com}{GitHub}，
+  是另一种做法。
+  它们让任意多的人独立工作，
+  然后以可控、可审阅的方式合并各自的改动。
+  遗憾的是，
+  版本控制系统学习曲线很陡，
+  而且处理不了常见的办公文档格式。
+
+\item[人们有多愿意协作。]
+  构建一个课程版维基百科所需的工具已经存在二十年了，
+  但大多数老师仍然不会像写和分享百科条目那样
+  去写和分享课程。
+
+\item[分享实际上有多有用。]
+  \gref{g:reusability-paradox}{可复用性悖论}指出，
+  一个学习对象越可复用，
+  它的教学效果就越差~\cite{Wile2002}。
+  原因是，一门好课更像一部小说，而不是一个程序：
+  它的各个部分紧紧耦合，而不是彼此独立黑箱。
+  因此直接复用也许是错误的目标；
+  如果我们设法让课程更容易重新混编，也许能走得更远。
+
+\end{description}
+
+如果可复用性悖论是对的，
+那么当被协作的东西很小时，协作就更可能发生。
+这与 Mike Caulfield 的\index{Caulfield, Mike}
+\hreffoot{https://hapgood.us/2016/05/13/choral-explanations/}{合唱式解释}理论很契合，
+该理论主张，像 \hreffoot{https://stackoverflow.com/}{Stack Overflow} 这样的网站之所以成功，
+是因为它们为每个问题提供了一合唱团式的答案，
+每一个都最适合略有不同的提问者。
+如果这是对的，
+那么未来的课程也许就是由社区整理的问答库所引导的观光之旅，
+为处在极其不同水平上的学习者而设计。
+
+\seclbl{练习}{s:process-exercises}
+
+\exercise{创建学习者画像}{小组}{30}
+
+以小组为单位，
+创建一个四点式画像，描述你们的一位典型学习者。
+
+\exercise{给学习目标分类}{两人一组}{10}
+
+看看\secref{s:process-objectives}里
+HTML 和 CSS 入门课程的示例学习目标，
+按布鲁姆分类法给每一条分类。
+和同伴的答案比较。
+你们在哪里一致、在哪里分歧？
+
+\exercise{写学习目标}{两人一组}{20}
+
+用布鲁姆分类法，
+为你目前教或打算教的某个东西写一个或多个学习目标。
+和同伴一起
+批评并改进这些目标。
+每一个是否都有可验证的动词，
+并清楚规定了可接受表现的标准？
+
+\exercise{再写一些学习目标}{两人一组}{20}
+
+用芬克分类法，
+为你目前教或打算教的某个东西写一个或多个学习目标。
+和同伴一起
+批评并改进这些目标。
+
+\exercise{帮我自己做成}{小组}{15}
+
+教育理论家列夫·维果茨基提出了\gref{g:zpd}{最近发展区}（ZPD）的概念，
+它包含人们目前还不能独立解决、
+但在导师帮助下可以解决的一类问题。
+这些正是接下来最值得着手的问题，
+因为它们够不着、却又能达到。
+
+以小组为单位，
+选一个你们已经做出的学习者画像，
+描述两三个处在该学习者最近发展区内的问题。
+
+\exercise{用减复杂度来搭建课程}{个人}{20}
+
+搭建编程课的一种办法，
+是先写出你想让学习者在最后完成的程序，
+然后去掉你最想让他们写的那部分最复杂的内容，
+把它变成最后一道练习。
+接着再去掉次复杂、也想让他们写的那部分，
+把它变成倒数第二道练习，
+依此类推。
+把练习都抽走之后剩下的东西，
+比如加载库或读取数据，
+就成了你给他们的起始代码。
+
+拿一个你想让学习者能够创建的程序或网页，
+往回推，把它拆成好消化的若干部分。
+一共有多少部分？
+每一部分引入了什么关键想法？
+
+\exercise{无关紧要的怪癖}{个人}{15}
+
+Betsy Leondar-Wright 造了
+「\hreffoot{http://www.classmatters.org/2006\_07/its-not-them.php}{无关紧要的怪癖}（inessential weirdness）」
+这个说法，用来描述一些小团体做的事，
+这些事其实并非必要，
+却把还不是该团体成员的人排斥在外。
+Sumana Harihareswara 后来把这一观念
+用在一场关于
+\hreffoot{https://www.harihareswara.net/sumana/2016/05/21/0}{开源软件里无关紧要的怪癖}的演讲里，
+其中就包括使用名字晦涩的命令行工具之类的事。
+花几分钟读读这些文章，
+然后列一份清单，写出你认为学习者在你第一次教他们时可能遇到的无关紧要的怪癖。
+其中有多少你能避免？
+
+\exercise{PETE}{个人}{15}
+\index{PETE（课程模式）}
+\index{课程模式!PETE}
+
+对编程课很管用的一种模式是 PETE：
+引入\ \textbf{问}题（Problem）,
+过一遍一个\textbf{例}子（Example）、
+讲解\textbf{理}论（Theory），
+然后再\textbf{阐}发第二个例子（Elaborate），
+好让学习者看出哪些是各案例特有的、哪些适用于所有案例。
+挑一件你最近教过或被教过的东西，
+按这四个步骤为它设计一节短课。
+
+\exercise{PRIMM}{个人}{15}
+\index{PRIMM（课程模式）}
+\index{课程模式!PRIMM}
+
+另一种课程模式是 PRIMM~\cite{Sent2019}：
+\textbf{预}测（Predict）程序的行为或输出、
+\textbf{运}行它（Run）看它实际做了什么、
+\textbf{探}究它为什么那样做（Investigate）——比如用调试器逐步执行或画出控制流、
+\textbf{改}动它（Modify）（或其输入），
+然后\textbf{重}新造一个类似的（Make）。
+挑一件你最近教过或被教过的东西，
+按这五个步骤为它设计一节短课。
+
+\exercise{具体—表征—抽象}{两人一组}{15}
+\index{CRA（课程模式）}
+\index{课程模式!CRA}
+
+\hreffoot{https://makingeducationfun.wordpress.com/2012/04/29/concrete-representational-abstract-cra/}{具体—表征—抽象}
+（Concrete-Representational-Abstract，CRA）
+是一种引入新想法的方法，
+主要用在年龄较小的学习者身上：
+亲手摆弄一个\textbf{具}体物体（Concrete）、
+用图像\textbf{表}征这个物体（Represent）、
+然后使用数字、符号或其他\textbf{抽}象物（Abstraction）
+来做同样的操作。
 
 \begin{enumerate}
 
 \item
-  Write each of the numbers 2, 7, 5, 10, 6 on a sticky note.
+  把 2、7、5、10、6 这几个数字分别写在一张便利贴上。
 
 \item
-  Simulate a loop that finds the largest value by looking at each in turn (concrete).
+  依次看每一个，模拟一个寻找最大值的循环（具体）。
 
 \item
-  Sketch a diagram of the process you used,
-  labeling each step (representational).
+  画出你所用过程的示意图，
+  给每一步加上标注（表征）。
 
 \item
-  Write instructions that someone else could follow
-  to go through the same steps (abstract).
+  写出别人能照着走同样步骤的说明（抽象）。
 \end{enumerate}
 
-Compare your representational and abstract materials with your partner's.
+把你的表征材料和抽象材料与同伴的比较。
 
-\exercise{Evaluating a Lesson Repository}{small groups}{10}
+\exercise{评估一个课程仓库}{小组}{10}
 
-\cite{Leak2017} explores why computer science teachers don't use lesson sharing sites
-and recommends ways to make them more appealing:
+\cite{Leak2017}探讨了计算机科学老师为什么不使用课程分享网站，
+并提出了让它们更有吸引力的建议：
 
 \begin{enumerate}
 
 \item
-  The landing page should allow site visitors to identify their background and their interests in visiting the site.
-  Sites should ask two questions:
-  ``What is your current role?'' and
-  ``What course and grade level are you interested in?''
+  落地页应该让访客能标明自己的背景和访问该网站的兴趣所在。
+  网站应该问两个问题：
+  「你目前的角色是什么？」以及
+  「你对哪门课程和哪个年级感兴趣？」
 
 \item
-   Sites should display all learning resources in the context of the full course
-   so that potential users can understand their intended context of use.
+  网站应该在完整课程的语境中展示所有学习资源，
+  好让潜在用户能理解它们预期使用的语境。
 
 \item
-  Many teachers have concerns about having their (lack of) knowledge judged by their peers
-  if they post to sites' discussion forums.
-  These forums should therefore allow anonymous posting.
+  很多老师担心，如果自己在网站的讨论区发帖，
+  自己的（知识欠缺）会被同行评判。
+  因此这些讨论区应该允许匿名发帖。
 
 \end{enumerate}
 
-In small groups,
-discuss whether these three features would be enough to convince you to use a lesson sharing site,
-and if not,
-what would.
+以小组为单位，
+讨论这三个特点是否足以说服你去使用一个课程分享网站；
+如果不够，
+还需要什么。
 
-\section*{Review}
+\section*{回顾}
 
-\figpdfhere{figures/conceptmap-personas.pdf}{Concepts: Learner personas}{f:process-personas}{}
+\figpdfhere{figures/conceptmap-personas.pdf}{概念：学习者画像}{f:process-personas}{}

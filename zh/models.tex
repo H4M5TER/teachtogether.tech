@@ -1,195 +1,193 @@
-\chapter{Mental Models and Formative Assessment}\label{s:models}
+\chapter{心智模型与形成性评价}\label{s:models}
 
-The first task in teaching is to figure out who your learners are.
-Our approach is based on the work of researchers like Patricia Benner,\index{Benner, Patricia}
-who studied how nurses progress from novice to expert~\cite{Benn2000}.
-Benner identified five stages of cognitive development that most people go through in a fairly consistent way.
-For our purposes, we will simplify this progression to three stages:
+教学的第一项任务，是弄清你的学习者是谁。
+我们的方法是基于 Patricia Benner 等研究者的工作，\index{Benner, Patricia}
+他们研究了护士如何从新手成长为专家~\cite{Benn2000}。
+Benner 识别出认知发展的五个阶段，
+大多数人都以相当一致的方式经历这些阶段。
+就我们的目的而言，可以把这一进程简化为三个阶段：
 
 \begin{description}
 
-\item[\grefdex{g:novice}{Novices}{novice}]
-  don't know what they don't know,
-  i.e.\ they don't yet have a usable mental model of the problem domain.
+\item[\grefdex{g:novice}{新手}{新手}]
+  不知道自己不知道什么，
+  也就是还没有对问题领域建立起可用的心智模型。
 
-\item[\grefdex{g:competent-practitioner}{Competent practitioners}{competent practitioner}]
-  have a mental model that's adequate for everyday purposes.
-  They can do normal tasks with normal effort under normal circumstances,
-  and have some understanding of the limits to their knowledge
-  (i.e.\ they know what they don't know).
+\item[\grefdex{g:competent-practitioner}{胜任者}{胜任者}]
+  拥有足以应付日常用途的心智模型。
+  他们能在正常情况下以正常的努力完成常规任务，
+  并且对自己知识的边界有一定认识
+  （也就是知道自己不知道什么）。
 
-\item[\grefdex{g:expert}{Experts}{expert}]
-  have mental models that include exceptions and special cases,
-  which allows them to handle situations that are out of the ordinary.
-  We will discuss expertise in more detail in \chapref{s:memory}.
+\item[\grefdex{g:expert}{专家}{专家}]
+  的心智模型包含例外和特例，
+  这使他们能处理不寻常的情况。
+  我们会在\chapref{s:memory}里更详细地讨论专长。
 
 \end{description}
 
-So what \emph{is} a \gref{g:mental-model}{mental model}?
-As the name suggests,
-it is a simplified representation of the most important parts of some problem domain
-that is good enough to enable problem solving.
-One example is the ball-and-spring models of molecules used in high school chemistry.
-Atoms aren't actually balls,
-and their bonds aren't actually springs,
-but the model enables people to reason about chemical compounds and their reactions.
-A more sophisticated model of an atom has a small central ball (the nucleus) surrounded by orbiting electrons.
-It's also wrong,
-but the extra complexity enables people to explain more and to solve more problems.
-(Like software,
-mental models are never finished:
-they're just used.)
+那么，\gref{g:mental-model}{心智模型}\emph{究竟}是什么？
+顾名思义，
+它是对某个问题领域中最重要的部分所做的简化表示，
+其精确程度足以支撑解决问题。
+一个例子是高中化学里用来表示分子的球—弹簧模型。
+原子其实不是球，
+它们的化学键其实也不是弹簧，
+但这个模型能让人对化合物及其反应进行推理。
+更精细的原子模型是中心一个小球（原子核），周围环绕着电子。
+它也是错的，
+但额外的复杂性让人能解释更多、解决更多问题。
+（和软件一样，
+心智模型永远没有完成：
+它们只是被拿来用而已。）
 
-Presenting a novice with a pile of facts is counter-productive
-because they don't yet have a model to fit those facts into.
-In fact,
-presenting too many facts too soon can actually reinforce
-the incorrect mental model they've cobbled together.
-As~\cite{Mull2007a} observed in a study of video instruction for science students:
+给新手一下子抛出一堆事实是适得其反的，
+因为他们还没有一个模型来安放这些事实。
+事实上，
+过早抛出太多事实，反而可能强化
+他们东拼西凑起来的那套错误心智模型。
+正如~\cite{Mull2007a}在一项针对理科生的视频教学研究中观察到的：
 
 \begin{quote}
 
-  Students have existing ideas about{\ldots}phenomena before viewing a video.
-  If the video presents{\ldots}concepts in a clear, well illustrated way,
-  students believe they are learning but they do not engage with the media on a deep enough level
-  to realize that what is presented differs from their prior knowledge{\ldots}
-  There is hope, however.
-  Presenting students' common misconceptions in a video alongside the{\ldots}concepts
-  has been shown to increase learning
-  by increasing the amount of mental effort students expend while watching it.
+  学生在观看视频之前，对{\ldots}现象已有自己的想法。
+  如果视频清晰、配图充分地呈现{\ldots}概念，
+  学生会以为自己在学，但他们与媒体的互动深度还不足以
+  意识到所呈现的内容和他们原有的知识并不一样{\ldots}
+  不过还是有希望的。
+  在视频里把学生常见的误解和{\ldots}概念一起呈现，
+  已被证明能增加学习，
+  因为它增加了学生观看时投入的心理努力。
 
 \end{quote}
 
-Your goal when teaching novices should therefore be
-to help them construct a mental model
-so that they have somewhere to put facts.
-For example,
-Software Carpentry's\index{The Carpentries}
-\hreffoot{http://swcarpentry.github.io/shell-novice/}{lesson on the Unix shell}
-introduces fifteen commands in three hours.
-That's one command every twelve minutes,
-which seems glacially slow until you realize that
-the lesson's real purpose isn't to teach those fifteen commands:
-it's to teach paths,
-history,
-tab completion,
-wildcards,
-pipes,
-command-line arguments,
-and redirection.
-Specific commands don't make sense until novices understand those concepts;
-once they do,
-they can start to read manual pages,
-search for the right keywords on the web,
-and tell whether the results of their searches are useful or not.
+所以你在教新手时的目标，
+应该是帮助他们建构一个心智模型，
+好让他们有地方安放事实。
+例如，
+Software Carpentry 的\index{The Carpentries}
+\hreffoot{http://swcarpentry.github.io/shell-novice/}{Unix shell 课程}
+用三小时介绍了十五条命令。
+也就是每十二分钟一条命令，
+这看起来慢得像冰川移动，直到你意识到
+这门课的真正目的并不是教这十五条命令：
+而是教路径、
+历史、
+Tab 补全、
+通配符、
+管道、
+命令行参数
+和重定向。
+只有新手理解了这些概念，具体的命令才有意义；
+一旦他们理解了，
+就能开始读手册页、
+在网上搜索合适的关键词，
+并判断搜到的结果有没有用。
 
-The cognitive differences between novices and competent practitioners
-underpin the differences between two kinds of teaching materials.
-A \gref{g:tutorial}{tutorial} helps newcomers to a field build a mental model;
-a \gref{g:manual}{manual},
-on the other hand,
-helps competent practitioners fill in the gaps in their knowledge.
-Tutorials frustrate competent practitioners because they move too slowly
-and say things that are obvious
-(though they are anything \emph{but} obvious to novices).
-Equally,
-manuals frustrate novices because they use jargon and \emph{don't} explain things.
-This phenomenon is called the \gref{g:expertise-reversal}{expertise reversal effect}~\cite{Kaly2003},
-and is one of the reasons you have to decide early on
-who your lessons are for.
+新手和胜任者之间的认知差异，
+支撑着两类教学材料的差异。
+\gref{g:tutorial}{教程}帮助刚入门的人建立心智模型；
+而\gref{g:manual}{手册}
+则帮助胜任者填补知识上的空缺。
+教程会让胜任者沮丧，因为它进展太慢，
+讲的都是显而易见的东西
+（尽管对新手来说它们\emph{一点也不}显而易见）。
+同样，
+手册会让新手沮丧，因为它满是行话，而且\emph{不}解释。
+这种现象叫做\gref{g:expertise-reversal}{专长逆转效应}~\cite{Kaly2003}，
+也是你必须尽早决定
+课程是为谁而讲的其中一个理由。
 
-\begin{aside}{A Handful of Exceptions}
-  One of the reasons Unix and C became popular is that
+\begin{aside}{少数的例外}
+  Unix 和 C 之所以流行，其中一个原因是
   \cite{Kern1978,Kern1983,Kern1988}
-  somehow managed to be good tutorials \emph{and} good manuals at the same time.
-  \cite{Fehi2008} and~\cite{Ray2014} are among the very few other books in computing that achieve this;
-  even after re-reading them several times,
-  I don't know how they pull it off.
+  竟然同时既是好教程\emph{又是}好手册。
+  \cite{Fehi2008} 和~\cite{Ray2014} 是计算机领域仅有的几本做到这一点的书；
+  即便反复重读，我也仍然不明白它们是怎么做到的。
 \end{aside}
 
-\seclbl{Are People Learning?}{s:models-formative-assessment}
+\seclbl{人们学到了吗？}{s:models-formative-assessment}
 
-Mark Twain once wrote,\index{Twain, Mark}
-``It ain't what you don't know that gets you into trouble.
-It's what you know for sure that just ain't so.''
-One of the exercises in building a mental model is therefore
-to clear away things that \emph{don't} belong.
-Broadly speaking,
-novices' misconceptions fall into three categories:
+马克·吐温曾写道，\index{Twain, Mark}
+「害你惹上麻烦的，不是你不知道的事，
+而是你确信不疑、其实并非如此的事。」
+因此，建构心智模型的功课之一，
+就是把\emph{不}属于其中的东西清理掉。
+大致说来，
+新手的误解可以分为三类：
 
 \begin{description}
 
-\item[Factual errors]
-  like believing that Vancouver is the capital of British Columbia
-  (it's Victoria).
-  These are usually simple to correct.
-  \index{misconception!factual error}
+\item[事实性错误]
+  比如以为温哥华是不列颠哥伦比亚省的首府
+  （其实是维多利亚）。
+  这类错误通常很容易纠正。
+  \index{误解!事实性错误}
 
-\item[Broken models]
-  like believing that motion and acceleration must be in the same direction.
-  We can address these by having novices reason through examples
-  where their models give the wrong answer.
-  \index{misconception!broken mental model}
+\item[模型损坏]
+  比如以为运动和加速度的方向必须一致。
+  我们可以让新手推演一些例子，
+  在这些例子里他们的模型会给出错误答案，从而纠正它。
+  \index{误解!损坏的心智模型}
 
-\item[Fundamental beliefs]
-  such as ``the world is only a few thousand years old''
-  or ``some kinds of people are just naturally better at programming than others''~\cite{Guzd2015b,Pati2016}.
-  These errors are often deeply connected to the learner's social identity,
-  so they resist evidence and rationalize contradictions.
-  \index{misconception!fundamental belief}
+\item[根本信念]
+  比如「世界只有几千年历史」，
+  或者「某些人天生就比别人更擅长编程」~\cite{Guzd2015b,Pati2016}。
+  这类错误往往和学习者的社会身份深深纠缠在一起，
+  因此会抗拒证据、并给矛盾找理由。
+  \index{误解!根本信念}
 
 \end{description}
 
-People learn fastest when teachers identify and clear up learners' misconceptions
-as the lesson is being delivered.
-This is called \gref{g:formative-assessment}{formative assessment}
-because it forms (or shapes) the teaching while it is taking place.
-Learners don't pass or fail formative assessment;
-instead,
-it gives both the teacher and the learner feedback on how well they are doing
-and what they should focus on next.
-For example,
-a music teacher might ask a learner to play a scale very slowly to check their breathing.
-The learner finds out if they are breathing correctly,
-while the teacher gets feedback on whether the explanation they just gave made sense.
+当教师能在授课过程中识别并清除学习者的误解时，人们学得最快。
+这叫做\gref{g:formative-assessment}{形成性评价}，
+因为它在教学进行的同时形成（或塑造）教学。
+学习者不会在形成性评价中及格或不及格；
+相反，
+它让教师和学习者都得到反馈，知道目前做得怎么样、
+接下来该把重点放在哪里。
+例如，
+音乐老师可能让学习者非常缓慢地弹一段音阶，来检查他的呼吸。
+学习者由此知道自己呼吸对不对，
+而老师则得到反馈，知道他刚才的讲解有没有讲清楚。
 
-\begin{aside}{Summing Up}
-  The counterpoint to formative assessment is
-  \gref{g:summative-assessment}{summative assessment},
-  which takes place at the end of the lesson.
-  Summative assessment is like a driver's test:
-  it tells the learner whether they have mastered the topic
-  and the teacher whether their lesson was successful.
-  One way of thinking about the difference is that
-  a chef tasting food as she cooks it is formative assessments,
-  but the guests tasting it once it's served is summative.
+\begin{aside}{总结一下}
+  与形成性评价相对的是
+  \gref{g:summative-assessment}{总结性评价}，
+  它发生在一门课程结束时。
+  总结性评价就像驾照考试：
+  它告诉学习者是否掌握了这个主题，
+  也告诉老师他的课是否成功。
+  理解两者区别的一种方式是：
+  厨师做菜时尝味道是形成性评价，
+  而客人吃到端上来的菜则是总结性评价。
 
-  Unfortunately,
-  school has trained most people to believe that all assessment is summative,
-  i.e.\ that if something feels like a test,
-  doing poorly will count against you.
-  Making formative assessments feel informal helps reduce this anxiety;
-  in my experience,
-  using online quizzes, clickers, or anything else seems to increase it,
-  since most people today believe that anything they do on the web is being watched and recorded.
+  遗憾的是，
+  学校已经让大多数人相信所有评价都是总结性的，
+  也就是只要感觉像是考试，
+  考得差就会对你不利。
+  让形成性评价显得不那么正式，有助于减轻这种焦虑；
+  依我的经验，
+  用在线测验、答题器或别的东西，反而会加重焦虑，
+  因为今天大多数人相信自己在网上做的任何事都会被监视和记录。
 \end{aside}
   
-In order to be useful during teaching,
-a formative assessment has to be quick to administer
-(so that it doesn't break the flow of the lesson)
-and have an unambiguous correct answer
-(so that it can be used with groups).\index{formative assessment!requirements}
-The most widely used kind of formative assessment is probably
-the multiple choice question (MCQ).\index{multiple choice question}
-A lot of teachers have a low opinion of them,
-but when they are designed well,
-they can reveal much more than just whether someone knows specific facts.
-For example,
-suppose you are teaching children how to do multi-digit addition~\cite{Ojos2015}
-and you give them this MCQ:
+为了在教学中派上用场，
+形成性评价必须能快速实施
+（以免打断课的节奏），
+而且要有唯一明确的正确答案
+（这样才能用于群体）。\index{形成性评价!要求}
+用得最广的一类形成性评价大概是
+多项选择题（MCQ）。\index{多项选择题}
+很多老师看不上它，
+但如果设计得当，
+它能揭示的远不止某人是否知道某些具体事实。
+例如，
+假设你在教孩子们做多位数加法~\cite{Ojos2015}，
+你给他们这样一道 MCQ：
 
 \begin{quote}
-  What is 37 + 15?\\
+  37 + 15 等于多少？\\
   a) 52\\
   b) 42\\
   c) 412\\
@@ -197,404 +195,399 @@ and you give them this MCQ:
 \end{quote}
 
 \noindent
-The correct answer is 52,
-but the other answers provide valuable insights:
+正确答案是 52，
+但其他答案提供了有价值的线索：
 
 \begin{itemize}
 
 \item
-  If the child chooses 42,
-  she has no understanding of what ``carrying'' means.
-  (She might well write 12 as the answers to 7+5,
-  then overwrite the 1 with the 4 she gets from 3+1.)
+  如果孩子选了 42，
+  说明他根本不理解「进位」是什么意思。
+  （他很可能是把 7+5 的答案写成 12，
+  然后用 3+1 得到的 4 覆盖掉那个 1。）
 
 \item
-  If she chooses 412,
-  she is treating each column of numbers as a separate problem.
-  This is still wrong,
-  but it's wrong for a different reason.
+  如果他选了 412，
+  说明他把每一列数字当成了独立的问题。
+  这仍然不对，
+  但错的原因不一样。
 
 \item
-  If she chooses 43 then she knows she has to carry the 1
-  but is carrying it back into the column it came from.
-  Again,
-  this is a different mistake,
-  and requires a different clarifying explanation from the teacher.
+  如果他选了 43，说明他知道要把 1 进位，
+  却是把它进回到了原来那一列。
+  这又是另一种错误，
+  需要老师给出另一种有针对性的解释。
 
 \end{itemize}
 
-Each of these incorrect answers is a \gref{g:plausible-distractor}{plausible distractor}
-with \gref{g:diagnostic-power}{diagnostic power}.
-A distractor is a wrong or less-than-best answer;
-``plausible'' means that it looks like it could be right,
-while ``diagnostic power'' means that each of the distractors helps the teacher figure out
-what to explain next to that particular learner.
+这些错误答案每一个都是具有\gref{g:diagnostic-power}{诊断力}的
+\gref{g:plausible-distractor}{似真干扰项}。
+干扰项是错误答案或不那么理想的答案；
+「似真」的意思是它看起来像是正确答案，
+而「诊断力」的意思是每个干扰项都能帮老师弄清
+接下来该给这位学习者讲什么。
 
-The spread of responses to a formative assessment guides what you do next.
-If enough of the class has the right answer, you move on.
-If the majority of the class chooses the same wrong answer,
-you should go back and work on correcting the misconception that distractor points to.
-If their answers are evenly split between several options they are probably just guessing,
-so you should back up and re-explain the idea in a different way.
-(Repeating exactly the same explanation will probably not be useful,
-which is one of things that makes so many video courses pedagogically ineffective.)
+形成性评价中答案的分布，会引导你下一步怎么做。
+如果班里足够多的人答对了，你就往下走。
+如果班里大多数人都选了同一个错误答案，
+你就应该回去，纠正那个干扰项所指向的误解。
+如果他们的答案均匀地分散在几个选项上，那很可能只是在猜，
+所以你应该退回去，换一种方式重新解释这个想法。
+（原封不动地重复同样的解释大概没用，
+这也是那么多视频课程在教学上效果不佳的原因之一。）
 
-What if most of the class votes for the right answer
-but a few vote for wrong ones?
-In that case,
-you have to decide whether you should spend time getting the minority caught up
-or whether it's more important to keep the majority engaged.
-No matter how hard you work or what teaching practices you use,
-you won't always be able to give everyone what they need;
-it's your responsibility as a teacher to make the call.
+要是班里大多数人选了正确答案，
+但少数人选错了呢？
+这时，
+你就得决定：是把时间花在让少数人跟上，
+还是让大多数人保持投入更重要。
+不管你多么努力、用什么教学方法，
+你都不可能总让每个人都得到他们需要的东西；
+作为老师，做出这个判断是你的责任。
 
-\begin{aside}{Where Do Wrong Answers Come From?}
-  In order to come up with plausible distractors,
-  think about the questions your learners asked or problems they had
-  the last time you taught this subject.
-  If you haven't taught it before,
-  think about your own misconceptions,
-  ask colleagues about their experiences,
-  or look at the history of your field:
-  if everyone misunderstood your subject in some way fifty years ago,
-  the odds are that a lot of your learners will still misunderstand it that way today.
-  You can also ask open-ended questions in class
-  to collect misconceptions about material to be covered in a later class,
-  or check question and answer sites like \hreffoot{http://www.quora.com}{Quora}
-  or \hreffoot{https://stackoverflow.com/}{Stack Overflow}
-  to see what people learning the subject elsewhere are confused by.
+\begin{aside}{错误答案是打哪儿来的？}
+  要想出似真的干扰项，
+  可以回想上一次教这个主题时，
+  学习者问过哪些问题、遇到过哪些困难。
+  如果你以前没教过，
+  就回想一下你自己有过的误解，
+  问问同事的经验，
+  或者看看你这个领域的历史：
+  如果五十年前大家都以某种方式误解了你的学科，
+  那么今天你的许多学习者很可能仍然那样误解它。
+  你也可以在课上问一些开放性问题，
+  收集关于以后要讲的内容有哪些误解，
+  或者去看看 \hreffoot{http://www.quora.com}{Quora}
+  或 \hreffoot{https://stackoverflow.com/}{Stack Overflow} 之类的问答网站，
+  看看在别处学这门学科的人都被什么搞糊涂了。
 \end{aside}
 
-Developing formative assessments makes your lessons better
-because it forces you to think about your learners' mental models.
-In my experience,
-once I do this I automatically write the lesson to cover the most likely gaps and errors.
-Formative assessments therefore pay off even if they aren't used
-(though teaching is more effective if they are).
+制作形成性评价能让你的课更好，
+因为它迫使你思考学习者的心智模型。
+依我的经验，
+一旦这样做，我就会自动把课写成能覆盖最可能出现的空缺和错误。
+所以，即使形成性评价没被用上，它也是值得的
+（当然，用上它教学会更有效）。
 
-MCQs aren't the only kind of formative assessment:
-\chapref{s:exercises} describes other kinds of exercises that are quick and unambiguous.
-Whatever you pick,
-you should do something that takes a minute or two every 10--15 minutes
-to make sure that your learners are actually learning.
-This rhythm isn't based on an intrinsic attentional limit:~\cite{Wils2007}
-found little support for the often-repeated claim that
-learners can only pay attention for 10--15 minutes.
-Instead,
-the guideline ensures that if a significant number of people have fallen behind,
-you only have to repeat a short portion of the lesson.
-Frequent formative assessments also keep learners engaged,
-particularly if they involved small-group discussion
-(\secref{s:classroom-peer}).
+MCQ 并不是唯一一类形成性评价：
+\chapref{s:exercises}描述了其他几种既快又无歧义的练习。
+不管你选哪种，
+都应该每 10—15 分钟做一两分钟的事，
+以确认你的学习者真的在学。
+这个节奏并不是基于某种内在的注意力极限：~\cite{Wils2007}
+几乎不支持那个被反复念叨的说法，
+即学习者只能集中注意力 10—15 分钟。
+相反，
+这个指导原则是为了保证：如果相当多的人掉队了，
+你只需要把这门课的很小一部分再讲一遍。
+频繁的形成性评价还能让学习者保持投入，
+尤其是当它涉及小组讨论时
+（\secref{s:classroom-peer}）。
 
-Formative assessments can also be used \emph{before} lessons.
-If you start a class with an MCQ and everyone answers it correctly,
-you can avoid explaining something that your learners already know.
-This kind of \gref{g:active-teaching}{active teaching}
-gives you more time to focus on things they don't know.
-It also shows learners that you respect their time enough not to waste it,
-which helps with motivation (\chapref{s:motivation}).
+形成性评价也可以用在一门课\emph{之前}。
+如果你用一道 MCQ 开始上课，而所有人都答对了，
+你就可以不必去讲学习者已经知道的东西。
+这种\gref{g:active-teaching}{主动教学}
+让你有更多时间专注于他们不知道的东西。
+它也向学习者表明，你尊重他们的时间、不至于浪费它，
+这有助于激发动机（\chapref{s:motivation}）。
 
-\begin{aside}{Concept Inventories}
-  Given enough data,
-  MCQs can be made surprisingly precise.
-  The best-known example is the
-  \grefdex{g:concept-inventory}{Force Concept Inventory}{concept inventory}~\cite{Hest1992},
-  which assesses understanding of basic Newtonian mechanics.
-  By interviewing a large number of respondents,
-  correlating their misconceptions with patterns of right and wrong answers,
-  and then improving the questions,
-  its creators constructed a diagnostic tool that can pinpoint specific misconceptions.
-  Researchers can then use that tool to measure the effect of changes in teaching methods~\cite{Hake1998}.
+\begin{aside}{概念清单}
+  只要有足够的数据，
+  MCQ 可以被做得精确得惊人。
+  最著名的例子是
+  \grefdex{g:concept-inventory}{力概念清单}{概念清单}~\cite{Hest1992}，
+  它评估对基础牛顿力学的理解。
+  通过访谈大量受访者、
+  把他们的误解与对错答案的模式关联起来，
+  再改进题目，
+  它的作者们构建出一个能精确定位具体误解的诊断工具。
+  研究者随后就能用这个工具来衡量教学方法变化的效果~\cite{Hake1998}。
 
-  Tew and others developed and validated
-  a language-independent assessment for introductory programming~\cite{Tew2011};
-  \cite{Park2016} replicated it,
-  and~\cite{Hamo2017} is developing a concept inventory for recursion.
-  However,
-  it's very costly to build tools like this,
-  and learners' ability to search for answers online is an ever-increasing threat to their validity.
+  Tew 等人开发并验证了一套
+  与编程语言无关的入门编程评估~\cite{Tew2011}；
+  \cite{Park2016} 做了重复验证，
+  而~\cite{Hamo2017} 正在开发一套针对递归的概念清单。
+  然而，
+  建立这样的工具成本极高，
+  而且学习者上网搜答案的能力，正越来越威胁到它们的有效性。
 \end{aside}
 
-Working formative assessments into class only requires a little bit of preparation and practice.
-Giving learners colored or numbered cards so that they can all answer an MCQ at once
-(rather than holding up their hands in turn),
-having one of the options be, ``I have no idea,''
-and encouraging them to talk to their neighbors for a few seconds before answering
-will all help ensure that your teaching flow isn't disrupted.
-\secref{s:classroom-peer} describes a powerful,
-evidence-based teaching method that builds on these simple ideas.
+把形成性评价融入课堂，只需要一点点准备和练习。
+给学习者发彩色或带编号的卡片，让他们能同时回答一道 MCQ
+（而不是一个个举手），
+把其中一个选项设成「我完全不知道」，
+并鼓励他们在作答前和邻座讨论几秒钟，
+这些都有助于确保你的教学节奏不被打断。
+\secref{s:classroom-peer}描述了一种强大、
+基于证据的教学方法，就建立在这些简单的想法之上。
 
-\begin{aside}{Humor}
-  Teachers sometimes put supposedly-silly answers like ``my nose!'' on MCQs,
-  particularly ones intended for younger learners.
-  However,
-  these don't provide any insight into learners' misconceptions,
-  and most people don't actually find them funny.
-  As a rule,
-  you should only include a joke in a lesson if you find it funny
-  the third time you re-read it.
+\begin{aside}{幽默}
+  老师有时会在 MCQ 里放一些本意是搞笑的答案，比如「我的鼻子！」，
+  尤其是给年龄较小的学习者出的题。
+  然而，
+  这些答案对了解学习者的误解毫无帮助，
+  而且大多数人其实并不觉得它们好笑。
+  一般而言，
+  只有当你在第三次重读时仍然觉得某个笑话好笑，
+  你才该把它放进课程里。
 \end{aside}
 
-A lesson's formative assessments should prepare learners for its summative assessment:
-no one should ever encounter a question on an exam that the teaching did not prepare them for.
-This doesn't mean you should never put new kinds of problems on an exam,
-but if you do,
-you should have given learners practice tackling novel problems beforehand.
-\chapref{s:process} explores this in depth.
+一门课的形成性评价应当为它的总结性评价做好准备：
+任何人都不应该遇到一道考试题目，而教学却没有为他做好准备。
+这并不意味着你绝不能在考试里放新的题型，
+但如果你这么做，
+就应该事先让学习者练习过处理新颖的问题。
+\chapref{s:process}会更深入地探讨这一点。
 
-\seclbl{Notional Machines}{s:models-notional}
+\seclbl{观念机器}{s:models-notional}
 
-The term \gref{g:computational-thinking}{computational thinking} is bandied about a lot,
-in part because people can agree it's important while meaning very different things by it.
-Rather than arguing over what it does and doesn't include,
-it's more useful to think about the \gref{g:notional-machine}{notional machine}
-that you want learners to understand~\cite{DuBo1986}.
-According to~\cite{Sorv2013},
-a notional machine:
+\gref{g:computational-thinking}{计算思维}这个词被到处滥用，
+部分原因是人们可以一致同意它很重要，心里想的却是非常不同的东西。
+与其争论它包含或不包含什么，
+不如想一想你希望学习者理解的\gref{g:notional-machine}{观念机器}~\cite{DuBo1986}。
+根据~\cite{Sorv2013}，
+观念机器：
 
 \begin{itemize}
 
 \item
-  is an idealized abstraction of computer hardware
-  and other aspects of programs' runtime environments;
+  是对计算机硬件
+  以及程序运行时环境其他方面的一种理想化抽象；
 
 \item
-  enables the semantics of programs to be described;
-  and
+  能让人描述程序的语义；
+  并且
 
 \item
-  correctly reflects what programs do when executed.
+  能正确反映程序执行时的行为。
 
 \end{itemize}
 
 \noindent
-For example, my notional machine for Python is:\index{Python}
+例如，我为 Python 建立的观念机器是这样的：\index{Python}
 
 \begin{enumerate}
 
 \item
-  Running programs live in memory,
-  which is divided between a call stack and a heap.
+  运行中的程序住在内存里，
+  内存分为调用栈和堆两部分。
 
 \item
-  Memory for data is always allocated from the heap.
+  数据的内存总是从堆里分配的。
 
 \item
-  Every piece of data is stored in a two-part structure.
-  The first part says what type the data is,
-  and the second part is the actual value.
+  每份数据都存放在一个由两部分组成的结构里。
+  第一部分说明数据是什么类型，
+  第二部分才是真正的值。
 
 \item
-  Booleans, numbers, and character strings are never modified after they are created.
+  布尔值、数字和字符串一旦创建就不再被修改。
 
 \item
-  Lists, sets, and other collections store references to other data
-  rather than storing those values directly.
-  They can be modified after they are created,
-  i.e.\ a list can be extended or new values can be added to a set.
+  列表、集合和其他容器存放的是对其他数据的引用，
+  而不是直接存放那些值。
+  它们在创建之后可以被修改，
+  也就是列表可以被扩展，集合可以加入新值。
 
 \item
-  When code is loaded into memory,
-  Python converts it to a sequence of instructions
-  that are stored like any other data.
-  This is why it's possible to assign functions to variables
-  and pass them as parameters.
+  当代码被载入内存时，
+  Python 把它转换成一串指令，
+  这些指令和其他数据一样被存储。
+  这就是为什么可以把函数赋给变量、
+  并作为参数传递。
 
 \item
-  When code is executed,
-  Python steps through the instructions,
-  doing what each one tells it to in turn.
+  代码执行时，
+  Python 逐条走过这些指令，
+  依次做每一条告诉它做的事。
 
 \item
-  Some instructions make Python read data,
-  do calculations,
-  and create new data.
-  Other instructions control what instructions Python executes,
-  which is how loops and conditionals work.
-  Yet another instruction tells Python to call a function.
+  有些指令让 Python 读取数据、
+  做计算、
+  并创建新数据。
+  另一些指令控制 Python 执行哪些指令，
+  循环和条件就是这样工作的。
+  还有一类指令告诉 Python 去调用一个函数。
 
 \item
-  When a function is called,
-  Python pushes a new stack frame onto the call stack.
+  调用函数时，
+  Python 把一个新栈帧压入调用栈。
 
 \item
-  Each stack frame stores variables' names and references to data.
-  Function parameters are just another kind of variable.
+  每个栈帧存放变量的名字和对数据的引用。
+  函数参数不过是另一种变量。
 
 \item
-  When a variable is used,
-  Python looks for it in the top stack frame.
-  If it isn't there, it looks in the bottom (global) frame.
+  用到某个变量时，
+  Python 先在栈顶的帧里找它。
+  如果不在那里，就去最底下（全局）的帧里找。
 
 \item
-  When the function finishes,
-  Python erases its stack frame and jumps backs to
-  the instructions it was executing before the function call.
-  If there isn't a ``before,''
-  the program has finished.
+  函数结束时，
+  Python 抹掉它的栈帧，跳回到
+  调用函数之前正在执行的指令。
+  如果没有「之前」，
+  程序就结束了。
 
 \end{enumerate}
 
-I use this cartoon version of reality whenever I teach Python.
-After about 25 hours of instruction and 100 hours of work on their own time,
-I expect most learners to have a mental model
-that includes most or all of these features.
+我教 Python 时用的就是这种漫画版的现实。
+经过大约 25 小时的授课和 100 小时的自主练习，
+我预期大多数学习者会建立起一个心智模型，
+包含这里的大部分或全部特征。
 
-\seclbl{Exercises}{s:models-exercises}
+\seclbl{练习}{s:models-exercises}
 
-\exercise{Your Mental Models}{think-pair-share}{15}
+\exercise{你的心智模型}{思考—结对—分享}{15}
 
-What is one mental model you use to understand your work?
-Write a few sentences describing it and give feedback on a partner's.
-Once you have done that,
-have a few people share their models with the whole group.
-Does everyone agree on what a mental model is?
-Is it possible to give a precise definition,
-or is the concept useful precisely because it is fuzzy?
+你用来理解自己工作的一种心智模型是什么？
+写几句话描述它，并对同伴的模型给出反馈。
+做完之后，
+请几个人把他们的模型分享给全班。
+大家对一个心智模型是什么有共识吗？
+有可能给出一个精确的定义吗，
+还是说这个概念之所以有用，恰恰因为它本身是模糊的？
 
-\exercise{Symptoms of Being a Novice}{whole class}{5}
+\exercise{新手的一些症状}{全班}{5}
 
-Saying that novices don't have a mental model of a particular domain
-is not the same as saying that they don't have a mental model at all.
-Novices tend to reason by analogy and guesswork,
-borrowing bits and pieces of mental models from other domains that seem superficially similar.
+说新手对某个领域没有心智模型，
+并不等于说他们完全没有心智模型。
+新手往往靠类比和猜测来推理，
+从其他看起来表面上相似的领域借来一鳞半爪的心智模型。
 
-People who are doing this often say things that are
-\hreffoot{https://en.wikipedia.org/wiki/Not\_even\_wrong}{not even wrong}.
-As a class,
-discuss what some other symptoms of being a novice are.
-What does someone do or say that leads you to classify them as a novice in some domain?
+这样做的人常说一些
+\hreffoot{https://en.wikipedia.org/wiki/Not\_even\_wrong}{连错都算不上}的话。
+作为全班一起讨论，新手的其他一些症状是什么。
+一个人做了什么、说了什么，会让你判定他在某个领域是新手？
 
-\exercise{Modelling Novice Mental Models}{pairs}{20}
+\exercise{给新手的心智模型建模}{两人一组}{20}
 
-Create a multiple choice question related to a topic you have taught
-or intend to teach
-and explain the diagnostic power of each its distractors
-(i.e.\ what misconception each distractor is meant to identify).
+针对你教过或打算教的一个主题，设计一道多项选择题，
+并解释它每个干扰项的诊断力
+（也就是每个干扰项分别想识别出哪种误解）。
 
-When you are done, trade MCQs with a partner.
-Is their question ambiguous?
-Are the misconceptions plausible?
-Do the distractors actually test for them?
-Are any likely misconceptions \emph{not} tested for?
+做完之后，和同伴交换 MCQ。
+他的题目有歧义吗？
+那些误解似真吗？
+干扰项真的能测出这些误解吗？
+有没有一些很可能存在的误解\emph{没有}被测到？
 
-\exercise{Thinking Things Through}{whole class}{15}
+\exercise{把事情想透}{全班}{15}
 
-A good formative assessment requires people to think through a problem.
-For example,
-imagine that you have placed a block of ice in a bathtub and then filled the tub to the rim with water.
-When the ice melts,
-does the water level go up (so that the tub overflows),
-go down,
-or stay the same (\figref{f:models-bathtub})?
+好的形成性评价要求人去想透一个问题。
+例如，
+设想你把一块冰放进浴缸，然后把浴缸放满水、直到水漫到边缘。
+冰融化后，
+水位会上升（于是浴缸溢水）、
+下降，
+还是保持不变（\figref{f:models-bathtub}）？
 
-\figpdf{figures/bathtub.pdf}{Ice in a bathtub}{f:models-bathtub}{}
+\figpdf{figures/bathtub.pdf}{浴缸里的冰}{f:models-bathtub}{}
 
-The correct answer is that the level stays the same:
-the ice displaces its own weight in water,
-so it exactly fills the ``hole'' it has made when it melts.
-Figuring out why helps people build a model of the relationship between weight, volume, and density~\cite{Epst2002}.
+正确答案是水位保持不变：
+冰排开的是与自身重量相等的水，
+所以融化后正好填满它此前「挖」出的那个洞。
+弄清其中缘由，有助于人们建立一个关于重量、体积和密度之间关系的心智模型~\cite{Epst2002}。
 
-Describe another formative assessment you have seen or used
-that required people to think something through
-and thereby identify flaws in their reasoning.
-When you are done,
-explain your example to a partner
-and give them feedback on theirs.
+再描述一个你见过或用过的形成性评价，
+它要求人把某件事想透，
+从而发现他们推理中的缺陷。
+做完之后，
+向同伴解释你的例子，
+并对他的例子给出反馈。
 
-\exercise{A Different Progression}{individual}{15}
+\exercise{另一种进阶}{个人}{15}
 
-The novice-competent-expert model of skill development
-is sometimes called the \hreffoot{https://en.wikipedia.org/wiki/Dreyfus\_model\_of\_skill\_acquisition}{Dreyfus model}.
-Another commonly-used progression is
-the \hreffoot{https://en.wikipedia.org/wiki/Four\_stages\_of\_competence}{four stages of competence}:
+这种新手—胜任者—专家的技能发展模型
+有时叫做\hreffoot{https://en.wikipedia.org/wiki/Dreyfus\_model\_of\_skill\_acquisition}{德雷福斯模型}。
+另一种常用的进阶是
+\hreffoot{https://en.wikipedia.org/wiki/Four\_stages\_of\_competence}{能力四阶段}：
 
 \begin{description}
 
-\item[Unconscious incompetence:]
-  the person doesn't know what they don't know.
+\item[无意识的无能：]
+  此人不知道自己不知道什么。
 
-\item[Conscious incompetence:]
-  the person realizes that they don't know something.
+\item[有意识的无能：]
+  此人意识到自己不知道某件事。
 
-\item[Conscious competence:]
-  the person has learned how to do something,
-  but can only do it while concentrating
-  and may still need to break things down into steps.
+\item[有意识的有能：]
+  此人学会了做某件事，
+  但只有集中注意力时才能做到，
+  可能仍需要把它拆成步骤。
 
-\item[Unconscious competence:]
-  the skill has become second nature
-  and the person can do it reflexively.
+\item[无意识的有能：]
+  这项技能已经变成第二天性，
+  此人可以反射性地完成它。
 
 \end{description}
 
-Identify one subject where you are at each level.
-What level are most of your learners at in the subject you teach most often?
-What level are you trying to get them to?
-How do these four stages relate to the novice-competent-expert classification?
+找出一个你分别处于这四个阶段的科目。
+在你最常教的科目里，你的大多数学习者处于哪个阶段？
+你想把他们带到哪个阶段？
+这四个阶段与新手—胜任者—专家的分类有什么关系？
 
-\exercise{What Kind of Computing?}{individual}{10}
+\exercise{哪一种计算？}{个人}{10}
 
-\cite{Tedr2008} summarizes three traditions in computing:
+\cite{Tedr2008} 总结了计算领域的三种传统：
 
 \begin{description}
 
-\item[Mathematical:]
-  Programs are the embodiment of algorithms.
-  They are either correct or incorrect,
-  as well as more or less efficient.
+\item[数学传统：]
+  程序是算法的化身。
+  它们要么正确要么不正确，
+  也分效率高低。
 
-\item[Scientific:]
-  Programs are more or less accurate models of information processes
-  that can be studied using the scientific method.
+\item[科学传统：]
+  程序是对信息过程的或精确或不精确的模型，
+  可以用科学方法来研究。
 
-\item[Engineering:]
-  Programs are built objects like dams and airplanes,
-  and are more or less effective and reliable.
+\item[工程传统：]
+  程序像水坝和飞机一样是人造物，
+  分有效可靠与否。
 
 \end{description}
 
-Which of these best matches your mental model of computing?
-If none of them do, what model do you have?
+哪一种最符合你对计算的心智模型？
+如果都不是，那你拥有的是什么模型？
 
-\exercise{Explaining Why Not}{pairs}{5}
+\exercise{解释为什么不是这样}{两人一组}{5}
 
-One of your learners thinks that there is some kind of difference between
-text that they type in character by character
-and identical text that they copy and paste.
-Think of a reason they might believe this
-or something that might have happened to give them this impression,
-then pretend to be that learner while your partner explains why this isn't the case.
-Trade roles and try again.
+你的一个学习者认为，
+他一个字符一个字符敲进去的文本，
+和他们复制粘贴的完全相同的文本之间，
+存在某种差别。
+想想他为什么可能相信这一点，
+或者可能发生过什么事让他产生这种印象，
+然后假装你就是那个学习者，而你的同伴向你解释为什么并非如此。
+交换角色再试一次。
 
-\exercise{Your Model Now}{whole class}{5}
+\exercise{你此刻的模型}{全班}{5}
 
-As a class,
-create a list of the key elements of your mental model of learning.
-What are the half-dozen most important concepts and how do they relate?
+作为全班，
+列出你们关于学习的心智模型的关键要素。
+最重要的六七个概念是什么，它们之间又是什么关系？
 
-\exercise{Your Notional Machines}{small groups}{20}
+\exercise{你的观念机器}{小组}{20}
 
-Working in small groups,
-write up a description of the notional machine you want learners to use
-to understand how their programs run.
-How does a notional machine for a blocks-based language like Scratch\index{Scratch}
-differ from that for Python?\index{Python}
-What about a notional machine for spreadsheets
-or for a browser that is interpreting HTML and CSS when rendering a web page?
+以小组为单位，
+写出你希望学习者用来理解程序如何运行的观念机器的描述。
+像 Scratch 这样的积木式语言，其观念机器与 Python 的有什么不同？\index{Scratch}\index{Python}
+电子表格的观念机器呢？
+或者一个渲染网页时解释 HTML 和 CSS 的浏览器呢？
 
-\exercise{Enjoying Without Learning}{individual}{5}
+\exercise{只乐不学}{个人}{5}
 
-Multiple studies have shown that
-teaching evaluations don't correlate with learning outcomes~\cite{Star2014,Uttl2017},
-i.e.\ that how highly learners rate a course doesn't predict how much they remember.
-Have you ever enjoyed a class that you didn't actually learn anything from?
-If so, what made it enjoyable?
+多项研究表明，
+教学评价与学习成效并不相关~\cite{Star2014,Uttl2017}，
+也就是学习者对一门课的评价有多高，并不能预测他们记住了多少。
+你有没有上过一门自己很享受、但其实什么也没学到的课？
+如果有，是什么让它变得有趣？
 
 \newpage
-\section*{Review}
+\section*{回顾}
 
-\figpdfhere{figures/conceptmap-mental-models.pdf}{Concepts: Mental models}{f:models-concept-map}{}
+\figpdfhere{figures/conceptmap-mental-models.pdf}{概念：心智模型}{f:models-concept-map}{}
 
-\figpdfhere{figures/conceptmap-assessment.pdf}{Concepts: Assessment}{f:models-formative-assessment}{}
+\figpdfhere{figures/conceptmap-assessment.pdf}{概念：评价}{f:models-formative-assessment}{}
